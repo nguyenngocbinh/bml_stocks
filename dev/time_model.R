@@ -2,24 +2,27 @@ library(xgboost)
 library(tidymodels)
 library(modeltime)
 library(tidyverse)
+library(tidyquant)
 library(lubridate)
 library(timetk)
+library(boostime)
 
 # This toggles plots from plotly (interactive) to ggplot (static)
 interactive <- FALSE
 
 # Data
-imput_data <- read_csv("data/excel_aaa.csv") %>% 
+input_data <- read_csv("data/excel_mbb.csv") %>% 
   janitor::clean_names() %>% 
   mutate(date = ymd(dtyyyymmdd),
          value = close_fixed) %>% 
   na.omit()
 
+data_length <- (max(input_data$date) - min(input_data$date)) %>% as.numeric()
 
-imput_data %>%
+input_data %>%
   plot_time_series(date, value, .interactive = interactive)
 
-splits <- initial_time_split(imput_data, prop = 0.9)
+splits <- initial_time_split(input_data, prop = 0.9)
 
 # Model 2: 
 model_fit_arima_no_boost <- arima_reg() %>%
@@ -72,6 +75,12 @@ wflw_fit_mars <- workflow() %>%
   add_model(model_spec_mars) %>%
   fit(training(splits))
 
+# Model 7:auto_arima_catboost
+
+model_arima_catboost <- boost_arima() %>%
+  set_engine("auto_arima_catboost", verbose = 0) %>%
+  fit(value ~ date + month(date), data = training(splits))
+model_arima_catboost
 # ----------------------------------------------------------------------------
 models_tbl <- modeltime_table(
   model_fit_arima_no_boost,
@@ -94,7 +103,7 @@ calibration_tbl
 calibration_tbl %>%
   modeltime_forecast(
     new_data    = testing(splits),
-    actual_data = imput_data
+    actual_data = input_data
   ) %>%
   plot_modeltime_forecast(
     .legend_max_width = 25, # For mobile screens
@@ -110,10 +119,10 @@ calibration_tbl %>%
 
 #-----------------------------------------------------------------------------
 refit_tbl <- calibration_tbl %>%
-  modeltime_refit(data = imput_data)
+  modeltime_refit(data = input_data)
 
 fc <- refit_tbl %>%
-  modeltime_forecast(h = "10 years", actual_data = imput_data, conf_interval = 0.2)
+  modeltime_forecast(h = "10 years", actual_data = input_data, conf_interval = 0.2)
 
 fc %>% 
   plot_modeltime_forecast(
@@ -145,7 +154,7 @@ library(timetk)
 library(modeltime.ensemble)
 # Step 1: Make resample predictions for submodels
 
-resamples_tscv <- imput_data %>%
+resamples_tscv <- input_data %>%
   time_series_cv(assess  = "2 years",
                  initial = "5 years",
                  skip    = "2 years",
@@ -159,3 +168,6 @@ resamples_tscv %>%
 submodel_predictions <- calibration_tbl %>%
   modeltime_fit_resamples(resamples = resamples_tscv, 
                           control = control_resamples(verbose = TRUE))
+
+submodel_predictions$.resample_results[[1]]$.predictions
+submodel_predictions$.resample_results[[1]]
