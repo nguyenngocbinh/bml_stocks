@@ -30,6 +30,7 @@ R.utils::sourceDirectory("R/")
 # Dự báo giá cổ phiếu ACB
 
 ### Dữ liệu giá theo thời gian
+
 ```{r}
-readd(input_data)
+readd(one_week_fc)
 ```
