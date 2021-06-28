@@ -8,12 +8,17 @@ library(lubridate)
 library(timetk)
 library(modeltime.ensemble)
 
+
+
 # library(boostime)
 
 # This toggles plots from plotly (interactive) to ggplot (static)
-interactive <- FALSE
+
 
 my_plan <- drake_plan(
+  
+  interactive = FALSE,
+  
   # Data
   input_data = read_csv("data/excel_acb.csv") %>%
     janitor::clean_names() %>%
@@ -125,6 +130,10 @@ my_plan <- drake_plan(
     modeltime_accuracy() %>%
     table_modeltime_accuracy(.interactive = FALSE),
   
+  best_model = accuracy_tbl$`_data` %>% 
+    filter(mae == min(mae)) %>% 
+    pull(.model_desc),
+  
   # Refit
   refit_tbl = calibration_tbl %>%
     modeltime_refit(data = input_data),
@@ -135,6 +144,11 @@ my_plan <- drake_plan(
     modeltime_forecast(h = "1 months",
                        actual_data = input_data,
                        conf_interval = 0.9),
+  
+  one_week_fc = fc %>%
+    filter(.model_desc == best_model) %>% 
+    filter(.index <= today() + 7, .index >= today()) %>%
+    arrange(.model_desc, .index),
   
   ## Tunning 
   resamples_tscv = input_data %>%
@@ -172,45 +186,11 @@ make(my_plan)
 
 
 
-fc <- readd(refit_tbl) %>%
-  modeltime_forecast(h = "1 months",
-                     actual_data = readd(input_data),
-                     conf_interval = 0.2)
-
-fc %>%
-  plot_modeltime_forecast(.legend_max_width = 25, # For mobile screens
-                          .interactive      = interactive)
-
-fc$.model_desc %>% table()
-
-fc %>%
-  filter(.model_desc == "EARTH") %>%
-  filter(.index <= today() + 7, .index >= today()) %>%
-  arrange(desc(.index))
-
-today() + 7
-
-
-fc %>%
-  filter(.model_desc == "PROPHET") %>%
-  filter(.index <= ymd(20210624), .index >= ymd(20210618)) %>%
-  arrange(desc(.index))
-
-fc %>%
-  filter(.model_desc == "UPDATE: ARIMA(1,1,1) W/ XGBOOST ERRORS") %>%
-  filter(.index <= ymd(20210624), .index >= ymd(20210618)) %>%
-  arrange(desc(.index))
-
 #=============================================================================
 
 
 # Step 1: Make resample predictions for submodels
 
 
-
-
-
-
-
-submodel_predictions$.resample_results[[1]]$.predictions
-submodel_predictions$.resample_results[[1]]
+# submodel_predictions$.resample_results[[1]]$.predictions
+# submodel_predictions$.resample_results[[1]]
