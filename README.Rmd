@@ -23,21 +23,27 @@ library(timetk)
 library(modeltime.ensemble)
 library(dplyr)
 # R.utils::sourceDirectory("D:/R/bml_stocks/R/")
-R.utils::sourceDirectory("R/")
+# R.utils::sourceDirectory("R/")
 
 ```
 
-# Dự báo giá cổ phiếu 
+# 
 
 ```{r, include = FALSE}
 print_results <- function(ticker){
-  print(paste("Giá cổ phiếu", ticker))
-  pred <- readd(paste0("modeling_data_", ticker))
+  # print(paste("Stock price", ticker))
+  
+  pred <- readd(paste0("modeling_data_", ticker), 
+                character_only = TRUE) %>% 
+    mutate(.ticker = ticker) %>% 
+    select(.ticker, .model_desc, .index, .value, .conf_lo, .conf_hi) %>% 
+    knitr::kable()
+  
   return(pred)
 }
 ```
 
-```{r}
+```{r, echo=FALSE}
 tickers <-  list.files("data") %>% stringr::str_sub(7, 9) 
 lapply(tickers, print_results)
 ```
