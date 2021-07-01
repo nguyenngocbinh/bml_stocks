@@ -11,6 +11,7 @@ library(modeltime.ensemble)
 
 # Note: 
 # Tickers have enough obs
+source("R/ultilities_funs.R")
 tickers <-  list.files("data") %>% stringr::str_sub(7, 9) 
 
 

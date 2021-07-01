@@ -13,7 +13,15 @@ fnc_get_data <- function(ticker_name) {
     janitor::clean_names() %>%
     mutate(date = ymd(dtyyyymmdd),
            value = close_fixed) %>%
-    na.omit()
+    arrange(date) %>%
+    mutate(
+      lag_open = LAG(open_fixed),
+      lag_close = LAG(close_fixed),
+      lag_high = LAG(high_fixed),
+      lag_low = LAG(low_fixed)
+    ) %>%
+    na.omit() %>%
+    select(date, value, lag_open, lag_close, lag_high, lag_low, ticker)
   return(df)
 }
 
@@ -50,7 +58,12 @@ fnc_modeling <- function(input_data) {
   
   
   # Model 3: ets ----
-  model_fit_ets = exp_smoothing() %>%
+  model_fit_ets = exp_smoothing(
+    seasonal_period  = 12,
+    error            = "multiplicative",
+    trend            = "additive",
+    season           = "multiplicative"
+  ) %>%
     set_engine(engine = "ets") %>%
     fit(value ~ date, data = training(splits))
   #> frequency = 12 observations per 1 year
@@ -63,10 +76,17 @@ fnc_modeling <- function(input_data) {
   #> Disabling daily seasonality. Run prophet with daily.seasonality=TRUE to override this.
   
   # Model 5: lm ----
+  # dt_train = training(splits)
   model_fit_lm = linear_reg() %>%
     set_engine("lm") %>%
     fit(value ~ as.numeric(date) + factor(month(date, label = TRUE), ordered = FALSE),
         data = training(splits))
+    
+    # fit_xy(
+    #   x = dt_train %>% select(lag_open, lag_close, lag_high, lag_low),
+    #   y = dt_train %>% pull(value)
+    # )
+  
   
   # Model 6: earth ----
   model_spec_mars = mars(mode = "regression") %>%
@@ -138,7 +158,7 @@ fnc_modeling <- function(input_data) {
   # Forecast next 1 month
   
   fc = refit_tbl %>%
-    modeltime_forecast(h = "1 months",
+    modeltime_forecast(h = "2 months",
                        actual_data = input_data,
                        conf_interval = 0.9)
   

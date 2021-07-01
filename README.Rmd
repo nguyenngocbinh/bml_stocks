@@ -36,8 +36,7 @@ print_results <- function(ticker){
   pred <- readd(paste0("modeling_data_", ticker), 
                 character_only = TRUE) %>% 
     mutate(.ticker = ticker) %>% 
-    select(.ticker, .model_desc, .index, .value, .conf_lo, .conf_hi) %>% 
-    knitr::kable()
+    select(.ticker, .index, .value, .low = .conf_lo, .high = .conf_hi, .model_desc ) 
   
   return(pred)
 }
@@ -45,5 +44,11 @@ print_results <- function(ticker){
 
 ```{r, echo=FALSE}
 tickers <-  list.files("data") %>% stringr::str_sub(7, 9) 
-lapply(tickers, print_results)
+x <- lapply(tickers, print_results) 
+
+
+for (i in 1:length(x)) {
+  print(knitr::kable(x[[i]]))
+  cat('\n\n<!-- -->\n\n')
+}
 ```
