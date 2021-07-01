@@ -27,10 +27,17 @@ R.utils::sourceDirectory("R/")
 
 ```
 
-# Dự báo giá cổ phiếu ACB
+# Dự báo giá cổ phiếu 
 
-### Dữ liệu giá theo thời gian
+```{r, include = FALSE}
+print_results <- function(ticker){
+  print(paste("Giá cổ phiếu", ticker))
+  pred <- readd(paste0("modeling_data_", ticker))
+  return(pred)
+}
+```
 
 ```{r}
-readd(one_week_fc)
+tickers <-  list.files("data") %>% stringr::str_sub(7, 9) 
+lapply(tickers, print_results)
 ```
