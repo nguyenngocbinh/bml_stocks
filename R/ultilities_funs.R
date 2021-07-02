@@ -169,3 +169,102 @@ fnc_modeling <- function(input_data) {
   
   return(one_week_fc)
 }
+
+
+#' @param ticker_name name of ticker.
+#' @examples
+#' func_template_report("acb")
+fnc_template_report <-  function(ticker_name){
+  
+line <- paste0(
+
+'---
+output: github_document
+editor_options: 
+chunk_output_type: console
+---
+  
+  
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup, include = FALSE}
+library(xgboost)
+library(drake)
+library(tidymodels)
+library(modeltime)
+library(tidyverse)
+library(tidyquant)
+library(lubridate)
+library(timetk)
+library(modeltime.ensemble)
+library(dplyr)
+# R.utils::sourceDirectory("D:/R/bml_stocks/R/")
+# R.utils::sourceDirectory("R/")
+interactive <- FALSE
+```
+
+# Forecast ', ticker_name, ' price
+
+### Plot
+```{r}
+readd(data_',ticker_name,') %>%
+  plot_time_series(date, value, .interactive = interactive)
+```
+
+### Divide data to train/ test
+
+```{r}
+readd(splits_data_',ticker_name,') %>%
+  tk_time_series_cv_plan() %>%
+  plot_time_series_cv_plan(date, value, .interactive = FALSE)
+```
+
+
+
+```{r}
+### Modeltime Table
+# readd(models_tbl)
+```
+
+
+
+
+```{r}
+### Calibration
+# readd(calibration_tbl)
+```
+
+
+
+```{r}
+### Forecast (Testing Set)
+# readd(forecast_tbl) %>% 
+#   plot_modeltime_forecast(.legend_max_width = 25, # For mobile screens
+#                           .interactive      = interactive)
+```
+
+
+
+
+```{r}
+### Accuracy table
+# readd(accuracy_tbl)$`_data`
+```
+
+```{r}
+### Next week forecast
+# readd(one_week_fc)
+```
+'
+)
+
+write(line,
+      file = paste0("vignettes/", ticker_name, "/Readme.Rmd"),
+      append = FALSE)
+
+}

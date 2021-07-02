@@ -1,0 +1,93 @@
+---
+output: github_document
+editor_options: 
+  chunk_output_type: console
+---
+
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup, include = FALSE}
+library(xgboost)
+library(drake)
+library(tidymodels)
+library(modeltime)
+library(tidyverse)
+library(tidyquant)
+library(lubridate)
+library(timetk)
+library(modeltime.ensemble)
+library(dplyr)
+# R.utils::sourceDirectory("D:/R/bml_stocks/R/")
+R.utils::sourceDirectory("R/")
+interactive <- FALSE
+```
+
+# Dự báo giá cổ phiếu ACB
+
+### Dữ liệu giá theo thời gian
+```{r}
+readd(input_data) %>%
+  plot_time_series(date, value, .interactive = interactive)
+```
+
+### Chia dữ liệu thành 2 tập train/ test
+
+```{r}
+readd(splits) %>%
+  tk_time_series_cv_plan() %>%
+  plot_time_series_cv_plan(date, value, .interactive = FALSE)
+```
+
+### Modeltime Table
+
+```{r}
+readd(models_tbl)
+```
+
+
+### Calibration
+
+```{r}
+readd(calibration_tbl)
+```
+
+
+### Forecast (Testing Set)
+```{r}
+readd(forecast_tbl) %>% 
+  plot_modeltime_forecast(.legend_max_width = 25, # For mobile screens
+                          .interactive      = interactive)
+```
+
+
+### Accuracy table
+
+```{r}
+readd(accuracy_tbl)$`_data`
+```
+
+### Next week forecast
+
+```{r}
+readd(one_week_fc)
+```
+
+
+
+```{r, include=FALSE}
+# # Tunning
+# readd(resamples_tscv) %>% 
+#   tk_time_series_cv_plan() %>% 
+#   plot_time_series_cv_plan(
+#         date, value,
+#         .facet_ncol  = 2,
+#         .interactive = FALSE
+#     )
+```
+

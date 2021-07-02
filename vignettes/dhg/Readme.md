@@ -1,10 +1,10 @@
 
-# Forecast acb price
+# Forecast dhg price
 
 ### Plot
 
 ``` r
-readd(data_acb) %>%
+readd(data_dhg) %>%
   plot_time_series(date, value, .interactive = interactive)
 ```
 
@@ -13,7 +13,7 @@ readd(data_acb) %>%
 ### Divide data to train/ test
 
 ``` r
-readd(splits_data_acb) %>%
+readd(splits_data_dhg) %>%
   tk_time_series_cv_plan() %>%
   plot_time_series_cv_plan(date, value, .interactive = FALSE)
 ```
