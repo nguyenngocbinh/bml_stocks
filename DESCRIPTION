@@ -1,16 +1,17 @@
 Package: bml.stocks
-Title: What the Package Does (One Line, Title Case)
+Title: Provide simple forecast on stocks price
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Binh",
+           family = "NN",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
+           email = "nguyenngocbinhneu@gmail.com",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+Description: Using some timeseries models to make predict.
 License: MIT + file LICENSE
 Suggests: 
     knitr,
+    lubridate,
     rmarkdown,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
@@ -19,3 +20,12 @@ LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 VignetteBuilder: knitr
+Depends: 
+    tidymodels,
+    drake,
+    xgboost,
+    modeltime,
+    tidyverse,
+    tidyquant,
+    timetk,
+    modeltime.ensemble
