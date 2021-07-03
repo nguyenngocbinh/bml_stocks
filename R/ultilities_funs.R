@@ -39,7 +39,7 @@ fnc_get_data <- function(ticker_name) {
 
 fnc_modeling <- function(input_data) {
   splits = input_data %>%
-    time_series_split(assess = "3 months", cumulative = TRUE)
+    time_series_split(assess = "6 months", cumulative = TRUE)
   
   # Model
   # Model 1:
@@ -219,46 +219,39 @@ readd(data_',ticker_name,') %>%
 ### Divide data to train/ test
 
 ```{r}
-readd(splits_data_',ticker_name,') %>%
+readd(splits_',ticker_name,') %>%
   tk_time_series_cv_plan() %>%
   plot_time_series_cv_plan(date, value, .interactive = FALSE)
 ```
 
-
-
-```{r}
 ### Modeltime Table
-# readd(models_tbl)
-```
-
-
-
 
 ```{r}
+readd(models_tbl_',ticker_name,')
+```
+
 ### Calibration
-# readd(calibration_tbl)
+```{r}
+readd(calibration_tbl_',ticker_name,')
 ```
 
 
-
-```{r}
 ### Forecast (Testing Set)
-# readd(forecast_tbl) %>% 
-#   plot_modeltime_forecast(.legend_max_width = 25, # For mobile screens
-#                           .interactive      = interactive)
+```{r}
+
+readd(forecast_tbl_',ticker_name,') %>% 
+  plot_modeltime_forecast(.legend_max_width = 25, 
+                           .interactive      = interactive)
 ```
 
-
-
-
-```{r}
 ### Accuracy table
-# readd(accuracy_tbl)$`_data`
-```
-
 ```{r}
+readd(accuracy_tbl_',ticker_name,')$`_data`
+
+```
 ### Next week forecast
-# readd(one_week_fc)
+```{r}
+readd(two_week_fc_',ticker_name,')
 ```
 '
 )
@@ -268,3 +261,46 @@ write(line,
       append = FALSE)
 
 }
+
+fnc_readme <- function(){
+  title = '
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup, include = FALSE}
+library(drake)
+```
+
+# FORECAST STOCKS PRICE
+  '
+write(title,
+      file = "Readme.Rmd",
+      append = FALSE)
+
+
+
+}
+
+fnc_readme_add <- function(ticker_name){
+  line = paste0('
+### ',stringr::str_to_upper(ticker_name),'
+```{r}
+readd(two_week_fc_',ticker_name,') %>%  knitr::kable()
+```
+')
+  write(line,
+        file = "Readme.Rmd",
+        append = TRUE)
+  
+}
+

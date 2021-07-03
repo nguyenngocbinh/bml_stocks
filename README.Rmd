@@ -1,3 +1,4 @@
+
 ---
 output: github_document
 ---
@@ -12,43 +13,122 @@ knitr::opts_chunk$set(
 ```
 
 ```{r setup, include = FALSE}
-library(xgboost)
 library(drake)
-library(tidymodels)
-library(modeltime)
-library(tidyverse)
-library(tidyquant)
-library(lubridate)
-library(timetk)
-library(modeltime.ensemble)
-library(dplyr)
-# R.utils::sourceDirectory("D:/R/bml_stocks/R/")
-# R.utils::sourceDirectory("R/")
-
 ```
 
-# 
-
-```{r, include = FALSE}
-print_results <- function(ticker){
-  # print(paste("Stock price", ticker))
+# FORECAST STOCKS PRICE
   
-  pred <- readd(paste0("modeling_data_", ticker), 
-                character_only = TRUE) %>% 
-    mutate(.ticker = ticker) %>% 
-    select(.ticker, .index, .value, .low = .conf_lo, .high = .conf_hi, .model_desc ) 
-  
-  return(pred)
-}
+
+### ACB
+```{r}
+readd(two_week_fc_acb) %>%  knitr::kable()
 ```
 
-```{r, echo=FALSE}
-tickers <-  list.files("data") %>% stringr::str_sub(7, 9) 
-x <- lapply(tickers, print_results) 
 
-
-for (i in 1:length(x)) {
-  print(knitr::kable(x[[i]]))
-  cat('\n\n<!-- -->\n\n')
-}
+### BID
+```{r}
+readd(two_week_fc_bid) %>%  knitr::kable()
 ```
+
+
+### BVH
+```{r}
+readd(two_week_fc_bvh) %>%  knitr::kable()
+```
+
+
+### DHG
+```{r}
+readd(two_week_fc_dhg) %>%  knitr::kable()
+```
+
+
+### FPT
+```{r}
+readd(two_week_fc_fpt) %>%  knitr::kable()
+```
+
+
+### HBC
+```{r}
+readd(two_week_fc_hbc) %>%  knitr::kable()
+```
+
+
+### HCM
+```{r}
+readd(two_week_fc_hcm) %>%  knitr::kable()
+```
+
+
+### HDG
+```{r}
+readd(two_week_fc_hdg) %>%  knitr::kable()
+```
+
+
+### HPG
+```{r}
+readd(two_week_fc_hpg) %>%  knitr::kable()
+```
+
+
+### MBB
+```{r}
+readd(two_week_fc_mbb) %>%  knitr::kable()
+```
+
+
+### PNJ
+```{r}
+readd(two_week_fc_pnj) %>%  knitr::kable()
+```
+
+
+### REE
+```{r}
+readd(two_week_fc_ree) %>%  knitr::kable()
+```
+
+
+### SBS
+```{r}
+readd(two_week_fc_sbs) %>%  knitr::kable()
+```
+
+
+### SHS
+```{r}
+readd(two_week_fc_shs) %>%  knitr::kable()
+```
+
+
+### SSI
+```{r}
+readd(two_week_fc_ssi) %>%  knitr::kable()
+```
+
+
+### TCB
+```{r}
+readd(two_week_fc_tcb) %>%  knitr::kable()
+```
+
+
+### TNG
+```{r}
+readd(two_week_fc_tng) %>%  knitr::kable()
+```
+
+
+### TPB
+```{r}
+readd(two_week_fc_tpb) %>%  knitr::kable()
+```
+
+
+### VCB
+```{r}
+readd(two_week_fc_vcb) %>%  knitr::kable()
+```
+

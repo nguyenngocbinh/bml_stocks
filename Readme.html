@@ -1,0 +1,2769 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="data:text/css,%0A%40font%2Dface%20%7B%0Afont%2Dfamily%3A%20octicons%2Dlink%3B%0Asrc%3A%20url%28data%3Afont%2Fwoff%3Bcharset%3Dutf%2D8%3Bbase64%2Cd09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM%2B8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB%2FaFGpk3jaTY6xa8JAGMW%2FO62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v%2Bk%2F0an2i%2BitHDw3v2%2B9%2BDBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3%2FI7AtxEJLtzzuZfI%2BVVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy%2FLt7Kc%2B0vWY%2FgAgIIEqAN9we0pwKXreiMasxvabDQMM4riO%2BqxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw%2Bymhce7vwM9jSqO8JyVd5RH9gyTt2%2BJ%2FyUmYlIR0s04n6%2B7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv%2FocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi%2BW2%2BMjCzMIDApSwvXzC97Z4Ig8N%2FBxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh%2F8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT%2BAEjAwuDFpBmA9KMDEwMCh9i%2Fv8H8sH0%2F4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9%2FlqYwOGZxeUelN2U2R6%2BcArgtCJpauW7UQBqnFkUsjAY%2FkOU1cP%2BDAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl%2BvvmM%2FbyA48e6tWrKArm4ZJlCbdsrxksL1AwWn%2FyBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO%2F%2FsdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd%2F89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF%2B9JOS0nbaaYDCQfwCJ7Au3AHj%2BLO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm%2BEBXuAbHmIMSRMs%2B4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL%2BhD7C1xoaHeLJSEao0FEW14ckxC%2BTU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13%2F%2Blm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl%2B9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O%2FAdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB%2F%2F%2FAA8AAQAAAAAAAAAAAAAAAAABAAAAAA%3D%3D%29%20format%28%27woff%27%29%3B%0A%7D%0Abody%20%7B%0A%2Dwebkit%2Dtext%2Dsize%2Dadjust%3A%20100%25%3B%0Atext%2Dsize%2Dadjust%3A%20100%25%3B%0Acolor%3A%20%23333%3B%0Afont%2Dfamily%3A%20%22Helvetica%20Neue%22%2C%20Helvetica%2C%20%22Segoe%20UI%22%2C%20Arial%2C%20freesans%2C%20sans%2Dserif%2C%20%22Apple%20Color%20Emoji%22%2C%20%22Segoe%20UI%20Emoji%22%2C%20%22Segoe%20UI%20Symbol%22%3B%0Afont%2Dsize%3A%2016px%3B%0Aline%2Dheight%3A%201%2E6%3B%0Aword%2Dwrap%3A%20break%2Dword%3B%0A%7D%0Aa%20%7B%0Abackground%2Dcolor%3A%20transparent%3B%0A%7D%0Aa%3Aactive%2C%0Aa%3Ahover%20%7B%0Aoutline%3A%200%3B%0A%7D%0Astrong%20%7B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Ah1%20%7B%0Afont%2Dsize%3A%202em%3B%0Amargin%3A%200%2E67em%200%3B%0A%7D%0Aimg%20%7B%0Aborder%3A%200%3B%0A%7D%0Ahr%20%7B%0Abox%2Dsizing%3A%20content%2Dbox%3B%0Aheight%3A%200%3B%0A%7D%0Apre%20%7B%0Aoverflow%3A%20auto%3B%0A%7D%0Acode%2C%0Akbd%2C%0Apre%20%7B%0Afont%2Dfamily%3A%20monospace%2C%20monospace%3B%0Afont%2Dsize%3A%201em%3B%0A%7D%0Ainput%20%7B%0Acolor%3A%20inherit%3B%0Afont%3A%20inherit%3B%0Amargin%3A%200%3B%0A%7D%0Ahtml%20input%5Bdisabled%5D%20%7B%0Acursor%3A%20default%3B%0A%7D%0Ainput%20%7B%0Aline%2Dheight%3A%20normal%3B%0A%7D%0Ainput%5Btype%3D%22checkbox%22%5D%20%7B%0Abox%2Dsizing%3A%20border%2Dbox%3B%0Apadding%3A%200%3B%0A%7D%0Atable%20%7B%0Aborder%2Dcollapse%3A%20collapse%3B%0Aborder%2Dspacing%3A%200%3B%0A%7D%0Atd%2C%0Ath%20%7B%0Apadding%3A%200%3B%0A%7D%0A%2A%20%7B%0Abox%2Dsizing%3A%20border%2Dbox%3B%0A%7D%0Ainput%20%7B%0Afont%3A%2013px%20%2F%201%2E4%20Helvetica%2C%20arial%2C%20nimbussansl%2C%20liberationsans%2C%20freesans%2C%20clean%2C%20sans%2Dserif%2C%20%22Apple%20Color%20Emoji%22%2C%20%22Segoe%20UI%20Emoji%22%2C%20%22Segoe%20UI%20Symbol%22%3B%0A%7D%0Aa%20%7B%0Acolor%3A%20%234078c0%3B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Aa%3Ahover%2C%0Aa%3Aactive%20%7B%0Atext%2Ddecoration%3A%20underline%3B%0A%7D%0Ahr%20%7B%0Aheight%3A%200%3B%0Amargin%3A%2015px%200%3B%0Aoverflow%3A%20hidden%3B%0Abackground%3A%20transparent%3B%0Aborder%3A%200%3B%0Aborder%2Dbottom%3A%201px%20solid%20%23ddd%3B%0A%7D%0Ahr%3Abefore%20%7B%0Adisplay%3A%20table%3B%0Acontent%3A%20%22%22%3B%0A%7D%0Ahr%3Aafter%20%7B%0Adisplay%3A%20table%3B%0Aclear%3A%20both%3B%0Acontent%3A%20%22%22%3B%0A%7D%0Ah1%2C%0Ah2%2C%0Ah3%2C%0Ah4%2C%0Ah5%2C%0Ah6%20%7B%0Amargin%2Dtop%3A%2015px%3B%0Amargin%2Dbottom%3A%2015px%3B%0Aline%2Dheight%3A%201%2E1%3B%0A%7D%0Ah1%20%7B%0Afont%2Dsize%3A%2030px%3B%0A%7D%0Ah2%20%7B%0Afont%2Dsize%3A%2021px%3B%0A%7D%0Ah3%20%7B%0Afont%2Dsize%3A%2016px%3B%0A%7D%0Ah4%20%7B%0Afont%2Dsize%3A%2014px%3B%0A%7D%0Ah5%20%7B%0Afont%2Dsize%3A%2012px%3B%0A%7D%0Ah6%20%7B%0Afont%2Dsize%3A%2011px%3B%0A%7D%0Ablockquote%20%7B%0Amargin%3A%200%3B%0A%7D%0Aul%2C%0Aol%20%7B%0Apadding%3A%200%3B%0Amargin%2Dtop%3A%200%3B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Aol%20ol%2C%0Aul%20ol%20%7B%0Alist%2Dstyle%2Dtype%3A%20lower%2Droman%3B%0A%7D%0Aul%20ul%20ol%2C%0Aul%20ol%20ol%2C%0Aol%20ul%20ol%2C%0Aol%20ol%20ol%20%7B%0Alist%2Dstyle%2Dtype%3A%20lower%2Dalpha%3B%0A%7D%0Add%20%7B%0Amargin%2Dleft%3A%200%3B%0A%7D%0Acode%20%7B%0Afont%2Dfamily%3A%20Consolas%2C%20%22Liberation%20Mono%22%2C%20Menlo%2C%20Courier%2C%20monospace%3B%0Afont%2Dsize%3A%2012px%3B%0A%7D%0Apre%20%7B%0Amargin%2Dtop%3A%200%3B%0Amargin%2Dbottom%3A%200%3B%0Afont%3A%2012px%20Consolas%2C%20%22Liberation%20Mono%22%2C%20Menlo%2C%20Courier%2C%20monospace%3B%0A%7D%0A%2Eselect%3A%3A%2Dms%2Dexpand%20%7B%0Aopacity%3A%200%3B%0A%7D%0A%2Eocticon%20%7B%0Afont%3A%20normal%20normal%20normal%2016px%2F1%20octicons%2Dlink%3B%0Adisplay%3A%20inline%2Dblock%3B%0Atext%2Ddecoration%3A%20none%3B%0Atext%2Drendering%3A%20auto%3B%0A%2Dwebkit%2Dfont%2Dsmoothing%3A%20antialiased%3B%0A%2Dmoz%2Dosx%2Dfont%2Dsmoothing%3A%20grayscale%3B%0A%2Dwebkit%2Duser%2Dselect%3A%20none%3B%0A%2Dmoz%2Duser%2Dselect%3A%20none%3B%0A%2Dms%2Duser%2Dselect%3A%20none%3B%0Auser%2Dselect%3A%20none%3B%0A%7D%0A%2Eocticon%2Dlink%3Abefore%20%7B%0Acontent%3A%20%27%5Cf05c%27%3B%0A%7D%0A%2Emarkdown%2Dbody%3Abefore%20%7B%0Adisplay%3A%20table%3B%0Acontent%3A%20%22%22%3B%0A%7D%0A%2Emarkdown%2Dbody%3Aafter%20%7B%0Adisplay%3A%20table%3B%0Aclear%3A%20both%3B%0Acontent%3A%20%22%22%3B%0A%7D%0A%2Emarkdown%2Dbody%3E%2A%3Afirst%2Dchild%20%7B%0Amargin%2Dtop%3A%200%20%21important%3B%0A%7D%0A%2Emarkdown%2Dbody%3E%2A%3Alast%2Dchild%20%7B%0Amargin%2Dbottom%3A%200%20%21important%3B%0A%7D%0Aa%3Anot%28%5Bhref%5D%29%20%7B%0Acolor%3A%20inherit%3B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0A%2Eanchor%20%7B%0Adisplay%3A%20inline%2Dblock%3B%0Apadding%2Dright%3A%202px%3B%0Amargin%2Dleft%3A%20%2D18px%3B%0A%7D%0A%2Eanchor%3Afocus%20%7B%0Aoutline%3A%20none%3B%0A%7D%0Ah1%2C%0Ah2%2C%0Ah3%2C%0Ah4%2C%0Ah5%2C%0Ah6%20%7B%0Amargin%2Dtop%3A%201em%3B%0Amargin%2Dbottom%3A%2016px%3B%0Afont%2Dweight%3A%20bold%3B%0Aline%2Dheight%3A%201%2E4%3B%0A%7D%0Ah1%20%2Eocticon%2Dlink%2C%0Ah2%20%2Eocticon%2Dlink%2C%0Ah3%20%2Eocticon%2Dlink%2C%0Ah4%20%2Eocticon%2Dlink%2C%0Ah5%20%2Eocticon%2Dlink%2C%0Ah6%20%2Eocticon%2Dlink%20%7B%0Acolor%3A%20%23000%3B%0Avertical%2Dalign%3A%20middle%3B%0Avisibility%3A%20hidden%3B%0A%7D%0Ah1%3Ahover%20%2Eanchor%2C%0Ah2%3Ahover%20%2Eanchor%2C%0Ah3%3Ahover%20%2Eanchor%2C%0Ah4%3Ahover%20%2Eanchor%2C%0Ah5%3Ahover%20%2Eanchor%2C%0Ah6%3Ahover%20%2Eanchor%20%7B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Ah1%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Ah2%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Ah3%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Ah4%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Ah5%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Ah6%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%20%7B%0Avisibility%3A%20visible%3B%0A%7D%0Ah1%20%7B%0Apadding%2Dbottom%3A%200%2E3em%3B%0Afont%2Dsize%3A%202%2E25em%3B%0Aline%2Dheight%3A%201%2E2%3B%0Aborder%2Dbottom%3A%201px%20solid%20%23eee%3B%0A%7D%0Ah1%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%3B%0A%7D%0Ah2%20%7B%0Apadding%2Dbottom%3A%200%2E3em%3B%0Afont%2Dsize%3A%201%2E75em%3B%0Aline%2Dheight%3A%201%2E225%3B%0Aborder%2Dbottom%3A%201px%20solid%20%23eee%3B%0A%7D%0Ah2%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%3B%0A%7D%0Ah3%20%7B%0Afont%2Dsize%3A%201%2E5em%3B%0Aline%2Dheight%3A%201%2E43%3B%0A%7D%0Ah3%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%2E2%3B%0A%7D%0Ah4%20%7B%0Afont%2Dsize%3A%201%2E25em%3B%0A%7D%0Ah4%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%2E2%3B%0A%7D%0Ah5%20%7B%0Afont%2Dsize%3A%201em%3B%0A%7D%0Ah5%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%2E1%3B%0A%7D%0Ah6%20%7B%0Afont%2Dsize%3A%201em%3B%0Acolor%3A%20%23777%3B%0A%7D%0Ah6%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%2E1%3B%0A%7D%0Ap%2C%0Ablockquote%2C%0Aul%2C%0Aol%2C%0Adl%2C%0Atable%2C%0Apre%20%7B%0Amargin%2Dtop%3A%200%3B%0Amargin%2Dbottom%3A%2016px%3B%0A%7D%0Ahr%20%7B%0Aheight%3A%204px%3B%0Apadding%3A%200%3B%0Amargin%3A%2016px%200%3B%0Abackground%2Dcolor%3A%20%23e7e7e7%3B%0Aborder%3A%200%20none%3B%0A%7D%0Aul%2C%0Aol%20%7B%0Apadding%2Dleft%3A%202em%3B%0A%7D%0Aul%20ul%2C%0Aul%20ol%2C%0Aol%20ol%2C%0Aol%20ul%20%7B%0Amargin%2Dtop%3A%200%3B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Ali%3Ep%20%7B%0Amargin%2Dtop%3A%2016px%3B%0A%7D%0Adl%20%7B%0Apadding%3A%200%3B%0A%7D%0Adl%20dt%20%7B%0Apadding%3A%200%3B%0Amargin%2Dtop%3A%2016px%3B%0Afont%2Dsize%3A%201em%3B%0Afont%2Dstyle%3A%20italic%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Adl%20dd%20%7B%0Apadding%3A%200%2016px%3B%0Amargin%2Dbottom%3A%2016px%3B%0A%7D%0Ablockquote%20%7B%0Apadding%3A%200%2015px%3B%0Acolor%3A%20%23777%3B%0Aborder%2Dleft%3A%204px%20solid%20%23ddd%3B%0A%7D%0Ablockquote%3E%3Afirst%2Dchild%20%7B%0Amargin%2Dtop%3A%200%3B%0A%7D%0Ablockquote%3E%3Alast%2Dchild%20%7B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Atable%20%7B%0Adisplay%3A%20block%3B%0Awidth%3A%20100%25%3B%0Aoverflow%3A%20auto%3B%0Aword%2Dbreak%3A%20normal%3B%0Aword%2Dbreak%3A%20keep%2Dall%3B%0A%7D%0Atable%20th%20%7B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Atable%20th%2C%0Atable%20td%20%7B%0Apadding%3A%206px%2013px%3B%0Aborder%3A%201px%20solid%20%23ddd%3B%0A%7D%0Atable%20tr%20%7B%0Abackground%2Dcolor%3A%20%23fff%3B%0Aborder%2Dtop%3A%201px%20solid%20%23ccc%3B%0A%7D%0Atable%20tr%3Anth%2Dchild%282n%29%20%7B%0Abackground%2Dcolor%3A%20%23f8f8f8%3B%0A%7D%0Aimg%20%7B%0Amax%2Dwidth%3A%20100%25%3B%0Abox%2Dsizing%3A%20content%2Dbox%3B%0Abackground%2Dcolor%3A%20%23fff%3B%0A%7D%0Acode%20%7B%0Apadding%3A%200%3B%0Apadding%2Dtop%3A%200%2E2em%3B%0Apadding%2Dbottom%3A%200%2E2em%3B%0Amargin%3A%200%3B%0Afont%2Dsize%3A%2085%25%3B%0Abackground%2Dcolor%3A%20rgba%280%2C0%2C0%2C0%2E04%29%3B%0Aborder%2Dradius%3A%203px%3B%0A%7D%0Acode%3Abefore%2C%0Acode%3Aafter%20%7B%0Aletter%2Dspacing%3A%20%2D0%2E2em%3B%0Acontent%3A%20%22%5C00a0%22%3B%0A%7D%0Apre%3Ecode%20%7B%0Apadding%3A%200%3B%0Amargin%3A%200%3B%0Afont%2Dsize%3A%20100%25%3B%0Aword%2Dbreak%3A%20normal%3B%0Awhite%2Dspace%3A%20pre%3B%0Abackground%3A%20transparent%3B%0Aborder%3A%200%3B%0A%7D%0A%2Ehighlight%20%7B%0Amargin%2Dbottom%3A%2016px%3B%0A%7D%0A%2Ehighlight%20pre%2C%0Apre%20%7B%0Apadding%3A%2016px%3B%0Aoverflow%3A%20auto%3B%0Afont%2Dsize%3A%2085%25%3B%0Aline%2Dheight%3A%201%2E45%3B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0Aborder%2Dradius%3A%203px%3B%0A%7D%0A%2Ehighlight%20pre%20%7B%0Amargin%2Dbottom%3A%200%3B%0Aword%2Dbreak%3A%20normal%3B%0A%7D%0Apre%20%7B%0Aword%2Dwrap%3A%20normal%3B%0A%7D%0Apre%20code%20%7B%0Adisplay%3A%20inline%3B%0Amax%2Dwidth%3A%20initial%3B%0Apadding%3A%200%3B%0Amargin%3A%200%3B%0Aoverflow%3A%20initial%3B%0Aline%2Dheight%3A%20inherit%3B%0Aword%2Dwrap%3A%20normal%3B%0Abackground%2Dcolor%3A%20transparent%3B%0Aborder%3A%200%3B%0A%7D%0Apre%20code%3Abefore%2C%0Apre%20code%3Aafter%20%7B%0Acontent%3A%20normal%3B%0A%7D%0Akbd%20%7B%0Adisplay%3A%20inline%2Dblock%3B%0Apadding%3A%203px%205px%3B%0Afont%2Dsize%3A%2011px%3B%0Aline%2Dheight%3A%2010px%3B%0Acolor%3A%20%23555%3B%0Avertical%2Dalign%3A%20middle%3B%0Abackground%2Dcolor%3A%20%23fcfcfc%3B%0Aborder%3A%20solid%201px%20%23ccc%3B%0Aborder%2Dbottom%2Dcolor%3A%20%23bbb%3B%0Aborder%2Dradius%3A%203px%3B%0Abox%2Dshadow%3A%20inset%200%20%2D1px%200%20%23bbb%3B%0A%7D%0A%2Epl%2Dc%20%7B%0Acolor%3A%20%23969896%3B%0A%7D%0A%2Epl%2Dc1%2C%0A%2Epl%2Ds%20%2Epl%2Dv%20%7B%0Acolor%3A%20%230086b3%3B%0A%7D%0A%2Epl%2De%2C%0A%2Epl%2Den%20%7B%0Acolor%3A%20%23795da3%3B%0A%7D%0A%2Epl%2Ds%20%2Epl%2Ds1%2C%0A%2Epl%2Dsmi%20%7B%0Acolor%3A%20%23333%3B%0A%7D%0A%2Epl%2Dent%20%7B%0Acolor%3A%20%2363a35c%3B%0A%7D%0A%2Epl%2Dk%20%7B%0Acolor%3A%20%23a71d5d%3B%0A%7D%0A%2Epl%2Dpds%2C%0A%2Epl%2Ds%2C%0A%2Epl%2Ds%20%2Epl%2Dpse%20%2Epl%2Ds1%2C%0A%2Epl%2Dsr%2C%0A%2Epl%2Dsr%20%2Epl%2Dcce%2C%0A%2Epl%2Dsr%20%2Epl%2Dsra%2C%0A%2Epl%2Dsr%20%2Epl%2Dsre%20%7B%0Acolor%3A%20%23183691%3B%0A%7D%0A%2Epl%2Dv%20%7B%0Acolor%3A%20%23ed6a43%3B%0A%7D%0A%2Epl%2Did%20%7B%0Acolor%3A%20%23b52a1d%3B%0A%7D%0A%2Epl%2Dii%20%7B%0Abackground%2Dcolor%3A%20%23b52a1d%3B%0Acolor%3A%20%23f8f8f8%3B%0A%7D%0A%2Epl%2Dsr%20%2Epl%2Dcce%20%7B%0Acolor%3A%20%2363a35c%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0A%2Epl%2Dml%20%7B%0Acolor%3A%20%23693a17%3B%0A%7D%0A%2Epl%2Dmh%2C%0A%2Epl%2Dmh%20%2Epl%2Den%2C%0A%2Epl%2Dms%20%7B%0Acolor%3A%20%231d3e81%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0A%2Epl%2Dmq%20%7B%0Acolor%3A%20%23008080%3B%0A%7D%0A%2Epl%2Dmi%20%7B%0Acolor%3A%20%23333%3B%0Afont%2Dstyle%3A%20italic%3B%0A%7D%0A%2Epl%2Dmb%20%7B%0Acolor%3A%20%23333%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0A%2Epl%2Dmd%20%7B%0Abackground%2Dcolor%3A%20%23ffecec%3B%0Acolor%3A%20%23bd2c00%3B%0A%7D%0A%2Epl%2Dmi1%20%7B%0Abackground%2Dcolor%3A%20%23eaffea%3B%0Acolor%3A%20%2355a532%3B%0A%7D%0A%2Epl%2Dmdr%20%7B%0Acolor%3A%20%23795da3%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0A%2Epl%2Dmo%20%7B%0Acolor%3A%20%231d3e81%3B%0A%7D%0Akbd%20%7B%0Adisplay%3A%20inline%2Dblock%3B%0Apadding%3A%203px%205px%3B%0Afont%3A%2011px%20Consolas%2C%20%22Liberation%20Mono%22%2C%20Menlo%2C%20Courier%2C%20monospace%3B%0Aline%2Dheight%3A%2010px%3B%0Acolor%3A%20%23555%3B%0Avertical%2Dalign%3A%20middle%3B%0Abackground%2Dcolor%3A%20%23fcfcfc%3B%0Aborder%3A%20solid%201px%20%23ccc%3B%0Aborder%2Dbottom%2Dcolor%3A%20%23bbb%3B%0Aborder%2Dradius%3A%203px%3B%0Abox%2Dshadow%3A%20inset%200%20%2D1px%200%20%23bbb%3B%0A%7D%0A%2Etask%2Dlist%2Ditem%20%7B%0Alist%2Dstyle%2Dtype%3A%20none%3B%0A%7D%0A%2Etask%2Dlist%2Ditem%2B%2Etask%2Dlist%2Ditem%20%7B%0Amargin%2Dtop%3A%203px%3B%0A%7D%0A%2Etask%2Dlist%2Ditem%20input%20%7B%0Amargin%3A%200%200%2E35em%200%2E25em%20%2D1%2E6em%3B%0Avertical%2Dalign%3A%20middle%3B%0A%7D%0A%3Achecked%2B%2Eradio%2Dlabel%20%7B%0Az%2Dindex%3A%201%3B%0Aposition%3A%20relative%3B%0Aborder%2Dcolor%3A%20%234078c0%3B%0A%7D%0A%2EsourceLine%20%7B%0Adisplay%3A%20inline%2Dblock%3B%0A%7D%0Acode%20%2Ekw%20%7B%20color%3A%20%23000000%3B%20%7D%0Acode%20%2Edt%20%7B%20color%3A%20%23ed6a43%3B%20%7D%0Acode%20%2Edv%20%7B%20color%3A%20%23009999%3B%20%7D%0Acode%20%2Ebn%20%7B%20color%3A%20%23009999%3B%20%7D%0Acode%20%2Efl%20%7B%20color%3A%20%23009999%3B%20%7D%0Acode%20%2Ech%20%7B%20color%3A%20%23009999%3B%20%7D%0Acode%20%2Est%20%7B%20color%3A%20%23183691%3B%20%7D%0Acode%20%2Eco%20%7B%20color%3A%20%23969896%3B%20%7D%0Acode%20%2Eot%20%7B%20color%3A%20%230086b3%3B%20%7D%0Acode%20%2Eal%20%7B%20color%3A%20%23a61717%3B%20%7D%0Acode%20%2Efu%20%7B%20color%3A%20%2363a35c%3B%20%7D%0Acode%20%2Eer%20%7B%20color%3A%20%23a61717%3B%20background%2Dcolor%3A%20%23e3d2d2%3B%20%7D%0Acode%20%2Ewa%20%7B%20color%3A%20%23000000%3B%20%7D%0Acode%20%2Ecn%20%7B%20color%3A%20%23008080%3B%20%7D%0Acode%20%2Esc%20%7B%20color%3A%20%23008080%3B%20%7D%0Acode%20%2Evs%20%7B%20color%3A%20%23183691%3B%20%7D%0Acode%20%2Ess%20%7B%20color%3A%20%23183691%3B%20%7D%0Acode%20%2Eim%20%7B%20color%3A%20%23000000%3B%20%7D%0Acode%20%2Eva%20%7Bcolor%3A%20%23008080%3B%20%7D%0Acode%20%2Ecf%20%7B%20color%3A%20%23000000%3B%20%7D%0Acode%20%2Eop%20%7B%20color%3A%20%23000000%3B%20%7D%0Acode%20%2Ebu%20%7B%20color%3A%20%23000000%3B%20%7D%0Acode%20%2Eex%20%7B%20color%3A%20%23000000%3B%20%7D%0Acode%20%2Epp%20%7B%20color%3A%20%23999999%3B%20%7D%0Acode%20%2Eat%20%7B%20color%3A%20%23008080%3B%20%7D%0Acode%20%2Edo%20%7B%20color%3A%20%23969896%3B%20%7D%0Acode%20%2Ean%20%7B%20color%3A%20%23008080%3B%20%7D%0Acode%20%2Ecv%20%7B%20color%3A%20%23008080%3B%20%7D%0Acode%20%2Ein%20%7B%20color%3A%20%23008080%3B%20%7D%0A">
+<style>
+body {
+  box-sizing: border-box;
+  min-width: 200px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 45px;
+  padding-top: 0px;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+<h1 id="forecast-stocks-price">FORECAST STOCKS PRICE</h1>
+<h3 id="acb">ACB</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_acb) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">.ticker</th>
+<th align="left">.index</th>
+<th align="right">.value</th>
+<th align="right">.low</th>
+<th align="right">.high</th>
+<th align="left">.model_desc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">acb</td>
+<td align="left">2021-07-03</td>
+<td align="right">38.58350</td>
+<td align="right">28.52614</td>
+<td align="right">48.64087</td>
+<td align="left">ARIMA(3,1,3)(2,0,2)[5] WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">acb</td>
+<td align="left">2021-07-04</td>
+<td align="right">38.81904</td>
+<td align="right">28.76167</td>
+<td align="right">48.87641</td>
+<td align="left">ARIMA(3,1,3)(2,0,2)[5] WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">acb</td>
+<td align="left">2021-07-05</td>
+<td align="right">39.04480</td>
+<td align="right">28.98743</td>
+<td align="right">49.10216</td>
+<td align="left">ARIMA(3,1,3)(2,0,2)[5] WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">acb</td>
+<td align="left">2021-07-06</td>
+<td align="right">39.25474</td>
+<td align="right">29.19737</td>
+<td align="right">49.31211</td>
+<td align="left">ARIMA(3,1,3)(2,0,2)[5] WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">acb</td>
+<td align="left">2021-07-07</td>
+<td align="right">39.49146</td>
+<td align="right">29.43409</td>
+<td align="right">49.54882</td>
+<td align="left">ARIMA(3,1,3)(2,0,2)[5] WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">acb</td>
+<td align="left">2021-07-08</td>
+<td align="right">39.72576</td>
+<td align="right">29.66839</td>
+<td align="right">49.78312</td>
+<td align="left">ARIMA(3,1,3)(2,0,2)[5] WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">acb</td>
+<td align="left">2021-07-09</td>
+<td align="right">39.95923</td>
+<td align="right">29.90186</td>
+<td align="right">50.01660</td>
+<td align="left">ARIMA(3,1,3)(2,0,2)[5] WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">acb</td>
+<td align="left">2021-07-10</td>
+<td align="right">40.18640</td>
+<td align="right">30.12904</td>
+<td align="right">50.24377</td>
+<td align="left">ARIMA(3,1,3)(2,0,2)[5] WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">acb</td>
+<td align="left">2021-07-11</td>
+<td align="right">40.40376</td>
+<td align="right">30.34639</td>
+<td align="right">50.46112</td>
+<td align="left">ARIMA(3,1,3)(2,0,2)[5] WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">acb</td>
+<td align="left">2021-07-12</td>
+<td align="right">40.63786</td>
+<td align="right">30.58050</td>
+<td align="right">50.69523</td>
+<td align="left">ARIMA(3,1,3)(2,0,2)[5] WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">acb</td>
+<td align="left">2021-07-13</td>
+<td align="right">40.87043</td>
+<td align="right">30.81307</td>
+<td align="right">50.92780</td>
+<td align="left">ARIMA(3,1,3)(2,0,2)[5] WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">acb</td>
+<td align="left">2021-07-14</td>
+<td align="right">41.10250</td>
+<td align="right">31.04513</td>
+<td align="right">51.15987</td>
+<td align="left">ARIMA(3,1,3)(2,0,2)[5] WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">acb</td>
+<td align="left">2021-07-15</td>
+<td align="right">41.33062</td>
+<td align="right">31.27326</td>
+<td align="right">51.38799</td>
+<td align="left">ARIMA(3,1,3)(2,0,2)[5] WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">acb</td>
+<td align="left">2021-07-16</td>
+<td align="right">41.55260</td>
+<td align="right">31.49524</td>
+<td align="right">51.60997</td>
+<td align="left">ARIMA(3,1,3)(2,0,2)[5] WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">acb</td>
+<td align="left">2021-07-17</td>
+<td align="right">41.78506</td>
+<td align="right">31.72770</td>
+<td align="right">51.84243</td>
+<td align="left">ARIMA(3,1,3)(2,0,2)[5] WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">acb</td>
+<td align="left">2021-07-18</td>
+<td align="right">42.01656</td>
+<td align="right">31.95920</td>
+<td align="right">52.07393</td>
+<td align="left">ARIMA(3,1,3)(2,0,2)[5] WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bid">BID</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_bid) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">.ticker</th>
+<th align="left">.index</th>
+<th align="right">.value</th>
+<th align="right">.low</th>
+<th align="right">.high</th>
+<th align="left">.model_desc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">bid</td>
+<td align="left">2021-07-03</td>
+<td align="right">43.38223</td>
+<td align="right">38.67480</td>
+<td align="right">48.08967</td>
+<td align="left">PROPHET</td>
+</tr>
+<tr class="even">
+<td align="left">bid</td>
+<td align="left">2021-07-04</td>
+<td align="right">43.36546</td>
+<td align="right">38.65802</td>
+<td align="right">48.07290</td>
+<td align="left">PROPHET</td>
+</tr>
+<tr class="odd">
+<td align="left">bid</td>
+<td align="left">2021-07-05</td>
+<td align="right">41.80489</td>
+<td align="right">37.09745</td>
+<td align="right">46.51232</td>
+<td align="left">PROPHET</td>
+</tr>
+<tr class="even">
+<td align="left">bid</td>
+<td align="left">2021-07-06</td>
+<td align="right">41.83207</td>
+<td align="right">37.12464</td>
+<td align="right">46.53951</td>
+<td align="left">PROPHET</td>
+</tr>
+<tr class="odd">
+<td align="left">bid</td>
+<td align="left">2021-07-07</td>
+<td align="right">41.85859</td>
+<td align="right">37.15115</td>
+<td align="right">46.56603</td>
+<td align="left">PROPHET</td>
+</tr>
+<tr class="even">
+<td align="left">bid</td>
+<td align="left">2021-07-08</td>
+<td align="right">41.90891</td>
+<td align="right">37.20148</td>
+<td align="right">46.61635</td>
+<td align="left">PROPHET</td>
+</tr>
+<tr class="odd">
+<td align="left">bid</td>
+<td align="left">2021-07-09</td>
+<td align="right">41.93361</td>
+<td align="right">37.22617</td>
+<td align="right">46.64104</td>
+<td align="left">PROPHET</td>
+</tr>
+<tr class="even">
+<td align="left">bid</td>
+<td align="left">2021-07-10</td>
+<td align="right">43.40987</td>
+<td align="right">38.70243</td>
+<td align="right">48.11731</td>
+<td align="left">PROPHET</td>
+</tr>
+<tr class="odd">
+<td align="left">bid</td>
+<td align="left">2021-07-11</td>
+<td align="right">43.43841</td>
+<td align="right">38.73097</td>
+<td align="right">48.14584</td>
+<td align="left">PROPHET</td>
+</tr>
+<tr class="even">
+<td align="left">bid</td>
+<td align="left">2021-07-12</td>
+<td align="right">41.92050</td>
+<td align="right">37.21306</td>
+<td align="right">46.62793</td>
+<td align="left">PROPHET</td>
+</tr>
+<tr class="odd">
+<td align="left">bid</td>
+<td align="left">2021-07-13</td>
+<td align="right">41.98691</td>
+<td align="right">37.27948</td>
+<td align="right">46.69435</td>
+<td align="left">PROPHET</td>
+</tr>
+<tr class="even">
+<td align="left">bid</td>
+<td align="left">2021-07-14</td>
+<td align="right">42.04851</td>
+<td align="right">37.34108</td>
+<td align="right">46.75595</td>
+<td align="left">PROPHET</td>
+</tr>
+<tr class="odd">
+<td align="left">bid</td>
+<td align="left">2021-07-15</td>
+<td align="right">42.12916</td>
+<td align="right">37.42172</td>
+<td align="right">46.83660</td>
+<td align="left">PROPHET</td>
+</tr>
+<tr class="even">
+<td align="left">bid</td>
+<td align="left">2021-07-16</td>
+<td align="right">42.17888</td>
+<td align="right">37.47145</td>
+<td align="right">46.88632</td>
+<td align="left">PROPHET</td>
+</tr>
+<tr class="odd">
+<td align="left">bid</td>
+<td align="left">2021-07-17</td>
+<td align="right">43.67449</td>
+<td align="right">38.96706</td>
+<td align="right">48.38193</td>
+<td align="left">PROPHET</td>
+</tr>
+<tr class="even">
+<td align="left">bid</td>
+<td align="left">2021-07-18</td>
+<td align="right">43.71641</td>
+<td align="right">39.00898</td>
+<td align="right">48.42385</td>
+<td align="left">PROPHET</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bvh">BVH</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_bvh) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">.ticker</th>
+<th align="left">.index</th>
+<th align="right">.value</th>
+<th align="right">.low</th>
+<th align="right">.high</th>
+<th align="left">.model_desc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">bvh</td>
+<td align="left">2021-07-03</td>
+<td align="right">57.98307</td>
+<td align="right">51.28149</td>
+<td align="right">64.68465</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="even">
+<td align="left">bvh</td>
+<td align="left">2021-07-04</td>
+<td align="right">58.02428</td>
+<td align="right">51.32270</td>
+<td align="right">64.72586</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="odd">
+<td align="left">bvh</td>
+<td align="left">2021-07-05</td>
+<td align="right">58.04736</td>
+<td align="right">51.34578</td>
+<td align="right">64.74894</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="even">
+<td align="left">bvh</td>
+<td align="left">2021-07-06</td>
+<td align="right">58.16550</td>
+<td align="right">51.46393</td>
+<td align="right">64.86708</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="odd">
+<td align="left">bvh</td>
+<td align="left">2021-07-07</td>
+<td align="right">58.09667</td>
+<td align="right">51.39509</td>
+<td align="right">64.79825</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="even">
+<td align="left">bvh</td>
+<td align="left">2021-07-08</td>
+<td align="right">58.14672</td>
+<td align="right">51.44515</td>
+<td align="right">64.84830</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="odd">
+<td align="left">bvh</td>
+<td align="left">2021-07-09</td>
+<td align="right">58.34288</td>
+<td align="right">51.64130</td>
+<td align="right">65.04445</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="even">
+<td align="left">bvh</td>
+<td align="left">2021-07-10</td>
+<td align="right">58.25523</td>
+<td align="right">51.55365</td>
+<td align="right">64.95681</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="odd">
+<td align="left">bvh</td>
+<td align="left">2021-07-11</td>
+<td align="right">58.24934</td>
+<td align="right">51.54776</td>
+<td align="right">64.95092</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="even">
+<td align="left">bvh</td>
+<td align="left">2021-07-12</td>
+<td align="right">58.29499</td>
+<td align="right">51.59342</td>
+<td align="right">64.99657</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="odd">
+<td align="left">bvh</td>
+<td align="left">2021-07-13</td>
+<td align="right">58.30223</td>
+<td align="right">51.60066</td>
+<td align="right">65.00381</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="even">
+<td align="left">bvh</td>
+<td align="left">2021-07-14</td>
+<td align="right">58.14105</td>
+<td align="right">51.43947</td>
+<td align="right">64.84263</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="odd">
+<td align="left">bvh</td>
+<td align="left">2021-07-15</td>
+<td align="right">57.91556</td>
+<td align="right">51.21398</td>
+<td align="right">64.61713</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="even">
+<td align="left">bvh</td>
+<td align="left">2021-07-16</td>
+<td align="right">57.96539</td>
+<td align="right">51.26381</td>
+<td align="right">64.66696</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="odd">
+<td align="left">bvh</td>
+<td align="left">2021-07-17</td>
+<td align="right">57.99601</td>
+<td align="right">51.29444</td>
+<td align="right">64.69759</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="even">
+<td align="left">bvh</td>
+<td align="left">2021-07-18</td>
+<td align="right">58.12067</td>
+<td align="right">51.41909</td>
+<td align="right">64.82224</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dhg">DHG</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_dhg) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">.ticker</th>
+<th align="left">.index</th>
+<th align="right">.value</th>
+<th align="right">.low</th>
+<th align="right">.high</th>
+<th align="left">.model_desc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">dhg</td>
+<td align="left">2021-07-03</td>
+<td align="right">99.39345</td>
+<td align="right">92.34294</td>
+<td align="right">106.4440</td>
+<td align="left">LM</td>
+</tr>
+<tr class="even">
+<td align="left">dhg</td>
+<td align="left">2021-07-04</td>
+<td align="right">99.41264</td>
+<td align="right">92.36212</td>
+<td align="right">106.4632</td>
+<td align="left">LM</td>
+</tr>
+<tr class="odd">
+<td align="left">dhg</td>
+<td align="left">2021-07-05</td>
+<td align="right">99.43183</td>
+<td align="right">92.38131</td>
+<td align="right">106.4823</td>
+<td align="left">LM</td>
+</tr>
+<tr class="even">
+<td align="left">dhg</td>
+<td align="left">2021-07-06</td>
+<td align="right">99.45101</td>
+<td align="right">92.40050</td>
+<td align="right">106.5015</td>
+<td align="left">LM</td>
+</tr>
+<tr class="odd">
+<td align="left">dhg</td>
+<td align="left">2021-07-07</td>
+<td align="right">99.47020</td>
+<td align="right">92.41969</td>
+<td align="right">106.5207</td>
+<td align="left">LM</td>
+</tr>
+<tr class="even">
+<td align="left">dhg</td>
+<td align="left">2021-07-08</td>
+<td align="right">99.48939</td>
+<td align="right">92.43888</td>
+<td align="right">106.5399</td>
+<td align="left">LM</td>
+</tr>
+<tr class="odd">
+<td align="left">dhg</td>
+<td align="left">2021-07-09</td>
+<td align="right">99.50858</td>
+<td align="right">92.45806</td>
+<td align="right">106.5591</td>
+<td align="left">LM</td>
+</tr>
+<tr class="even">
+<td align="left">dhg</td>
+<td align="left">2021-07-10</td>
+<td align="right">99.52777</td>
+<td align="right">92.47725</td>
+<td align="right">106.5783</td>
+<td align="left">LM</td>
+</tr>
+<tr class="odd">
+<td align="left">dhg</td>
+<td align="left">2021-07-11</td>
+<td align="right">99.54696</td>
+<td align="right">92.49644</td>
+<td align="right">106.5975</td>
+<td align="left">LM</td>
+</tr>
+<tr class="even">
+<td align="left">dhg</td>
+<td align="left">2021-07-12</td>
+<td align="right">99.56614</td>
+<td align="right">92.51563</td>
+<td align="right">106.6167</td>
+<td align="left">LM</td>
+</tr>
+<tr class="odd">
+<td align="left">dhg</td>
+<td align="left">2021-07-13</td>
+<td align="right">99.58533</td>
+<td align="right">92.53482</td>
+<td align="right">106.6358</td>
+<td align="left">LM</td>
+</tr>
+<tr class="even">
+<td align="left">dhg</td>
+<td align="left">2021-07-14</td>
+<td align="right">99.60452</td>
+<td align="right">92.55400</td>
+<td align="right">106.6550</td>
+<td align="left">LM</td>
+</tr>
+<tr class="odd">
+<td align="left">dhg</td>
+<td align="left">2021-07-15</td>
+<td align="right">99.62371</td>
+<td align="right">92.57319</td>
+<td align="right">106.6742</td>
+<td align="left">LM</td>
+</tr>
+<tr class="even">
+<td align="left">dhg</td>
+<td align="left">2021-07-16</td>
+<td align="right">99.64290</td>
+<td align="right">92.59238</td>
+<td align="right">106.6934</td>
+<td align="left">LM</td>
+</tr>
+<tr class="odd">
+<td align="left">dhg</td>
+<td align="left">2021-07-17</td>
+<td align="right">99.66208</td>
+<td align="right">92.61157</td>
+<td align="right">106.7126</td>
+<td align="left">LM</td>
+</tr>
+<tr class="even">
+<td align="left">dhg</td>
+<td align="left">2021-07-18</td>
+<td align="right">99.68127</td>
+<td align="right">92.63076</td>
+<td align="right">106.7318</td>
+<td align="left">LM</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fpt">FPT</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_fpt) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">.ticker</th>
+<th align="left">.index</th>
+<th align="right">.value</th>
+<th align="right">.low</th>
+<th align="right">.high</th>
+<th align="left">.model_desc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">fpt</td>
+<td align="left">2021-07-03</td>
+<td align="right">87.59973</td>
+<td align="right">78.39839</td>
+<td align="right">96.80108</td>
+<td align="left">ARIMA(3,2,0)(2,0,2)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">fpt</td>
+<td align="left">2021-07-04</td>
+<td align="right">87.87702</td>
+<td align="right">78.67567</td>
+<td align="right">97.07836</td>
+<td align="left">ARIMA(3,2,0)(2,0,2)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">fpt</td>
+<td align="left">2021-07-05</td>
+<td align="right">88.06459</td>
+<td align="right">78.86324</td>
+<td align="right">97.26593</td>
+<td align="left">ARIMA(3,2,0)(2,0,2)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">fpt</td>
+<td align="left">2021-07-06</td>
+<td align="right">88.26557</td>
+<td align="right">79.06422</td>
+<td align="right">97.46691</td>
+<td align="left">ARIMA(3,2,0)(2,0,2)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">fpt</td>
+<td align="left">2021-07-07</td>
+<td align="right">88.50286</td>
+<td align="right">79.30152</td>
+<td align="right">97.70421</td>
+<td align="left">ARIMA(3,2,0)(2,0,2)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">fpt</td>
+<td align="left">2021-07-08</td>
+<td align="right">88.74571</td>
+<td align="right">79.54437</td>
+<td align="right">97.94706</td>
+<td align="left">ARIMA(3,2,0)(2,0,2)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">fpt</td>
+<td align="left">2021-07-09</td>
+<td align="right">88.98343</td>
+<td align="right">79.78209</td>
+<td align="right">98.18478</td>
+<td align="left">ARIMA(3,2,0)(2,0,2)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">fpt</td>
+<td align="left">2021-07-10</td>
+<td align="right">89.21078</td>
+<td align="right">80.00944</td>
+<td align="right">98.41213</td>
+<td align="left">ARIMA(3,2,0)(2,0,2)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">fpt</td>
+<td align="left">2021-07-11</td>
+<td align="right">89.44165</td>
+<td align="right">80.24030</td>
+<td align="right">98.64299</td>
+<td align="left">ARIMA(3,2,0)(2,0,2)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">fpt</td>
+<td align="left">2021-07-12</td>
+<td align="right">89.67071</td>
+<td align="right">80.46937</td>
+<td align="right">98.87206</td>
+<td align="left">ARIMA(3,2,0)(2,0,2)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">fpt</td>
+<td align="left">2021-07-13</td>
+<td align="right">89.90085</td>
+<td align="right">80.69950</td>
+<td align="right">99.10219</td>
+<td align="left">ARIMA(3,2,0)(2,0,2)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">fpt</td>
+<td align="left">2021-07-14</td>
+<td align="right">90.13051</td>
+<td align="right">80.92917</td>
+<td align="right">99.33186</td>
+<td align="left">ARIMA(3,2,0)(2,0,2)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">fpt</td>
+<td align="left">2021-07-15</td>
+<td align="right">90.36344</td>
+<td align="right">81.16210</td>
+<td align="right">99.56479</td>
+<td align="left">ARIMA(3,2,0)(2,0,2)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">fpt</td>
+<td align="left">2021-07-16</td>
+<td align="right">90.59637</td>
+<td align="right">81.39502</td>
+<td align="right">99.79771</td>
+<td align="left">ARIMA(3,2,0)(2,0,2)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">fpt</td>
+<td align="left">2021-07-17</td>
+<td align="right">90.82650</td>
+<td align="right">81.62516</td>
+<td align="right">100.02785</td>
+<td align="left">ARIMA(3,2,0)(2,0,2)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">fpt</td>
+<td align="left">2021-07-18</td>
+<td align="right">91.05654</td>
+<td align="right">81.85519</td>
+<td align="right">100.25788</td>
+<td align="left">ARIMA(3,2,0)(2,0,2)[5] W/ XGBOOST ERRORS</td>
+</tr>
+</tbody>
+</table>
+<h3 id="hbc">HBC</h3>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_hbc) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">.ticker</th>
+<th align="left">.index</th>
+<th align="right">.value</th>
+<th align="right">.low</th>
+<th align="right">.high</th>
+<th align="left">.model_desc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">hbc</td>
+<td align="left">2021-07-03</td>
+<td align="right">16.16722</td>
+<td align="right">13.91075</td>
+<td align="right">18.42368</td>
+<td align="left">ARIMA(0,1,1) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">hbc</td>
+<td align="left">2021-07-04</td>
+<td align="right">16.17060</td>
+<td align="right">13.91414</td>
+<td align="right">18.42707</td>
+<td align="left">ARIMA(0,1,1) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">hbc</td>
+<td align="left">2021-07-05</td>
+<td align="right">16.18902</td>
+<td align="right">13.93255</td>
+<td align="right">18.44549</td>
+<td align="left">ARIMA(0,1,1) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">hbc</td>
+<td align="left">2021-07-06</td>
+<td align="right">16.20302</td>
+<td align="right">13.94655</td>
+<td align="right">18.45949</td>
+<td align="left">ARIMA(0,1,1) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">hbc</td>
+<td align="left">2021-07-07</td>
+<td align="right">16.20208</td>
+<td align="right">13.94562</td>
+<td align="right">18.45855</td>
+<td align="left">ARIMA(0,1,1) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">hbc</td>
+<td align="left">2021-07-08</td>
+<td align="right">16.19100</td>
+<td align="right">13.93453</td>
+<td align="right">18.44747</td>
+<td align="left">ARIMA(0,1,1) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">hbc</td>
+<td align="left">2021-07-09</td>
+<td align="right">16.20141</td>
+<td align="right">13.94494</td>
+<td align="right">18.45787</td>
+<td align="left">ARIMA(0,1,1) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">hbc</td>
+<td align="left">2021-07-10</td>
+<td align="right">16.21329</td>
+<td align="right">13.95682</td>
+<td align="right">18.46976</td>
+<td align="left">ARIMA(0,1,1) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">hbc</td>
+<td align="left">2021-07-11</td>
+<td align="right">16.20990</td>
+<td align="right">13.95343</td>
+<td align="right">18.46637</td>
+<td align="left">ARIMA(0,1,1) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">hbc</td>
+<td align="left">2021-07-12</td>
+<td align="right">16.21569</td>
+<td align="right">13.95922</td>
+<td align="right">18.47216</td>
+<td align="left">ARIMA(0,1,1) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">hbc</td>
+<td align="left">2021-07-13</td>
+<td align="right">16.22023</td>
+<td align="right">13.96376</td>
+<td align="right">18.47670</td>
+<td align="left">ARIMA(0,1,1) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">hbc</td>
+<td align="left">2021-07-14</td>
+<td align="right">16.22573</td>
+<td align="right">13.96926</td>
+<td align="right">18.48219</td>
+<td align="left">ARIMA(0,1,1) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">hbc</td>
+<td align="left">2021-07-15</td>
+<td align="right">16.22573</td>
+<td align="right">13.96926</td>
+<td align="right">18.48219</td>
+<td align="left">ARIMA(0,1,1) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">hbc</td>
+<td align="left">2021-07-16</td>
+<td align="right">16.21741</td>
+<td align="right">13.96094</td>
+<td align="right">18.47388</td>
+<td align="left">ARIMA(0,1,1) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">hbc</td>
+<td align="left">2021-07-17</td>
+<td align="right">16.22169</td>
+<td align="right">13.96522</td>
+<td align="right">18.47816</td>
+<td align="left">ARIMA(0,1,1) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">hbc</td>
+<td align="left">2021-07-18</td>
+<td align="right">16.22951</td>
+<td align="right">13.97304</td>
+<td align="right">18.48598</td>
+<td align="left">ARIMA(0,1,1) W/ XGBOOST ERRORS</td>
+</tr>
+</tbody>
+</table>
+<h3 id="hcm">HCM</h3>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_hcm) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">.ticker</th>
+<th align="left">.index</th>
+<th align="right">.value</th>
+<th align="right">.low</th>
+<th align="right">.high</th>
+<th align="left">.model_desc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">hcm</td>
+<td align="left">2021-07-03</td>
+<td align="right">49.06456</td>
+<td align="right">36.93907</td>
+<td align="right">61.19006</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="even">
+<td align="left">hcm</td>
+<td align="left">2021-07-04</td>
+<td align="right">49.22204</td>
+<td align="right">37.09654</td>
+<td align="right">61.34753</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="odd">
+<td align="left">hcm</td>
+<td align="left">2021-07-05</td>
+<td align="right">49.26245</td>
+<td align="right">37.13696</td>
+<td align="right">61.38795</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="even">
+<td align="left">hcm</td>
+<td align="left">2021-07-06</td>
+<td align="right">49.35356</td>
+<td align="right">37.22807</td>
+<td align="right">61.47906</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="odd">
+<td align="left">hcm</td>
+<td align="left">2021-07-07</td>
+<td align="right">49.36311</td>
+<td align="right">37.23762</td>
+<td align="right">61.48861</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="even">
+<td align="left">hcm</td>
+<td align="left">2021-07-08</td>
+<td align="right">49.43126</td>
+<td align="right">37.30577</td>
+<td align="right">61.55676</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="odd">
+<td align="left">hcm</td>
+<td align="left">2021-07-09</td>
+<td align="right">49.49293</td>
+<td align="right">37.36744</td>
+<td align="right">61.61843</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="even">
+<td align="left">hcm</td>
+<td align="left">2021-07-10</td>
+<td align="right">49.52028</td>
+<td align="right">37.39478</td>
+<td align="right">61.64577</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="odd">
+<td align="left">hcm</td>
+<td align="left">2021-07-11</td>
+<td align="right">49.48465</td>
+<td align="right">37.35915</td>
+<td align="right">61.61014</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="even">
+<td align="left">hcm</td>
+<td align="left">2021-07-12</td>
+<td align="right">49.50795</td>
+<td align="right">37.38246</td>
+<td align="right">61.63345</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="odd">
+<td align="left">hcm</td>
+<td align="left">2021-07-13</td>
+<td align="right">49.45194</td>
+<td align="right">37.32645</td>
+<td align="right">61.57744</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="even">
+<td align="left">hcm</td>
+<td align="left">2021-07-14</td>
+<td align="right">49.50855</td>
+<td align="right">37.38306</td>
+<td align="right">61.63405</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="odd">
+<td align="left">hcm</td>
+<td align="left">2021-07-15</td>
+<td align="right">49.43706</td>
+<td align="right">37.31157</td>
+<td align="right">61.56256</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="even">
+<td align="left">hcm</td>
+<td align="left">2021-07-16</td>
+<td align="right">49.55108</td>
+<td align="right">37.42559</td>
+<td align="right">61.67658</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="odd">
+<td align="left">hcm</td>
+<td align="left">2021-07-17</td>
+<td align="right">49.55246</td>
+<td align="right">37.42697</td>
+<td align="right">61.67796</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="even">
+<td align="left">hcm</td>
+<td align="left">2021-07-18</td>
+<td align="right">49.60946</td>
+<td align="right">37.48397</td>
+<td align="right">61.73496</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="hdg">HDG</h3>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_hdg) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">.ticker</th>
+<th align="left">.index</th>
+<th align="right">.value</th>
+<th align="right">.low</th>
+<th align="right">.high</th>
+<th align="left">.model_desc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">hdg</td>
+<td align="left">2021-07-03</td>
+<td align="right">43.41871</td>
+<td align="right">31.52151</td>
+<td align="right">55.31591</td>
+<td align="left">ARIMA(2,1,2)(2,0,1)[5] WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">hdg</td>
+<td align="left">2021-07-04</td>
+<td align="right">43.44830</td>
+<td align="right">31.55110</td>
+<td align="right">55.34550</td>
+<td align="left">ARIMA(2,1,2)(2,0,1)[5] WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">hdg</td>
+<td align="left">2021-07-05</td>
+<td align="right">43.47604</td>
+<td align="right">31.57883</td>
+<td align="right">55.37324</td>
+<td align="left">ARIMA(2,1,2)(2,0,1)[5] WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">hdg</td>
+<td align="left">2021-07-06</td>
+<td align="right">43.46169</td>
+<td align="right">31.56449</td>
+<td align="right">55.35889</td>
+<td align="left">ARIMA(2,1,2)(2,0,1)[5] WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">hdg</td>
+<td align="left">2021-07-07</td>
+<td align="right">43.47792</td>
+<td align="right">31.58072</td>
+<td align="right">55.37512</td>
+<td align="left">ARIMA(2,1,2)(2,0,1)[5] WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">hdg</td>
+<td align="left">2021-07-08</td>
+<td align="right">43.51006</td>
+<td align="right">31.61286</td>
+<td align="right">55.40726</td>
+<td align="left">ARIMA(2,1,2)(2,0,1)[5] WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">hdg</td>
+<td align="left">2021-07-09</td>
+<td align="right">43.50441</td>
+<td align="right">31.60721</td>
+<td align="right">55.40161</td>
+<td align="left">ARIMA(2,1,2)(2,0,1)[5] WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">hdg</td>
+<td align="left">2021-07-10</td>
+<td align="right">43.51079</td>
+<td align="right">31.61359</td>
+<td align="right">55.40799</td>
+<td align="left">ARIMA(2,1,2)(2,0,1)[5] WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">hdg</td>
+<td align="left">2021-07-11</td>
+<td align="right">43.54207</td>
+<td align="right">31.64487</td>
+<td align="right">55.43928</td>
+<td align="left">ARIMA(2,1,2)(2,0,1)[5] WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">hdg</td>
+<td align="left">2021-07-12</td>
+<td align="right">43.54567</td>
+<td align="right">31.64846</td>
+<td align="right">55.44287</td>
+<td align="left">ARIMA(2,1,2)(2,0,1)[5] WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">hdg</td>
+<td align="left">2021-07-13</td>
+<td align="right">43.54644</td>
+<td align="right">31.64924</td>
+<td align="right">55.44364</td>
+<td align="left">ARIMA(2,1,2)(2,0,1)[5] WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">hdg</td>
+<td align="left">2021-07-14</td>
+<td align="right">43.57346</td>
+<td align="right">31.67626</td>
+<td align="right">55.47067</td>
+<td align="left">ARIMA(2,1,2)(2,0,1)[5] WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">hdg</td>
+<td align="left">2021-07-15</td>
+<td align="right">43.58491</td>
+<td align="right">31.68770</td>
+<td align="right">55.48211</td>
+<td align="left">ARIMA(2,1,2)(2,0,1)[5] WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">hdg</td>
+<td align="left">2021-07-16</td>
+<td align="right">43.58402</td>
+<td align="right">31.68682</td>
+<td align="right">55.48122</td>
+<td align="left">ARIMA(2,1,2)(2,0,1)[5] WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">hdg</td>
+<td align="left">2021-07-17</td>
+<td align="right">43.60529</td>
+<td align="right">31.70809</td>
+<td align="right">55.50250</td>
+<td align="left">ARIMA(2,1,2)(2,0,1)[5] WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">hdg</td>
+<td align="left">2021-07-18</td>
+<td align="right">43.62215</td>
+<td align="right">31.72495</td>
+<td align="right">55.51935</td>
+<td align="left">ARIMA(2,1,2)(2,0,1)[5] WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+</tbody>
+</table>
+<h3 id="hpg">HPG</h3>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_hpg) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">.ticker</th>
+<th align="left">.index</th>
+<th align="right">.value</th>
+<th align="right">.low</th>
+<th align="right">.high</th>
+<th align="left">.model_desc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">hpg</td>
+<td align="left">2021-07-03</td>
+<td align="right">52.29437</td>
+<td align="right">43.13505</td>
+<td align="right">61.45368</td>
+<td align="left">ARIMA(4,2,3)</td>
+</tr>
+<tr class="even">
+<td align="left">hpg</td>
+<td align="left">2021-07-04</td>
+<td align="right">52.40962</td>
+<td align="right">43.25031</td>
+<td align="right">61.56894</td>
+<td align="left">ARIMA(4,2,3)</td>
+</tr>
+<tr class="odd">
+<td align="left">hpg</td>
+<td align="left">2021-07-05</td>
+<td align="right">52.41851</td>
+<td align="right">43.25919</td>
+<td align="right">61.57782</td>
+<td align="left">ARIMA(4,2,3)</td>
+</tr>
+<tr class="even">
+<td align="left">hpg</td>
+<td align="left">2021-07-06</td>
+<td align="right">52.65478</td>
+<td align="right">43.49546</td>
+<td align="right">61.81409</td>
+<td align="left">ARIMA(4,2,3)</td>
+</tr>
+<tr class="odd">
+<td align="left">hpg</td>
+<td align="left">2021-07-07</td>
+<td align="right">52.95170</td>
+<td align="right">43.79239</td>
+<td align="right">62.11102</td>
+<td align="left">ARIMA(4,2,3)</td>
+</tr>
+<tr class="even">
+<td align="left">hpg</td>
+<td align="left">2021-07-08</td>
+<td align="right">53.01676</td>
+<td align="right">43.85745</td>
+<td align="right">62.17608</td>
+<td align="left">ARIMA(4,2,3)</td>
+</tr>
+<tr class="odd">
+<td align="left">hpg</td>
+<td align="left">2021-07-09</td>
+<td align="right">53.06633</td>
+<td align="right">43.90701</td>
+<td align="right">62.22565</td>
+<td align="left">ARIMA(4,2,3)</td>
+</tr>
+<tr class="even">
+<td align="left">hpg</td>
+<td align="left">2021-07-10</td>
+<td align="right">53.34367</td>
+<td align="right">44.18436</td>
+<td align="right">62.50299</td>
+<td align="left">ARIMA(4,2,3)</td>
+</tr>
+<tr class="odd">
+<td align="left">hpg</td>
+<td align="left">2021-07-11</td>
+<td align="right">53.59347</td>
+<td align="right">44.43416</td>
+<td align="right">62.75279</td>
+<td align="left">ARIMA(4,2,3)</td>
+</tr>
+<tr class="even">
+<td align="left">hpg</td>
+<td align="left">2021-07-12</td>
+<td align="right">53.62750</td>
+<td align="right">44.46819</td>
+<td align="right">62.78682</td>
+<td align="left">ARIMA(4,2,3)</td>
+</tr>
+<tr class="odd">
+<td align="left">hpg</td>
+<td align="left">2021-07-13</td>
+<td align="right">53.72858</td>
+<td align="right">44.56926</td>
+<td align="right">62.88789</td>
+<td align="left">ARIMA(4,2,3)</td>
+</tr>
+<tr class="even">
+<td align="left">hpg</td>
+<td align="left">2021-07-14</td>
+<td align="right">54.02639</td>
+<td align="right">44.86708</td>
+<td align="right">63.18571</td>
+<td align="left">ARIMA(4,2,3)</td>
+</tr>
+<tr class="odd">
+<td align="left">hpg</td>
+<td align="left">2021-07-15</td>
+<td align="right">54.22240</td>
+<td align="right">45.06309</td>
+<td align="right">63.38172</td>
+<td align="left">ARIMA(4,2,3)</td>
+</tr>
+<tr class="even">
+<td align="left">hpg</td>
+<td align="left">2021-07-16</td>
+<td align="right">54.24663</td>
+<td align="right">45.08732</td>
+<td align="right">63.40595</td>
+<td align="left">ARIMA(4,2,3)</td>
+</tr>
+<tr class="odd">
+<td align="left">hpg</td>
+<td align="left">2021-07-17</td>
+<td align="right">54.40171</td>
+<td align="right">45.24239</td>
+<td align="right">63.56102</td>
+<td align="left">ARIMA(4,2,3)</td>
+</tr>
+<tr class="even">
+<td align="left">hpg</td>
+<td align="left">2021-07-18</td>
+<td align="right">54.69893</td>
+<td align="right">45.53962</td>
+<td align="right">63.85825</td>
+<td align="left">ARIMA(4,2,3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mbb">MBB</h3>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_mbb) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">.ticker</th>
+<th align="left">.index</th>
+<th align="right">.value</th>
+<th align="right">.low</th>
+<th align="right">.high</th>
+<th align="left">.model_desc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">mbb</td>
+<td align="left">2021-07-03</td>
+<td align="right">42.99019</td>
+<td align="right">31.03497</td>
+<td align="right">54.94541</td>
+<td align="left">ETS(M,A,M)</td>
+</tr>
+<tr class="even">
+<td align="left">mbb</td>
+<td align="left">2021-07-04</td>
+<td align="right">43.06775</td>
+<td align="right">31.11253</td>
+<td align="right">55.02298</td>
+<td align="left">ETS(M,A,M)</td>
+</tr>
+<tr class="odd">
+<td align="left">mbb</td>
+<td align="left">2021-07-05</td>
+<td align="right">43.14037</td>
+<td align="right">31.18515</td>
+<td align="right">55.09559</td>
+<td align="left">ETS(M,A,M)</td>
+</tr>
+<tr class="even">
+<td align="left">mbb</td>
+<td align="left">2021-07-06</td>
+<td align="right">43.21181</td>
+<td align="right">31.25658</td>
+<td align="right">55.16703</td>
+<td align="left">ETS(M,A,M)</td>
+</tr>
+<tr class="odd">
+<td align="left">mbb</td>
+<td align="left">2021-07-07</td>
+<td align="right">43.18417</td>
+<td align="right">31.22894</td>
+<td align="right">55.13939</td>
+<td align="left">ETS(M,A,M)</td>
+</tr>
+<tr class="even">
+<td align="left">mbb</td>
+<td align="left">2021-07-08</td>
+<td align="right">43.33494</td>
+<td align="right">31.37971</td>
+<td align="right">55.29016</td>
+<td align="left">ETS(M,A,M)</td>
+</tr>
+<tr class="odd">
+<td align="left">mbb</td>
+<td align="left">2021-07-09</td>
+<td align="right">43.56237</td>
+<td align="right">31.60714</td>
+<td align="right">55.51759</td>
+<td align="left">ETS(M,A,M)</td>
+</tr>
+<tr class="even">
+<td align="left">mbb</td>
+<td align="left">2021-07-10</td>
+<td align="right">43.54783</td>
+<td align="right">31.59261</td>
+<td align="right">55.50305</td>
+<td align="left">ETS(M,A,M)</td>
+</tr>
+<tr class="odd">
+<td align="left">mbb</td>
+<td align="left">2021-07-11</td>
+<td align="right">43.77094</td>
+<td align="right">31.81571</td>
+<td align="right">55.72616</td>
+<td align="left">ETS(M,A,M)</td>
+</tr>
+<tr class="even">
+<td align="left">mbb</td>
+<td align="left">2021-07-12</td>
+<td align="right">44.02621</td>
+<td align="right">32.07099</td>
+<td align="right">55.98143</td>
+<td align="left">ETS(M,A,M)</td>
+</tr>
+<tr class="odd">
+<td align="left">mbb</td>
+<td align="left">2021-07-13</td>
+<td align="right">43.99508</td>
+<td align="right">32.03986</td>
+<td align="right">55.95030</td>
+<td align="left">ETS(M,A,M)</td>
+</tr>
+<tr class="even">
+<td align="left">mbb</td>
+<td align="left">2021-07-14</td>
+<td align="right">44.04940</td>
+<td align="right">32.09417</td>
+<td align="right">56.00462</td>
+<td align="left">ETS(M,A,M)</td>
+</tr>
+<tr class="odd">
+<td align="left">mbb</td>
+<td align="left">2021-07-15</td>
+<td align="right">44.08958</td>
+<td align="right">32.13436</td>
+<td align="right">56.04481</td>
+<td align="left">ETS(M,A,M)</td>
+</tr>
+<tr class="even">
+<td align="left">mbb</td>
+<td align="left">2021-07-16</td>
+<td align="right">44.16679</td>
+<td align="right">32.21157</td>
+<td align="right">56.12201</td>
+<td align="left">ETS(M,A,M)</td>
+</tr>
+<tr class="odd">
+<td align="left">mbb</td>
+<td align="left">2021-07-17</td>
+<td align="right">44.23892</td>
+<td align="right">32.28370</td>
+<td align="right">56.19415</td>
+<td align="left">ETS(M,A,M)</td>
+</tr>
+<tr class="even">
+<td align="left">mbb</td>
+<td align="left">2021-07-18</td>
+<td align="right">44.30985</td>
+<td align="right">32.35463</td>
+<td align="right">56.26508</td>
+<td align="left">ETS(M,A,M)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pnj">PNJ</h3>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_pnj) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">.ticker</th>
+<th align="left">.index</th>
+<th align="right">.value</th>
+<th align="right">.low</th>
+<th align="right">.high</th>
+<th align="left">.model_desc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">pnj</td>
+<td align="left">2021-07-03</td>
+<td align="right">99.80332</td>
+<td align="right">95.26742</td>
+<td align="right">104.3392</td>
+<td align="left">ETS(M,A,M)</td>
+</tr>
+<tr class="even">
+<td align="left">pnj</td>
+<td align="left">2021-07-04</td>
+<td align="right">99.79942</td>
+<td align="right">95.26352</td>
+<td align="right">104.3353</td>
+<td align="left">ETS(M,A,M)</td>
+</tr>
+<tr class="odd">
+<td align="left">pnj</td>
+<td align="left">2021-07-05</td>
+<td align="right">99.46078</td>
+<td align="right">94.92488</td>
+<td align="right">103.9967</td>
+<td align="left">ETS(M,A,M)</td>
+</tr>
+<tr class="even">
+<td align="left">pnj</td>
+<td align="left">2021-07-06</td>
+<td align="right">99.58887</td>
+<td align="right">95.05297</td>
+<td align="right">104.1248</td>
+<td align="left">ETS(M,A,M)</td>
+</tr>
+<tr class="odd">
+<td align="left">pnj</td>
+<td align="left">2021-07-07</td>
+<td align="right">99.18761</td>
+<td align="right">94.65172</td>
+<td align="right">103.7235</td>
+<td align="left">ETS(M,A,M)</td>
+</tr>
+<tr class="even">
+<td align="left">pnj</td>
+<td align="left">2021-07-08</td>
+<td align="right">99.71857</td>
+<td align="right">95.18268</td>
+<td align="right">104.2545</td>
+<td align="left">ETS(M,A,M)</td>
+</tr>
+<tr class="odd">
+<td align="left">pnj</td>
+<td align="left">2021-07-09</td>
+<td align="right">100.11041</td>
+<td align="right">95.57451</td>
+<td align="right">104.6463</td>
+<td align="left">ETS(M,A,M)</td>
+</tr>
+<tr class="even">
+<td align="left">pnj</td>
+<td align="left">2021-07-10</td>
+<td align="right">100.47648</td>
+<td align="right">95.94058</td>
+<td align="right">105.0124</td>
+<td align="left">ETS(M,A,M)</td>
+</tr>
+<tr class="odd">
+<td align="left">pnj</td>
+<td align="left">2021-07-11</td>
+<td align="right">101.12846</td>
+<td align="right">96.59257</td>
+<td align="right">105.6644</td>
+<td align="left">ETS(M,A,M)</td>
+</tr>
+<tr class="even">
+<td align="left">pnj</td>
+<td align="left">2021-07-12</td>
+<td align="right">101.46598</td>
+<td align="right">96.93009</td>
+<td align="right">106.0019</td>
+<td align="left">ETS(M,A,M)</td>
+</tr>
+<tr class="odd">
+<td align="left">pnj</td>
+<td align="left">2021-07-13</td>
+<td align="right">101.64248</td>
+<td align="right">97.10658</td>
+<td align="right">106.1784</td>
+<td align="left">ETS(M,A,M)</td>
+</tr>
+<tr class="even">
+<td align="left">pnj</td>
+<td align="left">2021-07-14</td>
+<td align="right">101.87440</td>
+<td align="right">97.33850</td>
+<td align="right">106.4103</td>
+<td align="left">ETS(M,A,M)</td>
+</tr>
+<tr class="odd">
+<td align="left">pnj</td>
+<td align="left">2021-07-15</td>
+<td align="right">101.61205</td>
+<td align="right">97.07616</td>
+<td align="right">106.1479</td>
+<td align="left">ETS(M,A,M)</td>
+</tr>
+<tr class="even">
+<td align="left">pnj</td>
+<td align="left">2021-07-16</td>
+<td align="right">101.60536</td>
+<td align="right">97.06946</td>
+<td align="right">106.1413</td>
+<td align="left">ETS(M,A,M)</td>
+</tr>
+<tr class="odd">
+<td align="left">pnj</td>
+<td align="left">2021-07-17</td>
+<td align="right">101.25788</td>
+<td align="right">96.72199</td>
+<td align="right">105.7938</td>
+<td align="left">ETS(M,A,M)</td>
+</tr>
+<tr class="even">
+<td align="left">pnj</td>
+<td align="left">2021-07-18</td>
+<td align="right">101.38558</td>
+<td align="right">96.84969</td>
+<td align="right">105.9215</td>
+<td align="left">ETS(M,A,M)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ree">REE</h3>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_ree) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">.ticker</th>
+<th align="left">.index</th>
+<th align="right">.value</th>
+<th align="right">.low</th>
+<th align="right">.high</th>
+<th align="left">.model_desc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">ree</td>
+<td align="left">2021-07-03</td>
+<td align="right">56.58600</td>
+<td align="right">52.98387</td>
+<td align="right">60.18813</td>
+<td align="left">ARIMA(0,1,1)(1,0,1)[5] WITH DRIFT</td>
+</tr>
+<tr class="even">
+<td align="left">ree</td>
+<td align="left">2021-07-04</td>
+<td align="right">56.69081</td>
+<td align="right">53.08868</td>
+<td align="right">60.29294</td>
+<td align="left">ARIMA(0,1,1)(1,0,1)[5] WITH DRIFT</td>
+</tr>
+<tr class="odd">
+<td align="left">ree</td>
+<td align="left">2021-07-05</td>
+<td align="right">56.70061</td>
+<td align="right">53.09848</td>
+<td align="right">60.30274</td>
+<td align="left">ARIMA(0,1,1)(1,0,1)[5] WITH DRIFT</td>
+</tr>
+<tr class="even">
+<td align="left">ree</td>
+<td align="left">2021-07-06</td>
+<td align="right">56.65025</td>
+<td align="right">53.04813</td>
+<td align="right">60.25238</td>
+<td align="left">ARIMA(0,1,1)(1,0,1)[5] WITH DRIFT</td>
+</tr>
+<tr class="odd">
+<td align="left">ree</td>
+<td align="left">2021-07-07</td>
+<td align="right">56.66168</td>
+<td align="right">53.05955</td>
+<td align="right">60.26381</td>
+<td align="left">ARIMA(0,1,1)(1,0,1)[5] WITH DRIFT</td>
+</tr>
+<tr class="even">
+<td align="left">ree</td>
+<td align="left">2021-07-08</td>
+<td align="right">56.63369</td>
+<td align="right">53.03156</td>
+<td align="right">60.23582</td>
+<td align="left">ARIMA(0,1,1)(1,0,1)[5] WITH DRIFT</td>
+</tr>
+<tr class="odd">
+<td align="left">ree</td>
+<td align="left">2021-07-09</td>
+<td align="right">56.70715</td>
+<td align="right">53.10502</td>
+<td align="right">60.30928</td>
+<td align="left">ARIMA(0,1,1)(1,0,1)[5] WITH DRIFT</td>
+</tr>
+<tr class="even">
+<td align="left">ree</td>
+<td align="left">2021-07-10</td>
+<td align="right">56.71731</td>
+<td align="right">53.11518</td>
+<td align="right">60.31944</td>
+<td align="left">ARIMA(0,1,1)(1,0,1)[5] WITH DRIFT</td>
+</tr>
+<tr class="odd">
+<td align="left">ree</td>
+<td align="left">2021-07-11</td>
+<td align="right">56.68739</td>
+<td align="right">53.08526</td>
+<td align="right">60.28952</td>
+<td align="left">ARIMA(0,1,1)(1,0,1)[5] WITH DRIFT</td>
+</tr>
+<tr class="even">
+<td align="left">ree</td>
+<td align="left">2021-07-12</td>
+<td align="right">56.69863</td>
+<td align="right">53.09650</td>
+<td align="right">60.30076</td>
+<td align="left">ARIMA(0,1,1)(1,0,1)[5] WITH DRIFT</td>
+</tr>
+<tr class="odd">
+<td align="left">ree</td>
+<td align="left">2021-07-13</td>
+<td align="right">56.68361</td>
+<td align="right">53.08148</td>
+<td align="right">60.28574</td>
+<td align="left">ARIMA(0,1,1)(1,0,1)[5] WITH DRIFT</td>
+</tr>
+<tr class="even">
+<td align="left">ree</td>
+<td align="left">2021-07-14</td>
+<td align="right">56.73618</td>
+<td align="right">53.13405</td>
+<td align="right">60.33831</td>
+<td align="left">ARIMA(0,1,1)(1,0,1)[5] WITH DRIFT</td>
+</tr>
+<tr class="odd">
+<td align="left">ree</td>
+<td align="left">2021-07-15</td>
+<td align="right">56.74658</td>
+<td align="right">53.14445</td>
+<td align="right">60.34871</td>
+<td align="left">ARIMA(0,1,1)(1,0,1)[5] WITH DRIFT</td>
+</tr>
+<tr class="even">
+<td align="left">ree</td>
+<td align="left">2021-07-16</td>
+<td align="right">56.73027</td>
+<td align="right">53.12815</td>
+<td align="right">60.33240</td>
+<td align="left">ARIMA(0,1,1)(1,0,1)[5] WITH DRIFT</td>
+</tr>
+<tr class="odd">
+<td align="left">ree</td>
+<td align="left">2021-07-17</td>
+<td align="right">56.74139</td>
+<td align="right">53.13926</td>
+<td align="right">60.34352</td>
+<td align="left">ARIMA(0,1,1)(1,0,1)[5] WITH DRIFT</td>
+</tr>
+<tr class="even">
+<td align="left">ree</td>
+<td align="left">2021-07-18</td>
+<td align="right">56.73502</td>
+<td align="right">53.13289</td>
+<td align="right">60.33715</td>
+<td align="left">ARIMA(0,1,1)(1,0,1)[5] WITH DRIFT</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sbs">SBS</h3>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_sbs) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">.ticker</th>
+<th align="left">.index</th>
+<th align="right">.value</th>
+<th align="right">.low</th>
+<th align="right">.high</th>
+<th align="left">.model_desc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">sbs</td>
+<td align="left">2021-07-03</td>
+<td align="right">16.96242</td>
+<td align="right">14.52468</td>
+<td align="right">19.40016</td>
+<td align="left">ARIMA(0,2,1)(1,0,1)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">sbs</td>
+<td align="left">2021-07-04</td>
+<td align="right">17.05310</td>
+<td align="right">14.61536</td>
+<td align="right">19.49084</td>
+<td align="left">ARIMA(0,2,1)(1,0,1)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">sbs</td>
+<td align="left">2021-07-05</td>
+<td align="right">17.14378</td>
+<td align="right">14.70604</td>
+<td align="right">19.58153</td>
+<td align="left">ARIMA(0,2,1)(1,0,1)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">sbs</td>
+<td align="left">2021-07-06</td>
+<td align="right">17.23447</td>
+<td align="right">14.79672</td>
+<td align="right">19.67221</td>
+<td align="left">ARIMA(0,2,1)(1,0,1)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">sbs</td>
+<td align="left">2021-07-07</td>
+<td align="right">17.32515</td>
+<td align="right">14.88741</td>
+<td align="right">19.76289</td>
+<td align="left">ARIMA(0,2,1)(1,0,1)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">sbs</td>
+<td align="left">2021-07-08</td>
+<td align="right">17.41583</td>
+<td align="right">14.97809</td>
+<td align="right">19.85357</td>
+<td align="left">ARIMA(0,2,1)(1,0,1)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">sbs</td>
+<td align="left">2021-07-09</td>
+<td align="right">17.50651</td>
+<td align="right">15.06877</td>
+<td align="right">19.94425</td>
+<td align="left">ARIMA(0,2,1)(1,0,1)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">sbs</td>
+<td align="left">2021-07-10</td>
+<td align="right">17.59719</td>
+<td align="right">15.15945</td>
+<td align="right">20.03493</td>
+<td align="left">ARIMA(0,2,1)(1,0,1)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">sbs</td>
+<td align="left">2021-07-11</td>
+<td align="right">17.68787</td>
+<td align="right">15.25013</td>
+<td align="right">20.12561</td>
+<td align="left">ARIMA(0,2,1)(1,0,1)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">sbs</td>
+<td align="left">2021-07-12</td>
+<td align="right">17.77855</td>
+<td align="right">15.34081</td>
+<td align="right">20.21629</td>
+<td align="left">ARIMA(0,2,1)(1,0,1)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">sbs</td>
+<td align="left">2021-07-13</td>
+<td align="right">17.86923</td>
+<td align="right">15.43149</td>
+<td align="right">20.30697</td>
+<td align="left">ARIMA(0,2,1)(1,0,1)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">sbs</td>
+<td align="left">2021-07-14</td>
+<td align="right">17.95991</td>
+<td align="right">15.52217</td>
+<td align="right">20.39766</td>
+<td align="left">ARIMA(0,2,1)(1,0,1)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">sbs</td>
+<td align="left">2021-07-15</td>
+<td align="right">18.05060</td>
+<td align="right">15.61285</td>
+<td align="right">20.48834</td>
+<td align="left">ARIMA(0,2,1)(1,0,1)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">sbs</td>
+<td align="left">2021-07-16</td>
+<td align="right">18.14128</td>
+<td align="right">15.70354</td>
+<td align="right">20.57902</td>
+<td align="left">ARIMA(0,2,1)(1,0,1)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">sbs</td>
+<td align="left">2021-07-17</td>
+<td align="right">18.23196</td>
+<td align="right">15.79422</td>
+<td align="right">20.66970</td>
+<td align="left">ARIMA(0,2,1)(1,0,1)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">sbs</td>
+<td align="left">2021-07-18</td>
+<td align="right">18.32264</td>
+<td align="right">15.88490</td>
+<td align="right">20.76038</td>
+<td align="left">ARIMA(0,2,1)(1,0,1)[5] W/ XGBOOST ERRORS</td>
+</tr>
+</tbody>
+</table>
+<h3 id="shs">SHS</h3>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_shs) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">.ticker</th>
+<th align="left">.index</th>
+<th align="right">.value</th>
+<th align="right">.low</th>
+<th align="right">.high</th>
+<th align="left">.model_desc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">shs</td>
+<td align="left">2021-07-03</td>
+<td align="right">45.29186</td>
+<td align="right">39.09035</td>
+<td align="right">51.49337</td>
+<td align="left">ARIMA(4,2,0)(2,0,0)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">shs</td>
+<td align="left">2021-07-04</td>
+<td align="right">45.49000</td>
+<td align="right">39.28849</td>
+<td align="right">51.69151</td>
+<td align="left">ARIMA(4,2,0)(2,0,0)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">shs</td>
+<td align="left">2021-07-05</td>
+<td align="right">45.71402</td>
+<td align="right">39.51251</td>
+<td align="right">51.91553</td>
+<td align="left">ARIMA(4,2,0)(2,0,0)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">shs</td>
+<td align="left">2021-07-06</td>
+<td align="right">45.90799</td>
+<td align="right">39.70648</td>
+<td align="right">52.10950</td>
+<td align="left">ARIMA(4,2,0)(2,0,0)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">shs</td>
+<td align="left">2021-07-07</td>
+<td align="right">46.06591</td>
+<td align="right">39.86440</td>
+<td align="right">52.26742</td>
+<td align="left">ARIMA(4,2,0)(2,0,0)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">shs</td>
+<td align="left">2021-07-08</td>
+<td align="right">46.21186</td>
+<td align="right">40.01035</td>
+<td align="right">52.41337</td>
+<td align="left">ARIMA(4,2,0)(2,0,0)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">shs</td>
+<td align="left">2021-07-09</td>
+<td align="right">46.41177</td>
+<td align="right">40.21026</td>
+<td align="right">52.61328</td>
+<td align="left">ARIMA(4,2,0)(2,0,0)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">shs</td>
+<td align="left">2021-07-10</td>
+<td align="right">46.61809</td>
+<td align="right">40.41658</td>
+<td align="right">52.81960</td>
+<td align="left">ARIMA(4,2,0)(2,0,0)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">shs</td>
+<td align="left">2021-07-11</td>
+<td align="right">46.81073</td>
+<td align="right">40.60922</td>
+<td align="right">53.01224</td>
+<td align="left">ARIMA(4,2,0)(2,0,0)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">shs</td>
+<td align="left">2021-07-12</td>
+<td align="right">46.97081</td>
+<td align="right">40.76930</td>
+<td align="right">53.17232</td>
+<td align="left">ARIMA(4,2,0)(2,0,0)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">shs</td>
+<td align="left">2021-07-13</td>
+<td align="right">47.11866</td>
+<td align="right">40.91715</td>
+<td align="right">53.32017</td>
+<td align="left">ARIMA(4,2,0)(2,0,0)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">shs</td>
+<td align="left">2021-07-14</td>
+<td align="right">47.31631</td>
+<td align="right">41.11480</td>
+<td align="right">53.51781</td>
+<td align="left">ARIMA(4,2,0)(2,0,0)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">shs</td>
+<td align="left">2021-07-15</td>
+<td align="right">47.52245</td>
+<td align="right">41.32094</td>
+<td align="right">53.72396</td>
+<td align="left">ARIMA(4,2,0)(2,0,0)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">shs</td>
+<td align="left">2021-07-16</td>
+<td align="right">47.71532</td>
+<td align="right">41.51381</td>
+<td align="right">53.91683</td>
+<td align="left">ARIMA(4,2,0)(2,0,0)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">shs</td>
+<td align="left">2021-07-17</td>
+<td align="right">47.87719</td>
+<td align="right">41.67568</td>
+<td align="right">54.07870</td>
+<td align="left">ARIMA(4,2,0)(2,0,0)[5] W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">shs</td>
+<td align="left">2021-07-18</td>
+<td align="right">48.02655</td>
+<td align="right">41.82504</td>
+<td align="right">54.22806</td>
+<td align="left">ARIMA(4,2,0)(2,0,0)[5] W/ XGBOOST ERRORS</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ssi">SSI</h3>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_ssi) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">.ticker</th>
+<th align="left">.index</th>
+<th align="right">.value</th>
+<th align="right">.low</th>
+<th align="right">.high</th>
+<th align="left">.model_desc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">ssi</td>
+<td align="left">2021-07-03</td>
+<td align="right">56.94966</td>
+<td align="right">47.35260</td>
+<td align="right">66.54671</td>
+<td align="left">ARIMA(3,1,4) WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">ssi</td>
+<td align="left">2021-07-04</td>
+<td align="right">57.07243</td>
+<td align="right">47.47538</td>
+<td align="right">66.66948</td>
+<td align="left">ARIMA(3,1,4) WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">ssi</td>
+<td align="left">2021-07-05</td>
+<td align="right">57.31206</td>
+<td align="right">47.71501</td>
+<td align="right">66.90912</td>
+<td align="left">ARIMA(3,1,4) WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">ssi</td>
+<td align="left">2021-07-06</td>
+<td align="right">57.67380</td>
+<td align="right">48.07675</td>
+<td align="right">67.27086</td>
+<td align="left">ARIMA(3,1,4) WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">ssi</td>
+<td align="left">2021-07-07</td>
+<td align="right">57.87028</td>
+<td align="right">48.27323</td>
+<td align="right">67.46734</td>
+<td align="left">ARIMA(3,1,4) WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">ssi</td>
+<td align="left">2021-07-08</td>
+<td align="right">58.04970</td>
+<td align="right">48.45265</td>
+<td align="right">67.64676</td>
+<td align="left">ARIMA(3,1,4) WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">ssi</td>
+<td align="left">2021-07-09</td>
+<td align="right">58.38013</td>
+<td align="right">48.78308</td>
+<td align="right">67.97719</td>
+<td align="left">ARIMA(3,1,4) WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">ssi</td>
+<td align="left">2021-07-10</td>
+<td align="right">58.64497</td>
+<td align="right">49.04792</td>
+<td align="right">68.24202</td>
+<td align="left">ARIMA(3,1,4) WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">ssi</td>
+<td align="left">2021-07-11</td>
+<td align="right">58.81496</td>
+<td align="right">49.21790</td>
+<td align="right">68.41201</td>
+<td align="left">ARIMA(3,1,4) WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">ssi</td>
+<td align="left">2021-07-12</td>
+<td align="right">59.09169</td>
+<td align="right">49.49464</td>
+<td align="right">68.68874</td>
+<td align="left">ARIMA(3,1,4) WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">ssi</td>
+<td align="left">2021-07-13</td>
+<td align="right">59.39316</td>
+<td align="right">49.79611</td>
+<td align="right">68.99021</td>
+<td align="left">ARIMA(3,1,4) WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">ssi</td>
+<td align="left">2021-07-14</td>
+<td align="right">59.58980</td>
+<td align="right">49.99275</td>
+<td align="right">69.18685</td>
+<td align="left">ARIMA(3,1,4) WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">ssi</td>
+<td align="left">2021-07-15</td>
+<td align="right">59.82090</td>
+<td align="right">50.22385</td>
+<td align="right">69.41795</td>
+<td align="left">ARIMA(3,1,4) WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">ssi</td>
+<td align="left">2021-07-16</td>
+<td align="right">60.12373</td>
+<td align="right">50.52668</td>
+<td align="right">69.72078</td>
+<td align="left">ARIMA(3,1,4) WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">ssi</td>
+<td align="left">2021-07-17</td>
+<td align="right">60.35885</td>
+<td align="right">50.76179</td>
+<td align="right">69.95590</td>
+<td align="left">ARIMA(3,1,4) WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">ssi</td>
+<td align="left">2021-07-18</td>
+<td align="right">60.56833</td>
+<td align="right">50.97128</td>
+<td align="right">70.16539</td>
+<td align="left">ARIMA(3,1,4) WITH DRIFT W/ XGBOOST ERRORS</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tcb">TCB</h3>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_tcb) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">.ticker</th>
+<th align="left">.index</th>
+<th align="right">.value</th>
+<th align="right">.low</th>
+<th align="right">.high</th>
+<th align="left">.model_desc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">tcb</td>
+<td align="left">2021-07-03</td>
+<td align="right">51.64482</td>
+<td align="right">25.16830</td>
+<td align="right">78.12134</td>
+<td align="left">ARIMA(1,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">tcb</td>
+<td align="left">2021-07-04</td>
+<td align="right">51.59659</td>
+<td align="right">25.12006</td>
+<td align="right">78.07311</td>
+<td align="left">ARIMA(1,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">tcb</td>
+<td align="left">2021-07-05</td>
+<td align="right">51.73457</td>
+<td align="right">25.25805</td>
+<td align="right">78.21109</td>
+<td align="left">ARIMA(1,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">tcb</td>
+<td align="left">2021-07-06</td>
+<td align="right">51.69636</td>
+<td align="right">25.21984</td>
+<td align="right">78.17288</td>
+<td align="left">ARIMA(1,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">tcb</td>
+<td align="left">2021-07-07</td>
+<td align="right">51.74381</td>
+<td align="right">25.26729</td>
+<td align="right">78.22033</td>
+<td align="left">ARIMA(1,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">tcb</td>
+<td align="left">2021-07-08</td>
+<td align="right">51.74045</td>
+<td align="right">25.26393</td>
+<td align="right">78.21697</td>
+<td align="left">ARIMA(1,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">tcb</td>
+<td align="left">2021-07-09</td>
+<td align="right">51.72517</td>
+<td align="right">25.24865</td>
+<td align="right">78.20169</td>
+<td align="left">ARIMA(1,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">tcb</td>
+<td align="left">2021-07-10</td>
+<td align="right">51.82710</td>
+<td align="right">25.35058</td>
+<td align="right">78.30362</td>
+<td align="left">ARIMA(1,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">tcb</td>
+<td align="left">2021-07-11</td>
+<td align="right">51.83498</td>
+<td align="right">25.35846</td>
+<td align="right">78.31150</td>
+<td align="left">ARIMA(1,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">tcb</td>
+<td align="left">2021-07-12</td>
+<td align="right">51.81803</td>
+<td align="right">25.34151</td>
+<td align="right">78.29455</td>
+<td align="left">ARIMA(1,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">tcb</td>
+<td align="left">2021-07-13</td>
+<td align="right">51.79483</td>
+<td align="right">25.31831</td>
+<td align="right">78.27135</td>
+<td align="left">ARIMA(1,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">tcb</td>
+<td align="left">2021-07-14</td>
+<td align="right">51.79232</td>
+<td align="right">25.31580</td>
+<td align="right">78.26884</td>
+<td align="left">ARIMA(1,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">tcb</td>
+<td align="left">2021-07-15</td>
+<td align="right">51.84359</td>
+<td align="right">25.36707</td>
+<td align="right">78.32011</td>
+<td align="left">ARIMA(1,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">tcb</td>
+<td align="left">2021-07-16</td>
+<td align="right">51.86001</td>
+<td align="right">25.38349</td>
+<td align="right">78.33654</td>
+<td align="left">ARIMA(1,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">tcb</td>
+<td align="left">2021-07-17</td>
+<td align="right">51.87375</td>
+<td align="right">25.39723</td>
+<td align="right">78.35027</td>
+<td align="left">ARIMA(1,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">tcb</td>
+<td align="left">2021-07-18</td>
+<td align="right">51.85473</td>
+<td align="right">25.37821</td>
+<td align="right">78.33125</td>
+<td align="left">ARIMA(1,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tng">TNG</h3>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_tng) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">.ticker</th>
+<th align="left">.index</th>
+<th align="right">.value</th>
+<th align="right">.low</th>
+<th align="right">.high</th>
+<th align="left">.model_desc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">tng</td>
+<td align="left">2021-07-03</td>
+<td align="right">23.55473</td>
+<td align="right">12.48118</td>
+<td align="right">34.62828</td>
+<td align="left">ARIMA(0,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">tng</td>
+<td align="left">2021-07-04</td>
+<td align="right">23.28873</td>
+<td align="right">12.21518</td>
+<td align="right">34.36227</td>
+<td align="left">ARIMA(0,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">tng</td>
+<td align="left">2021-07-05</td>
+<td align="right">23.27799</td>
+<td align="right">12.20444</td>
+<td align="right">34.35153</td>
+<td align="left">ARIMA(0,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">tng</td>
+<td align="left">2021-07-06</td>
+<td align="right">23.53774</td>
+<td align="right">12.46420</td>
+<td align="right">34.61129</td>
+<td align="left">ARIMA(0,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">tng</td>
+<td align="left">2021-07-07</td>
+<td align="right">23.55525</td>
+<td align="right">12.48171</td>
+<td align="right">34.62880</td>
+<td align="left">ARIMA(0,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">tng</td>
+<td align="left">2021-07-08</td>
+<td align="right">23.30309</td>
+<td align="right">12.22954</td>
+<td align="right">34.37664</td>
+<td align="left">ARIMA(0,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">tng</td>
+<td align="left">2021-07-09</td>
+<td align="right">23.28577</td>
+<td align="right">12.21222</td>
+<td align="right">34.35931</td>
+<td align="left">ARIMA(0,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">tng</td>
+<td align="left">2021-07-10</td>
+<td align="right">23.53055</td>
+<td align="right">12.45701</td>
+<td align="right">34.60410</td>
+<td align="left">ARIMA(0,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">tng</td>
+<td align="left">2021-07-11</td>
+<td align="right">23.54769</td>
+<td align="right">12.47414</td>
+<td align="right">34.62124</td>
+<td align="left">ARIMA(0,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">tng</td>
+<td align="left">2021-07-12</td>
+<td align="right">23.31006</td>
+<td align="right">12.23652</td>
+<td align="right">34.38361</td>
+<td align="left">ARIMA(0,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">tng</td>
+<td align="left">2021-07-13</td>
+<td align="right">23.29312</td>
+<td align="right">12.21957</td>
+<td align="right">34.36666</td>
+<td align="left">ARIMA(0,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">tng</td>
+<td align="left">2021-07-14</td>
+<td align="right">23.52379</td>
+<td align="right">12.45025</td>
+<td align="right">34.59734</td>
+<td align="left">ARIMA(0,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">tng</td>
+<td align="left">2021-07-15</td>
+<td align="right">23.54055</td>
+<td align="right">12.46700</td>
+<td align="right">34.61409</td>
+<td align="left">ARIMA(0,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">tng</td>
+<td align="left">2021-07-16</td>
+<td align="right">23.31662</td>
+<td align="right">12.24307</td>
+<td align="right">34.39016</td>
+<td align="left">ARIMA(0,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">tng</td>
+<td align="left">2021-07-17</td>
+<td align="right">23.30006</td>
+<td align="right">12.22651</td>
+<td align="right">34.37361</td>
+<td align="left">ARIMA(0,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">tng</td>
+<td align="left">2021-07-18</td>
+<td align="right">23.51744</td>
+<td align="right">12.44389</td>
+<td align="right">34.59099</td>
+<td align="left">ARIMA(0,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tpb">TPB</h3>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_tpb) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">.ticker</th>
+<th align="left">.index</th>
+<th align="right">.value</th>
+<th align="right">.low</th>
+<th align="right">.high</th>
+<th align="left">.model_desc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">tpb</td>
+<td align="left">2021-07-03</td>
+<td align="right">35.47693</td>
+<td align="right">26.32945</td>
+<td align="right">44.62442</td>
+<td align="left">ARIMA(0,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">tpb</td>
+<td align="left">2021-07-04</td>
+<td align="right">35.40921</td>
+<td align="right">26.26172</td>
+<td align="right">44.55670</td>
+<td align="left">ARIMA(0,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">tpb</td>
+<td align="left">2021-07-05</td>
+<td align="right">35.36275</td>
+<td align="right">26.21526</td>
+<td align="right">44.51024</td>
+<td align="left">ARIMA(0,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">tpb</td>
+<td align="left">2021-07-06</td>
+<td align="right">35.28123</td>
+<td align="right">26.13374</td>
+<td align="right">44.42872</td>
+<td align="left">ARIMA(0,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">tpb</td>
+<td align="left">2021-07-07</td>
+<td align="right">35.27098</td>
+<td align="right">26.12349</td>
+<td align="right">44.41847</td>
+<td align="left">ARIMA(0,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">tpb</td>
+<td align="left">2021-07-08</td>
+<td align="right">35.28610</td>
+<td align="right">26.13861</td>
+<td align="right">44.43359</td>
+<td align="left">ARIMA(0,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">tpb</td>
+<td align="left">2021-07-09</td>
+<td align="right">35.22968</td>
+<td align="right">26.08219</td>
+<td align="right">44.37717</td>
+<td align="left">ARIMA(0,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">tpb</td>
+<td align="left">2021-07-10</td>
+<td align="right">35.21829</td>
+<td align="right">26.07080</td>
+<td align="right">44.36578</td>
+<td align="left">ARIMA(0,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">tpb</td>
+<td align="left">2021-07-11</td>
+<td align="right">35.12676</td>
+<td align="right">25.97927</td>
+<td align="right">44.27425</td>
+<td align="left">ARIMA(0,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">tpb</td>
+<td align="left">2021-07-12</td>
+<td align="right">35.02372</td>
+<td align="right">25.87623</td>
+<td align="right">44.17121</td>
+<td align="left">ARIMA(0,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">tpb</td>
+<td align="left">2021-07-13</td>
+<td align="right">35.00303</td>
+<td align="right">25.85554</td>
+<td align="right">44.15052</td>
+<td align="left">ARIMA(0,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">tpb</td>
+<td align="left">2021-07-14</td>
+<td align="right">34.94060</td>
+<td align="right">25.79311</td>
+<td align="right">44.08809</td>
+<td align="left">ARIMA(0,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">tpb</td>
+<td align="left">2021-07-15</td>
+<td align="right">34.91305</td>
+<td align="right">25.76556</td>
+<td align="right">44.06053</td>
+<td align="left">ARIMA(0,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">tpb</td>
+<td align="left">2021-07-16</td>
+<td align="right">34.85933</td>
+<td align="right">25.71184</td>
+<td align="right">44.00682</td>
+<td align="left">ARIMA(0,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">tpb</td>
+<td align="left">2021-07-17</td>
+<td align="right">34.80777</td>
+<td align="right">25.66029</td>
+<td align="right">43.95526</td>
+<td align="left">ARIMA(0,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">tpb</td>
+<td align="left">2021-07-18</td>
+<td align="right">34.75346</td>
+<td align="right">25.60597</td>
+<td align="right">43.90095</td>
+<td align="left">ARIMA(0,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vcb">VCB</h3>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_vcb) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">.ticker</th>
+<th align="left">.index</th>
+<th align="right">.value</th>
+<th align="right">.low</th>
+<th align="right">.high</th>
+<th align="left">.model_desc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">vcb</td>
+<td align="left">2021-07-03</td>
+<td align="right">112.2803</td>
+<td align="right">105.8065</td>
+<td align="right">118.7541</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="even">
+<td align="left">vcb</td>
+<td align="left">2021-07-04</td>
+<td align="right">112.5293</td>
+<td align="right">106.0556</td>
+<td align="right">119.0031</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="odd">
+<td align="left">vcb</td>
+<td align="left">2021-07-05</td>
+<td align="right">112.6620</td>
+<td align="right">106.1882</td>
+<td align="right">119.1357</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="even">
+<td align="left">vcb</td>
+<td align="left">2021-07-06</td>
+<td align="right">112.5825</td>
+<td align="right">106.1088</td>
+<td align="right">119.0563</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="odd">
+<td align="left">vcb</td>
+<td align="left">2021-07-07</td>
+<td align="right">112.5843</td>
+<td align="right">106.1105</td>
+<td align="right">119.0581</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="even">
+<td align="left">vcb</td>
+<td align="left">2021-07-08</td>
+<td align="right">112.5808</td>
+<td align="right">106.1071</td>
+<td align="right">119.0546</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="odd">
+<td align="left">vcb</td>
+<td align="left">2021-07-09</td>
+<td align="right">112.7263</td>
+<td align="right">106.2525</td>
+<td align="right">119.2000</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="even">
+<td align="left">vcb</td>
+<td align="left">2021-07-10</td>
+<td align="right">112.6846</td>
+<td align="right">106.2108</td>
+<td align="right">119.1583</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="odd">
+<td align="left">vcb</td>
+<td align="left">2021-07-11</td>
+<td align="right">112.7129</td>
+<td align="right">106.2391</td>
+<td align="right">119.1866</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="even">
+<td align="left">vcb</td>
+<td align="left">2021-07-12</td>
+<td align="right">112.6451</td>
+<td align="right">106.1713</td>
+<td align="right">119.1189</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="odd">
+<td align="left">vcb</td>
+<td align="left">2021-07-13</td>
+<td align="right">112.7993</td>
+<td align="right">106.3255</td>
+<td align="right">119.2731</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="even">
+<td align="left">vcb</td>
+<td align="left">2021-07-14</td>
+<td align="right">112.6780</td>
+<td align="right">106.2042</td>
+<td align="right">119.1518</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="odd">
+<td align="left">vcb</td>
+<td align="left">2021-07-15</td>
+<td align="right">112.2879</td>
+<td align="right">105.8141</td>
+<td align="right">118.7617</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="even">
+<td align="left">vcb</td>
+<td align="left">2021-07-16</td>
+<td align="right">112.5366</td>
+<td align="right">106.0629</td>
+<td align="right">119.0104</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="odd">
+<td align="left">vcb</td>
+<td align="left">2021-07-17</td>
+<td align="right">112.6689</td>
+<td align="right">106.1952</td>
+<td align="right">119.1427</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="even">
+<td align="left">vcb</td>
+<td align="left">2021-07-18</td>
+<td align="right">112.5892</td>
+<td align="right">106.1155</td>
+<td align="right">119.0630</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+</tbody>
+</table>
+
+</body>
+</html>
