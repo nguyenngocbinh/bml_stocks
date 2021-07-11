@@ -3,6 +3,8 @@
 #' @importFrom janitor clean_names
 #' @importFrom readr read_csv
 #' @import dplyr
+#' @import lubridate
+#' @importFrom tidyquant LAG
 #' @export fnc_get_data
 #' @param ticker_name name of ticker.
 #' @examples
@@ -21,7 +23,7 @@ fnc_get_data <- function(ticker_name) {
       lag_low = LAG(low_fixed)
     ) %>%
     na.omit() %>%
-    select(date, value, lag_open, lag_close, lag_high, lag_low, ticker)
+    select(date, value, lag_open, lag_close, lag_high, lag_low, ticker, open_fixed, close_fixed, high_fixed, low_fixed, volume)
   return(df)
 }
 

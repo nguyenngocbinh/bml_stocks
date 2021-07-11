@@ -194,7 +194,7 @@ my_plan <- drake_plan(
 # clean(destroy = TRUE)
 make(my_plan)
 
-re# Reports =====================================================================
+# Reports =====================================================================
 # Create folders
 map(tickers, function(ticker) {
   if (dir.exists(paste0("vignettes/", ticker)) == F)
