@@ -1,0 +1,76 @@
+---
+output: github_document
+editor_options: 
+chunk_output_type: console
+---
+  
+  
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup, include = FALSE}
+library(xgboost)
+library(drake)
+library(tidymodels)
+library(modeltime)
+library(tidyverse)
+library(tidyquant)
+library(lubridate)
+library(timetk)
+library(modeltime.ensemble)
+library(dplyr)
+# R.utils::sourceDirectory("D:/R/bml_stocks/R/")
+# R.utils::sourceDirectory("R/")
+interactive <- FALSE
+```
+
+# Forecast vci price
+
+### Plot
+```{r}
+readd(data_vci) %>%
+  plot_time_series(date, value, .interactive = interactive)
+```
+
+### Divide data to train/ test
+
+```{r}
+readd(splits_vci) %>%
+  tk_time_series_cv_plan() %>%
+  plot_time_series_cv_plan(date, value, .interactive = FALSE)
+```
+
+### Modeltime Table
+
+```{r}
+readd(models_tbl_vci)
+```
+
+### Calibration
+```{r}
+readd(calibration_tbl_vci)
+```
+
+
+### Forecast (Testing Set)
+```{r}
+
+readd(forecast_tbl_vci) %>% 
+  plot_modeltime_forecast(.legend_max_width = 25, 
+                           .interactive      = interactive)
+```
+
+### Accuracy table
+```{r}
+readd(accuracy_tbl_vci)$`_data`
+
+```
+### Next week forecast
+```{r}
+readd(two_week_fc_vci)
+```
+

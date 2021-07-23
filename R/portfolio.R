@@ -13,23 +13,22 @@ library(modeltime.ensemble)
 # Tickers have enough obs
 source("R/ultilities_funs.R")
 tickers <-  list.files("data") %>% stringr::str_sub(7, 9)
+# Note: vnindex -> vni
 
 
 my_plan <- drake_plan(
   interactive = FALSE,
   
   # Using raw_data to fit accuracy and dont need update training model
-  raw_data = target(
-    fnc_get_data(ticker),
-    transform = map(ticker = !!tickers)
-  ),
+  raw_data = target(fnc_get_data(ticker),
+                    transform = map(ticker = !!tickers)),
   
   # Data
   # Function from ultilities_funs.R
   data = target(
     raw_data %>%
-      # Note: prevent retrain
-      filter(date <= ymd(20210625)),
+      # Note: prevent retrain and 
+      filter(date <= ymd(20210701), date > ymd(20210701) - 365 * 2),
     
     transform = map(raw_data, .id = ticker)
   ),
@@ -39,7 +38,7 @@ my_plan <- drake_plan(
   
   splits = target(
     data %>%
-      time_series_split(assess = "6 months", cumulative = TRUE),
+      time_series_split(assess = "3 months", cumulative = TRUE),
     transform = map(data, .id = ticker)
   ),
   
@@ -92,15 +91,15 @@ my_plan <- drake_plan(
   ),
   
   # Model 5: lm ----
-  model_fit_lm = target(
-    linear_reg() %>%
-      set_engine("lm") %>%
-      fit(
-        value ~ as.numeric(date) + factor(month(date, label = TRUE), ordered = FALSE),
-        data = training(splits)
-      ),
-    transform = map(splits, .tag_out = bmodel, .id = ticker)
-  ),
+  # model_fit_lm = target(
+  #   linear_reg() %>%
+  #     set_engine("lm") %>%
+  #     fit(
+  #       value ~ as.numeric(date)  + lag_open + lag_close + lag_high + lag_low + mean_20 + mean_50,
+  #       data = training(splits)
+  #     ),
+  #   transform = map(splits, .tag_out = bmodel, .id = ticker)
+  # ),
   
   # Table of models ----------------------------------------------------------
   # Note: Combine all models using results from .tag_out above
@@ -127,7 +126,13 @@ my_plan <- drake_plan(
       # Note: using raw_data cause not update training model
       actual_data = raw_data
     ),
-    transform = combine(calibration_tbl, splits, raw_data, .by = ticker, .id = ticker)
+    transform = combine(
+      calibration_tbl,
+      splits,
+      raw_data,
+      .by = ticker,
+      .id = ticker
+    )
   ),
   
   # Accuracy -----------------------------------------------------------------
@@ -139,6 +144,7 @@ my_plan <- drake_plan(
   
   # Refit --------------------------------------------------------------------
   # In combine must using .by = ticker
+  # re-train on full data
   refit_tbl = target(
     modeltime_refit(calibration_tbl, data),
     transform = combine(calibration_tbl, data, .by =  ticker, .id = ticker)
@@ -148,6 +154,7 @@ my_plan <- drake_plan(
   make_forecast = target(
     modeltime_forecast(
       refit_tbl,
+      # Note: with lm model can't predict by horizon
       h = "2 months",
       actual_data = data,
       conf_interval = 0.9
@@ -158,9 +165,8 @@ my_plan <- drake_plan(
   # Export 1/2 month forecast
   best_accuracy_model = target(
     accuracy_tbl$`_data` %>%
-      filter(mae == min(mae)) %>%
-      # select only 1 best model
-      slice(1)
+      slice_min(mae) %>% 
+      slice_head(n = 1)
     ,
     transform = map(accuracy_tbl, .id = ticker)
   ),
@@ -168,7 +174,9 @@ my_plan <- drake_plan(
   two_week_fc = target(
     make_forecast %>%
       inner_join(best_accuracy_model, by = ".model_id") %>%
-      filter(.index <= today() + 15, .index >= today()) %>%
+      filter(.index <= today() + 7, .index >= today()) %>%
+      # Keep weekdays
+      filter(!(weekdays(.index) %in% c("Sunday", "Saturday"))) %>% 
       # Mutate .ticker var
       mutate(.ticker = ticker) %>%
       select(

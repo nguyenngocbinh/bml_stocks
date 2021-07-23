@@ -25,14 +25,13 @@ readd(splits_tcb) %>%
 ``` r
 readd(models_tbl_tcb)
 #> # Modeltime Table
-#> # A tibble: 5 x 3
-#>   .model_id .model   .model_desc                   
-#>       <int> <list>   <chr>                         
-#> 1         1 <fit[+]> ARIMA(0,1,1)(2,0,0)[5]        
-#> 2         2 <fit[+]> ARIMA(1,1,0) W/ XGBOOST ERRORS
-#> 3         3 <fit[+]> ETS(M,AD,M)                   
-#> 4         4 <fit[+]> PROPHET                       
-#> 5         5 <fit[+]> LM
+#> # A tibble: 4 x 3
+#>   .model_id .model   .model_desc                             
+#>       <int> <list>   <chr>                                   
+#> 1         1 <fit[+]> ARIMA(0,2,1)(1,0,0)[5]                  
+#> 2         2 <fit[+]> ARIMA(0,2,1)(0,0,1)[5] W/ XGBOOST ERRORS
+#> 3         3 <fit[+]> ETS(M,AD,M)                             
+#> 4         4 <fit[+]> PROPHET
 ```
 
 ### Calibration
@@ -40,14 +39,13 @@ readd(models_tbl_tcb)
 ``` r
 readd(calibration_tbl_tcb)
 #> # Modeltime Table
-#> # A tibble: 5 x 5
-#>   .model_id .model   .model_desc                    .type .calibration_data 
-#>       <int> <list>   <chr>                          <chr> <list>            
-#> 1         1 <fit[+]> ARIMA(0,1,1)(2,0,0)[5]         Test  <tibble [130 x 4]>
-#> 2         2 <fit[+]> ARIMA(1,1,0) W/ XGBOOST ERRORS Test  <tibble [130 x 4]>
-#> 3         3 <fit[+]> ETS(M,AD,M)                    Test  <tibble [130 x 4]>
-#> 4         4 <fit[+]> PROPHET                        Test  <tibble [130 x 4]>
-#> 5         5 <fit[+]> LM                             Test  <tibble [130 x 4]>
+#> # A tibble: 4 x 5
+#>   .model_id .model   .model_desc                              .type .calibration_data
+#>       <int> <list>   <chr>                                    <chr> <list>           
+#> 1         1 <fit[+]> ARIMA(0,2,1)(1,0,0)[5]                   Test  <tibble [65 x 4]>
+#> 2         2 <fit[+]> ARIMA(0,2,1)(0,0,1)[5] W/ XGBOOST ERRORS Test  <tibble [65 x 4]>
+#> 3         3 <fit[+]> ETS(M,AD,M)                              Test  <tibble [65 x 4]>
+#> 4         4 <fit[+]> PROPHET                                  Test  <tibble [65 x 4]>
 ```
 
 ### Forecast (Testing Set)
@@ -65,37 +63,26 @@ readd(forecast_tbl_tcb) %>%
 
 ``` r
 readd(accuracy_tbl_tcb)$`_data`
-#> # A tibble: 5 x 9
-#>   .model_id .model_desc                    .type   mae  mape  mase smape  rmse   rsq
-#>       <int> <chr>                          <chr> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
-#> 1         1 ARIMA(0,1,1)(2,0,0)[5]         Test   14.6  33.6  18.9  41.6  16.3  0.23
-#> 2         2 ARIMA(1,1,0) W/ XGBOOST ERRORS Test   14.4  32.8  18.5  40.6  16.1  0.01
-#> 3         3 ETS(M,AD,M)                    Test   14.8  33.9  19.0  42.0  16.4  0   
-#> 4         4 PROPHET                        Test   17.0  39.4  22.0  50.6  18.7  0.12
-#> 5         5 LM                             Test   23.1  54.4  29.8  76.4  24.6  0.41
+#> # A tibble: 4 x 9
+#>   .model_id .model_desc                              .type   mae  mape  mase smape  rmse   rsq
+#>       <int> <chr>                                    <chr> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
+#> 1         1 ARIMA(0,2,1)(1,0,0)[5]                   Test   4.7   9.39  5.42 10     5.54  0.78
+#> 2         2 ARIMA(0,2,1)(0,0,1)[5] W/ XGBOOST ERRORS Test   4.46  8.89  5.14  9.44  5.28  0.78
+#> 3         3 ETS(M,AD,M)                              Test   7.24 14.4   8.35 15.9   8.6   0.62
+#> 4         4 PROPHET                                  Test   2.77  6.15  3.19  5.88  3.35  0.8
 ```
 
 ### Next week forecast
 
 ``` r
 readd(two_week_fc_tcb)
-#> # A tibble: 16 x 6
-#>    .ticker .index     .value  .low .high .model_desc                   
-#>    <chr>   <date>      <dbl> <dbl> <dbl> <chr>                         
-#>  1 tcb     2021-07-03   51.6  25.2  78.1 ARIMA(1,1,0) W/ XGBOOST ERRORS
-#>  2 tcb     2021-07-04   51.6  25.1  78.1 ARIMA(1,1,0) W/ XGBOOST ERRORS
-#>  3 tcb     2021-07-05   51.7  25.3  78.2 ARIMA(1,1,0) W/ XGBOOST ERRORS
-#>  4 tcb     2021-07-06   51.7  25.2  78.2 ARIMA(1,1,0) W/ XGBOOST ERRORS
-#>  5 tcb     2021-07-07   51.7  25.3  78.2 ARIMA(1,1,0) W/ XGBOOST ERRORS
-#>  6 tcb     2021-07-08   51.7  25.3  78.2 ARIMA(1,1,0) W/ XGBOOST ERRORS
-#>  7 tcb     2021-07-09   51.7  25.2  78.2 ARIMA(1,1,0) W/ XGBOOST ERRORS
-#>  8 tcb     2021-07-10   51.8  25.4  78.3 ARIMA(1,1,0) W/ XGBOOST ERRORS
-#>  9 tcb     2021-07-11   51.8  25.4  78.3 ARIMA(1,1,0) W/ XGBOOST ERRORS
-#> 10 tcb     2021-07-12   51.8  25.3  78.3 ARIMA(1,1,0) W/ XGBOOST ERRORS
-#> 11 tcb     2021-07-13   51.8  25.3  78.3 ARIMA(1,1,0) W/ XGBOOST ERRORS
-#> 12 tcb     2021-07-14   51.8  25.3  78.3 ARIMA(1,1,0) W/ XGBOOST ERRORS
-#> 13 tcb     2021-07-15   51.8  25.4  78.3 ARIMA(1,1,0) W/ XGBOOST ERRORS
-#> 14 tcb     2021-07-16   51.9  25.4  78.3 ARIMA(1,1,0) W/ XGBOOST ERRORS
-#> 15 tcb     2021-07-17   51.9  25.4  78.4 ARIMA(1,1,0) W/ XGBOOST ERRORS
-#> 16 tcb     2021-07-18   51.9  25.4  78.3 ARIMA(1,1,0) W/ XGBOOST ERRORS
+#> # A tibble: 6 x 6
+#>   .ticker .index     .value  .low .high .model_desc
+#>   <chr>   <date>      <dbl> <dbl> <dbl> <chr>      
+#> 1 tcb     2021-07-23   56.5  51.0  62.0 PROPHET    
+#> 2 tcb     2021-07-26   56.7  51.2  62.2 PROPHET    
+#> 3 tcb     2021-07-27   56.8  51.3  62.3 PROPHET    
+#> 4 tcb     2021-07-28   57.0  51.5  62.6 PROPHET    
+#> 5 tcb     2021-07-29   57.2  51.7  62.7 PROPHET    
+#> 6 tcb     2021-07-30   57.4  51.9  62.9 PROPHET
 ```

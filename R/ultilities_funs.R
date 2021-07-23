@@ -20,10 +20,37 @@ fnc_get_data <- function(ticker_name) {
       lag_open = LAG(open_fixed),
       lag_close = LAG(close_fixed),
       lag_high = LAG(high_fixed),
-      lag_low = LAG(low_fixed)
+      lag_low = LAG(low_fixed),
+      lag_vol = LAG(volume)
     ) %>%
     na.omit() %>%
-    select(date, value, lag_open, lag_close, lag_high, lag_low, ticker, open_fixed, close_fixed, high_fixed, low_fixed, volume)
+    select(date, value, lag_open, lag_close, lag_high, lag_low, ticker, open_fixed, close_fixed, high_fixed, low_fixed, volume) %>% 
+    tq_mutate(
+      # tq_mutate args
+      select     = value,
+      mutate_fun = rollapply, 
+      # rollapply args
+      width      = 20,
+      align      = "right",
+      FUN        = mean,
+      # mean args
+      na.rm      = TRUE,
+      # tq_mutate args
+      col_rename = "mean_20"
+    ) %>% 
+    tq_mutate(
+      # tq_mutate args
+      select     = value,
+      mutate_fun = rollapply, 
+      # rollapply args
+      width      = 50,
+      align      = "right",
+      FUN        = mean,
+      # mean args
+      na.rm      = TRUE,
+      # tq_mutate args
+      col_rename = "mean_50"
+    )
   return(df)
 }
 

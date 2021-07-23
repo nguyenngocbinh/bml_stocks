@@ -19,12 +19,6 @@ library(drake)
 # FORECAST STOCKS PRICE
   
 
-### ACB
-```{r}
-readd(two_week_fc_acb) %>%  knitr::kable()
-```
-
-
 ### BID
 ```{r}
 readd(two_week_fc_bid) %>%  knitr::kable()
@@ -34,12 +28,6 @@ readd(two_week_fc_bid) %>%  knitr::kable()
 ### BVH
 ```{r}
 readd(two_week_fc_bvh) %>%  knitr::kable()
-```
-
-
-### DHG
-```{r}
-readd(two_week_fc_dhg) %>%  knitr::kable()
 ```
 
 
@@ -85,12 +73,6 @@ readd(two_week_fc_pnj) %>%  knitr::kable()
 ```
 
 
-### REE
-```{r}
-readd(two_week_fc_ree) %>%  knitr::kable()
-```
-
-
 ### SBS
 ```{r}
 readd(two_week_fc_sbs) %>%  knitr::kable()
@@ -130,5 +112,17 @@ readd(two_week_fc_tpb) %>%  knitr::kable()
 ### VCB
 ```{r}
 readd(two_week_fc_vcb) %>%  knitr::kable()
+```
+
+
+### VCI
+```{r}
+readd(two_week_fc_vci) %>%  knitr::kable()
+```
+
+
+### VNI
+```{r}
+readd(two_week_fc_vni) %>%  knitr::kable()
 ```
 
