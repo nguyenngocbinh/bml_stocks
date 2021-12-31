@@ -1,0 +1,23 @@
+tickers <- c(
+  'AAA',
+  'ACB',
+  'BID',
+  'BVH',
+  'DHG',
+  'FPT',
+  'HBC',
+  'HCM',
+  'HDG',
+  'HPG',
+  'MBB',
+  'PNJ',
+  'REE',
+  'SBS',
+  'SHS',
+  'SSB',
+  'SSI',
+  'TCB',
+  'TNG',
+  'TPB',
+  'VCB'
+)

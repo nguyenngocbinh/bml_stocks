@@ -28,18 +28,18 @@ library(dplyr)
 interactive <- FALSE
 ```
 
-# Forecast mbb price
+# Forecast MBB price
 
 ### Plot
 ```{r}
-readd(data_mbb) %>%
+readd(data_MBB) %>%
   plot_time_series(date, value, .interactive = interactive)
 ```
 
 ### Divide data to train/ test
 
 ```{r}
-readd(splits_mbb) %>%
+readd(splits_MBB) %>%
   tk_time_series_cv_plan() %>%
   plot_time_series_cv_plan(date, value, .interactive = FALSE)
 ```
@@ -47,30 +47,30 @@ readd(splits_mbb) %>%
 ### Modeltime Table
 
 ```{r}
-readd(models_tbl_mbb)
+readd(models_tbl_MBB)
 ```
 
 ### Calibration
 ```{r}
-readd(calibration_tbl_mbb)
+readd(calibration_tbl_MBB)
 ```
 
 
 ### Forecast (Testing Set)
 ```{r}
 
-readd(forecast_tbl_mbb) %>% 
+readd(forecast_tbl_MBB) %>% 
   plot_modeltime_forecast(.legend_max_width = 25, 
                            .interactive      = interactive)
 ```
 
 ### Accuracy table
 ```{r}
-readd(accuracy_tbl_mbb)$`_data`
+readd(accuracy_tbl_MBB)$`_data`
 
 ```
 ### Next week forecast
 ```{r}
-readd(two_week_fc_mbb)
+readd(two_week_fc_MBB)
 ```
 

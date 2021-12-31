@@ -28,18 +28,18 @@ library(dplyr)
 interactive <- FALSE
 ```
 
-# Forecast tng price
+# Forecast TNG price
 
 ### Plot
 ```{r}
-readd(data_tng) %>%
+readd(data_TNG) %>%
   plot_time_series(date, value, .interactive = interactive)
 ```
 
 ### Divide data to train/ test
 
 ```{r}
-readd(splits_tng) %>%
+readd(splits_TNG) %>%
   tk_time_series_cv_plan() %>%
   plot_time_series_cv_plan(date, value, .interactive = FALSE)
 ```
@@ -47,30 +47,30 @@ readd(splits_tng) %>%
 ### Modeltime Table
 
 ```{r}
-readd(models_tbl_tng)
+readd(models_tbl_TNG)
 ```
 
 ### Calibration
 ```{r}
-readd(calibration_tbl_tng)
+readd(calibration_tbl_TNG)
 ```
 
 
 ### Forecast (Testing Set)
 ```{r}
 
-readd(forecast_tbl_tng) %>% 
+readd(forecast_tbl_TNG) %>% 
   plot_modeltime_forecast(.legend_max_width = 25, 
                            .interactive      = interactive)
 ```
 
 ### Accuracy table
 ```{r}
-readd(accuracy_tbl_tng)$`_data`
+readd(accuracy_tbl_TNG)$`_data`
 
 ```
 ### Next week forecast
 ```{r}
-readd(two_week_fc_tng)
+readd(two_week_fc_TNG)
 ```
 

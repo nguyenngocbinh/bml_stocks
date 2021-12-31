@@ -1,10 +1,10 @@
 
-# Forecast bid price
+# Forecast BID price
 
 ### Plot
 
 ``` r
-readd(data_bid) %>%
+readd(data_BID) %>%
   plot_time_series(date, value, .interactive = interactive)
 ```
 
@@ -13,7 +13,7 @@ readd(data_bid) %>%
 ### Divide data to train/ test
 
 ``` r
-readd(splits_bid) %>%
+readd(splits_BID) %>%
   tk_time_series_cv_plan() %>%
   plot_time_series_cv_plan(date, value, .interactive = FALSE)
 ```
@@ -23,13 +23,13 @@ readd(splits_bid) %>%
 ### Modeltime Table
 
 ``` r
-readd(models_tbl_bid)
+readd(models_tbl_BID)
 #> # Modeltime Table
 #> # A tibble: 4 x 3
 #>   .model_id .model   .model_desc                   
 #>       <int> <list>   <chr>                         
-#> 1         1 <fit[+]> ARIMA(0,1,0)                  
-#> 2         2 <fit[+]> ARIMA(2,1,2) W/ XGBOOST ERRORS
+#> 1         1 <fit[+]> ARIMA(2,1,1)(2,0,1)[5]        
+#> 2         2 <fit[+]> ARIMA(0,1,0) W/ XGBOOST ERRORS
 #> 3         3 <fit[+]> ETS(M,AD,M)                   
 #> 4         4 <fit[+]> PROPHET
 ```
@@ -37,21 +37,21 @@ readd(models_tbl_bid)
 ### Calibration
 
 ``` r
-readd(calibration_tbl_bid)
+readd(calibration_tbl_BID)
 #> # Modeltime Table
 #> # A tibble: 4 x 5
 #>   .model_id .model   .model_desc                    .type .calibration_data
 #>       <int> <list>   <chr>                          <chr> <list>           
-#> 1         1 <fit[+]> ARIMA(0,1,0)                   Test  <tibble [65 x 4]>
-#> 2         2 <fit[+]> ARIMA(2,1,2) W/ XGBOOST ERRORS Test  <tibble [65 x 4]>
-#> 3         3 <fit[+]> ETS(M,AD,M)                    Test  <tibble [65 x 4]>
-#> 4         4 <fit[+]> PROPHET                        Test  <tibble [65 x 4]>
+#> 1         1 <fit[+]> ARIMA(2,1,1)(2,0,1)[5]         Test  <tibble [59 x 4]>
+#> 2         2 <fit[+]> ARIMA(0,1,0) W/ XGBOOST ERRORS Test  <tibble [59 x 4]>
+#> 3         3 <fit[+]> ETS(M,AD,M)                    Test  <tibble [59 x 4]>
+#> 4         4 <fit[+]> PROPHET                        Test  <tibble [59 x 4]>
 ```
 
 ### Forecast (Testing Set)
 
 ``` r
-readd(forecast_tbl_bid) %>% 
+readd(forecast_tbl_BID) %>% 
   plot_modeltime_forecast(.legend_max_width = 25, 
                            .interactive      = interactive)
 #> Warning in max(ids, na.rm = TRUE): no non-missing arguments to max; returning -Inf
@@ -62,27 +62,26 @@ readd(forecast_tbl_bid) %>%
 ### Accuracy table
 
 ``` r
-readd(accuracy_tbl_bid)$`_data`
+readd(accuracy_tbl_BID)$`_data`
 #> # A tibble: 4 x 9
 #>   .model_id .model_desc                    .type   mae  mape  mase smape  rmse   rsq
 #>       <int> <chr>                          <chr> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
-#> 1         1 ARIMA(0,1,0)                   Test   2.4   5.28  3.25  5.46  2.88 NA   
-#> 2         2 ARIMA(2,1,2) W/ XGBOOST ERRORS Test   2.27  5.01  3.07  5.14  2.69  0   
-#> 3         3 ETS(M,AD,M)                    Test   2.53  5.56  3.43  5.76  3.05  0.01
-#> 4         4 PROPHET                        Test   2.06  4.8   2.79  4.65  2.55  0.23
+#> 1         1 ARIMA(2,1,1)(2,0,1)[5]         Test   2.46  7.05  6.2   7.38  2.81  0.25
+#> 2         2 ARIMA(0,1,0) W/ XGBOOST ERRORS Test   2.29  6.58  5.78  6.85  2.58  0.25
+#> 3         3 ETS(M,AD,M)                    Test   2.67  7.63  6.72  8.03  3.08  0.08
+#> 4         4 PROPHET                        Test   4.15 11.9  10.5  12.9   4.73  0.62
 ```
 
 ### Next week forecast
 
 ``` r
-readd(two_week_fc_bid)
-#> # A tibble: 6 x 6
-#>   .ticker .index     .value  .low .high .model_desc
-#>   <chr>   <date>      <dbl> <dbl> <dbl> <chr>      
-#> 1 bid     2021-07-23   45.6  41.4  49.8 PROPHET    
-#> 2 bid     2021-07-26   45.5  41.3  49.7 PROPHET    
-#> 3 bid     2021-07-27   45.5  41.3  49.7 PROPHET    
-#> 4 bid     2021-07-28   45.6  41.4  49.8 PROPHET    
-#> 5 bid     2021-07-29   45.7  41.5  49.9 PROPHET    
-#> 6 bid     2021-07-30   45.7  41.5  49.9 PROPHET
+readd(two_week_fc_BID)
+#> # A tibble: 5 x 6
+#>   .ticker .index     .value  .low .high .model_desc                   
+#>   <chr>   <date>      <dbl> <dbl> <dbl> <chr>                         
+#> 1 BID     2022-01-03   37.7  33.4  41.9 ARIMA(0,1,0) W/ XGBOOST ERRORS
+#> 2 BID     2022-01-04   37.7  33.4  41.9 ARIMA(0,1,0) W/ XGBOOST ERRORS
+#> 3 BID     2022-01-05   37.7  33.4  41.9 ARIMA(0,1,0) W/ XGBOOST ERRORS
+#> 4 BID     2022-01-06   37.7  33.4  41.9 ARIMA(0,1,0) W/ XGBOOST ERRORS
+#> 5 BID     2022-01-07   37.7  33.4  41.9 ARIMA(0,1,0) W/ XGBOOST ERRORS
 ```

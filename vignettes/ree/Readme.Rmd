@@ -28,18 +28,18 @@ library(dplyr)
 interactive <- FALSE
 ```
 
-# Forecast ree price
+# Forecast REE price
 
 ### Plot
 ```{r}
-readd(data_ree) %>%
+readd(data_REE) %>%
   plot_time_series(date, value, .interactive = interactive)
 ```
 
 ### Divide data to train/ test
 
 ```{r}
-readd(splits_ree) %>%
+readd(splits_REE) %>%
   tk_time_series_cv_plan() %>%
   plot_time_series_cv_plan(date, value, .interactive = FALSE)
 ```
@@ -47,30 +47,30 @@ readd(splits_ree) %>%
 ### Modeltime Table
 
 ```{r}
-readd(models_tbl_ree)
+readd(models_tbl_REE)
 ```
 
 ### Calibration
 ```{r}
-readd(calibration_tbl_ree)
+readd(calibration_tbl_REE)
 ```
 
 
 ### Forecast (Testing Set)
 ```{r}
 
-readd(forecast_tbl_ree) %>% 
+readd(forecast_tbl_REE) %>% 
   plot_modeltime_forecast(.legend_max_width = 25, 
                            .interactive      = interactive)
 ```
 
 ### Accuracy table
 ```{r}
-readd(accuracy_tbl_ree)$`_data`
+readd(accuracy_tbl_REE)$`_data`
 
 ```
 ### Next week forecast
 ```{r}
-readd(two_week_fc_ree)
+readd(two_week_fc_REE)
 ```
 

@@ -1,3 +1,85 @@
+#' @title Data processing
+#' @description Format data, mutate features
+#' @author Nguyen Ngoc Binh \email{nguyenngocbinhneu@@gmail.com}
+#' @importFrom tidyquant LAG tq_mutate
+#' @export bml_data_processing
+#' @param input_data dataframe get from bml_vndirect_ticker_price function
+#' @examples df <- bml_vndirect_ticker_price('VCB', 100)
+#' @example bml_data_processing(df)
+
+bml_data_processing <- function(input_data = NULL){
+  
+  if (is.null(input_data)) {
+    stop("Don't have input data")
+  }
+  
+  cleaned_data <- input_data %>%
+    
+    # format data
+    mutate(date = as.Date(date)) %>%
+    
+    # fix name variable
+    mutate(value = adClose) %>%
+    # Order by date
+    arrange(date) %>%
+    
+    # create features
+    mutate(
+      lag_open = LAG(adOpen),
+      lag_close = LAG(adClose),
+      lag_high = LAG(adHigh),
+      lag_low = LAG(adLow),
+      lag_vol = LAG(nmVolume)
+    ) %>%
+    
+    na.omit() %>%
+    
+    select(
+      date,
+      value,
+      lag_open,
+      lag_close,
+      lag_high,
+      lag_low,
+      ticker = code,
+      adOpen,
+      adClose,
+      adHigh,
+      adLow,
+      volume = nmVolume
+    ) %>%
+    tq_mutate(
+      # tq_mutate args
+      select     = value,
+      mutate_fun = rollapply,
+      # rollapply args
+      width      = 20,
+      align      = "right",
+      FUN        = mean,
+      # mean args
+      na.rm      = TRUE,
+      # tq_mutate args
+      col_rename = "mean_20"
+    ) %>%
+    tq_mutate(
+      # tq_mutate args
+      select     = value,
+      mutate_fun = rollapply,
+      # rollapply args
+      width      = 50,
+      align      = "right",
+      FUN        = mean,
+      # mean args
+      na.rm      = TRUE,
+      # tq_mutate args
+      col_rename = "mean_50"
+    ) %>% 
+    na.omit() 
+  
+  cleaned_data
+}
+
+
 #' @title Get data from disk
 #' @author Nguyen Ngoc Binh \email{nguyenngocbinhneu@@gmail.com}
 #' @importFrom janitor clean_names
@@ -53,6 +135,9 @@ fnc_get_data <- function(ticker_name) {
     )
   return(df)
 }
+
+
+
 
 
 #' @title Modelling
@@ -202,8 +287,8 @@ fnc_modeling <- function(input_data) {
 
 #' @param ticker_name name of ticker.
 #' @examples
-#' func_template_report("acb")
-fnc_template_report <-  function(ticker_name){
+#' bml_template_report("acb")
+bml_template_report <-  function(ticker_name){
   
 line <- paste0(
 
@@ -291,7 +376,7 @@ write(line,
 
 }
 
-fnc_readme <- function(){
+bml_create_readme_file <- function(){
   title = '
 ---
 output: github_document
@@ -320,7 +405,7 @@ write(title,
 
 }
 
-fnc_readme_add <- function(ticker_name){
+bml_readme_add_ticker <- function(ticker_name){
   line = paste0('
 ### ',stringr::str_to_upper(ticker_name),'
 ```{r}

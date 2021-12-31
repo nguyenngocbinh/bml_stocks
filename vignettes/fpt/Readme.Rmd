@@ -28,18 +28,18 @@ library(dplyr)
 interactive <- FALSE
 ```
 
-# Forecast fpt price
+# Forecast FPT price
 
 ### Plot
 ```{r}
-readd(data_fpt) %>%
+readd(data_FPT) %>%
   plot_time_series(date, value, .interactive = interactive)
 ```
 
 ### Divide data to train/ test
 
 ```{r}
-readd(splits_fpt) %>%
+readd(splits_FPT) %>%
   tk_time_series_cv_plan() %>%
   plot_time_series_cv_plan(date, value, .interactive = FALSE)
 ```
@@ -47,30 +47,30 @@ readd(splits_fpt) %>%
 ### Modeltime Table
 
 ```{r}
-readd(models_tbl_fpt)
+readd(models_tbl_FPT)
 ```
 
 ### Calibration
 ```{r}
-readd(calibration_tbl_fpt)
+readd(calibration_tbl_FPT)
 ```
 
 
 ### Forecast (Testing Set)
 ```{r}
 
-readd(forecast_tbl_fpt) %>% 
+readd(forecast_tbl_FPT) %>% 
   plot_modeltime_forecast(.legend_max_width = 25, 
                            .interactive      = interactive)
 ```
 
 ### Accuracy table
 ```{r}
-readd(accuracy_tbl_fpt)$`_data`
+readd(accuracy_tbl_FPT)$`_data`
 
 ```
 ### Next week forecast
 ```{r}
-readd(two_week_fc_fpt)
+readd(two_week_fc_FPT)
 ```
 

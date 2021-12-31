@@ -19,110 +19,128 @@ library(drake)
 # FORECAST STOCKS PRICE
   
 
+### AAA
+```{r}
+readd(two_week_fc_AAA) %>%  knitr::kable()
+```
+
+
+### ACB
+```{r}
+readd(two_week_fc_ACB) %>%  knitr::kable()
+```
+
+
 ### BID
 ```{r}
-readd(two_week_fc_bid) %>%  knitr::kable()
+readd(two_week_fc_BID) %>%  knitr::kable()
 ```
 
 
 ### BVH
 ```{r}
-readd(two_week_fc_bvh) %>%  knitr::kable()
+readd(two_week_fc_BVH) %>%  knitr::kable()
+```
+
+
+### DHG
+```{r}
+readd(two_week_fc_DHG) %>%  knitr::kable()
 ```
 
 
 ### FPT
 ```{r}
-readd(two_week_fc_fpt) %>%  knitr::kable()
+readd(two_week_fc_FPT) %>%  knitr::kable()
 ```
 
 
 ### HBC
 ```{r}
-readd(two_week_fc_hbc) %>%  knitr::kable()
+readd(two_week_fc_HBC) %>%  knitr::kable()
 ```
 
 
 ### HCM
 ```{r}
-readd(two_week_fc_hcm) %>%  knitr::kable()
+readd(two_week_fc_HCM) %>%  knitr::kable()
 ```
 
 
 ### HDG
 ```{r}
-readd(two_week_fc_hdg) %>%  knitr::kable()
+readd(two_week_fc_HDG) %>%  knitr::kable()
 ```
 
 
 ### HPG
 ```{r}
-readd(two_week_fc_hpg) %>%  knitr::kable()
+readd(two_week_fc_HPG) %>%  knitr::kable()
 ```
 
 
 ### MBB
 ```{r}
-readd(two_week_fc_mbb) %>%  knitr::kable()
+readd(two_week_fc_MBB) %>%  knitr::kable()
 ```
 
 
 ### PNJ
 ```{r}
-readd(two_week_fc_pnj) %>%  knitr::kable()
+readd(two_week_fc_PNJ) %>%  knitr::kable()
+```
+
+
+### REE
+```{r}
+readd(two_week_fc_REE) %>%  knitr::kable()
 ```
 
 
 ### SBS
 ```{r}
-readd(two_week_fc_sbs) %>%  knitr::kable()
+readd(two_week_fc_SBS) %>%  knitr::kable()
 ```
 
 
 ### SHS
 ```{r}
-readd(two_week_fc_shs) %>%  knitr::kable()
+readd(two_week_fc_SHS) %>%  knitr::kable()
+```
+
+
+### SSB
+```{r}
+readd(two_week_fc_SSB) %>%  knitr::kable()
 ```
 
 
 ### SSI
 ```{r}
-readd(two_week_fc_ssi) %>%  knitr::kable()
+readd(two_week_fc_SSI) %>%  knitr::kable()
 ```
 
 
 ### TCB
 ```{r}
-readd(two_week_fc_tcb) %>%  knitr::kable()
+readd(two_week_fc_TCB) %>%  knitr::kable()
 ```
 
 
 ### TNG
 ```{r}
-readd(two_week_fc_tng) %>%  knitr::kable()
+readd(two_week_fc_TNG) %>%  knitr::kable()
 ```
 
 
 ### TPB
 ```{r}
-readd(two_week_fc_tpb) %>%  knitr::kable()
+readd(two_week_fc_TPB) %>%  knitr::kable()
 ```
 
 
 ### VCB
 ```{r}
-readd(two_week_fc_vcb) %>%  knitr::kable()
-```
-
-
-### VCI
-```{r}
-readd(two_week_fc_vci) %>%  knitr::kable()
-```
-
-
-### VNI
-```{r}
-readd(two_week_fc_vni) %>%  knitr::kable()
+readd(two_week_fc_VCB) %>%  knitr::kable()
 ```
 

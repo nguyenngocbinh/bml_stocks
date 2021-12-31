@@ -28,18 +28,18 @@ library(dplyr)
 interactive <- FALSE
 ```
 
-# Forecast dhg price
+# Forecast DHG price
 
 ### Plot
 ```{r}
-readd(data_dhg) %>%
+readd(data_DHG) %>%
   plot_time_series(date, value, .interactive = interactive)
 ```
 
 ### Divide data to train/ test
 
 ```{r}
-readd(splits_dhg) %>%
+readd(splits_DHG) %>%
   tk_time_series_cv_plan() %>%
   plot_time_series_cv_plan(date, value, .interactive = FALSE)
 ```
@@ -47,30 +47,30 @@ readd(splits_dhg) %>%
 ### Modeltime Table
 
 ```{r}
-readd(models_tbl_dhg)
+readd(models_tbl_DHG)
 ```
 
 ### Calibration
 ```{r}
-readd(calibration_tbl_dhg)
+readd(calibration_tbl_DHG)
 ```
 
 
 ### Forecast (Testing Set)
 ```{r}
 
-readd(forecast_tbl_dhg) %>% 
+readd(forecast_tbl_DHG) %>% 
   plot_modeltime_forecast(.legend_max_width = 25, 
                            .interactive      = interactive)
 ```
 
 ### Accuracy table
 ```{r}
-readd(accuracy_tbl_dhg)$`_data`
+readd(accuracy_tbl_DHG)$`_data`
 
 ```
 ### Next week forecast
 ```{r}
-readd(two_week_fc_dhg)
+readd(two_week_fc_DHG)
 ```
 

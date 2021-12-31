@@ -28,8 +28,8 @@ body {
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 <h1 id="forecast-stocks-price">FORECAST STOCKS PRICE</h1>
-<h3 id="bid">BID</h3>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_bid) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<h3 id="aaa">AAA</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_AAA) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -43,57 +43,161 @@ body {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">bid</td>
-<td align="left">2021-07-23</td>
-<td align="right">45.61075</td>
-<td align="right">41.40779</td>
-<td align="right">49.81371</td>
+<td align="left">AAA</td>
+<td align="left">2022-01-03</td>
+<td align="right">18.72279</td>
+<td align="right">15.66018</td>
+<td align="right">21.78540</td>
 <td align="left">PROPHET</td>
 </tr>
 <tr class="even">
-<td align="left">bid</td>
-<td align="left">2021-07-26</td>
-<td align="right">45.46409</td>
-<td align="right">41.26113</td>
-<td align="right">49.66705</td>
+<td align="left">AAA</td>
+<td align="left">2022-01-04</td>
+<td align="right">18.74639</td>
+<td align="right">15.68378</td>
+<td align="right">21.80899</td>
 <td align="left">PROPHET</td>
 </tr>
 <tr class="odd">
-<td align="left">bid</td>
-<td align="left">2021-07-27</td>
-<td align="right">45.49788</td>
-<td align="right">41.29492</td>
-<td align="right">49.70084</td>
+<td align="left">AAA</td>
+<td align="left">2022-01-05</td>
+<td align="right">18.80652</td>
+<td align="right">15.74392</td>
+<td align="right">21.86913</td>
 <td align="left">PROPHET</td>
 </tr>
 <tr class="even">
-<td align="left">bid</td>
-<td align="left">2021-07-28</td>
-<td align="right">45.62157</td>
-<td align="right">41.41861</td>
-<td align="right">49.82453</td>
+<td align="left">AAA</td>
+<td align="left">2022-01-06</td>
+<td align="right">18.90766</td>
+<td align="right">15.84506</td>
+<td align="right">21.97027</td>
 <td align="left">PROPHET</td>
 </tr>
 <tr class="odd">
-<td align="left">bid</td>
-<td align="left">2021-07-29</td>
-<td align="right">45.73905</td>
-<td align="right">41.53609</td>
-<td align="right">49.94201</td>
+<td align="left">AAA</td>
+<td align="left">2022-01-07</td>
+<td align="right">18.87549</td>
+<td align="right">15.81288</td>
+<td align="right">21.93810</td>
 <td align="left">PROPHET</td>
 </tr>
+</tbody>
+</table>
+<h3 id="acb">ACB</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_ACB) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">.ticker</th>
+<th align="left">.index</th>
+<th align="right">.value</th>
+<th align="right">.low</th>
+<th align="right">.high</th>
+<th align="left">.model_desc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">ACB</td>
+<td align="left">2022-01-03</td>
+<td align="right">34.62303</td>
+<td align="right">32.75589</td>
+<td align="right">36.49017</td>
+<td align="left">ARIMA(0,1,0) WITH DRIFT</td>
+</tr>
 <tr class="even">
-<td align="left">bid</td>
-<td align="left">2021-07-30</td>
-<td align="right">45.70871</td>
-<td align="right">41.50575</td>
-<td align="right">49.91167</td>
-<td align="left">PROPHET</td>
+<td align="left">ACB</td>
+<td align="left">2022-01-04</td>
+<td align="right">34.66404</td>
+<td align="right">32.79690</td>
+<td align="right">36.53118</td>
+<td align="left">ARIMA(0,1,0) WITH DRIFT</td>
+</tr>
+<tr class="odd">
+<td align="left">ACB</td>
+<td align="left">2022-01-05</td>
+<td align="right">34.70505</td>
+<td align="right">32.83791</td>
+<td align="right">36.57219</td>
+<td align="left">ARIMA(0,1,0) WITH DRIFT</td>
+</tr>
+<tr class="even">
+<td align="left">ACB</td>
+<td align="left">2022-01-06</td>
+<td align="right">34.74606</td>
+<td align="right">32.87892</td>
+<td align="right">36.61320</td>
+<td align="left">ARIMA(0,1,0) WITH DRIFT</td>
+</tr>
+<tr class="odd">
+<td align="left">ACB</td>
+<td align="left">2022-01-07</td>
+<td align="right">34.78707</td>
+<td align="right">32.91993</td>
+<td align="right">36.65421</td>
+<td align="left">ARIMA(0,1,0) WITH DRIFT</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bid">BID</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_BID) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">.ticker</th>
+<th align="left">.index</th>
+<th align="right">.value</th>
+<th align="right">.low</th>
+<th align="right">.high</th>
+<th align="left">.model_desc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">BID</td>
+<td align="left">2022-01-03</td>
+<td align="right">37.66297</td>
+<td align="right">33.4058</td>
+<td align="right">41.92014</td>
+<td align="left">ARIMA(0,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">BID</td>
+<td align="left">2022-01-04</td>
+<td align="right">37.66297</td>
+<td align="right">33.4058</td>
+<td align="right">41.92014</td>
+<td align="left">ARIMA(0,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">BID</td>
+<td align="left">2022-01-05</td>
+<td align="right">37.66297</td>
+<td align="right">33.4058</td>
+<td align="right">41.92014</td>
+<td align="left">ARIMA(0,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="even">
+<td align="left">BID</td>
+<td align="left">2022-01-06</td>
+<td align="right">37.66297</td>
+<td align="right">33.4058</td>
+<td align="right">41.92014</td>
+<td align="left">ARIMA(0,1,0) W/ XGBOOST ERRORS</td>
+</tr>
+<tr class="odd">
+<td align="left">BID</td>
+<td align="left">2022-01-07</td>
+<td align="right">37.66297</td>
+<td align="right">33.4058</td>
+<td align="right">41.92014</td>
+<td align="left">ARIMA(0,1,0) W/ XGBOOST ERRORS</td>
 </tr>
 </tbody>
 </table>
 <h3 id="bvh">BVH</h3>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_bvh) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_BVH) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -107,57 +211,105 @@ body {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">bvh</td>
-<td align="left">2021-07-23</td>
-<td align="right">59.08091</td>
-<td align="right">54.10671</td>
-<td align="right">64.05512</td>
-<td align="left">ARIMA(0,1,3)(0,0,2)[5]</td>
+<td align="left">BVH</td>
+<td align="left">2022-01-03</td>
+<td align="right">56.14159</td>
+<td align="right">50.49230</td>
+<td align="right">61.79089</td>
+<td align="left">ETS(M,AD,M)</td>
 </tr>
 <tr class="even">
-<td align="left">bvh</td>
-<td align="left">2021-07-26</td>
-<td align="right">59.08091</td>
-<td align="right">54.10671</td>
-<td align="right">64.05512</td>
-<td align="left">ARIMA(0,1,3)(0,0,2)[5]</td>
+<td align="left">BVH</td>
+<td align="left">2022-01-04</td>
+<td align="right">56.22082</td>
+<td align="right">50.57153</td>
+<td align="right">61.87012</td>
+<td align="left">ETS(M,AD,M)</td>
 </tr>
 <tr class="odd">
-<td align="left">bvh</td>
-<td align="left">2021-07-27</td>
-<td align="right">59.08091</td>
-<td align="right">54.10671</td>
-<td align="right">64.05512</td>
-<td align="left">ARIMA(0,1,3)(0,0,2)[5]</td>
+<td align="left">BVH</td>
+<td align="left">2022-01-05</td>
+<td align="right">56.46556</td>
+<td align="right">50.81627</td>
+<td align="right">62.11486</td>
+<td align="left">ETS(M,AD,M)</td>
 </tr>
 <tr class="even">
-<td align="left">bvh</td>
-<td align="left">2021-07-28</td>
-<td align="right">59.08091</td>
-<td align="right">54.10671</td>
-<td align="right">64.05512</td>
-<td align="left">ARIMA(0,1,3)(0,0,2)[5]</td>
+<td align="left">BVH</td>
+<td align="left">2022-01-06</td>
+<td align="right">56.06424</td>
+<td align="right">50.41494</td>
+<td align="right">61.71353</td>
+<td align="left">ETS(M,AD,M)</td>
 </tr>
 <tr class="odd">
-<td align="left">bvh</td>
-<td align="left">2021-07-29</td>
-<td align="right">59.08091</td>
-<td align="right">54.10671</td>
-<td align="right">64.05512</td>
-<td align="left">ARIMA(0,1,3)(0,0,2)[5]</td>
+<td align="left">BVH</td>
+<td align="left">2022-01-07</td>
+<td align="right">55.58708</td>
+<td align="right">49.93778</td>
+<td align="right">61.23637</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dhg">DHG</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_DHG) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">.ticker</th>
+<th align="left">.index</th>
+<th align="right">.value</th>
+<th align="right">.low</th>
+<th align="right">.high</th>
+<th align="left">.model_desc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">DHG</td>
+<td align="left">2022-01-03</td>
+<td align="right">116.0215</td>
+<td align="right">94.92817</td>
+<td align="right">137.1149</td>
+<td align="left">PROPHET</td>
 </tr>
 <tr class="even">
-<td align="left">bvh</td>
-<td align="left">2021-07-30</td>
-<td align="right">59.08091</td>
-<td align="right">54.10671</td>
-<td align="right">64.05512</td>
-<td align="left">ARIMA(0,1,3)(0,0,2)[5]</td>
+<td align="left">DHG</td>
+<td align="left">2022-01-04</td>
+<td align="right">116.2615</td>
+<td align="right">95.16811</td>
+<td align="right">137.3549</td>
+<td align="left">PROPHET</td>
+</tr>
+<tr class="odd">
+<td align="left">DHG</td>
+<td align="left">2022-01-05</td>
+<td align="right">116.3035</td>
+<td align="right">95.21012</td>
+<td align="right">137.3969</td>
+<td align="left">PROPHET</td>
+</tr>
+<tr class="even">
+<td align="left">DHG</td>
+<td align="left">2022-01-06</td>
+<td align="right">116.4522</td>
+<td align="right">95.35884</td>
+<td align="right">137.5456</td>
+<td align="left">PROPHET</td>
+</tr>
+<tr class="odd">
+<td align="left">DHG</td>
+<td align="left">2022-01-07</td>
+<td align="right">116.4265</td>
+<td align="right">95.33313</td>
+<td align="right">137.5199</td>
+<td align="left">PROPHET</td>
 </tr>
 </tbody>
 </table>
 <h3 id="fpt">FPT</h3>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_fpt) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_FPT) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -171,57 +323,49 @@ body {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">fpt</td>
-<td align="left">2021-07-23</td>
-<td align="right">90.02648</td>
-<td align="right">85.15166</td>
-<td align="right">94.90130</td>
-<td align="left">PROPHET</td>
+<td align="left">FPT</td>
+<td align="left">2022-01-03</td>
+<td align="right">93.21429</td>
+<td align="right">83.35480</td>
+<td align="right">103.0738</td>
+<td align="left">ETS(M,AD,M)</td>
 </tr>
 <tr class="even">
-<td align="left">fpt</td>
-<td align="left">2021-07-26</td>
-<td align="right">90.34413</td>
-<td align="right">85.46932</td>
-<td align="right">95.21895</td>
-<td align="left">PROPHET</td>
+<td align="left">FPT</td>
+<td align="left">2022-01-04</td>
+<td align="right">93.26881</td>
+<td align="right">83.40932</td>
+<td align="right">103.1283</td>
+<td align="left">ETS(M,AD,M)</td>
 </tr>
 <tr class="odd">
-<td align="left">fpt</td>
-<td align="left">2021-07-27</td>
-<td align="right">90.64922</td>
-<td align="right">85.77440</td>
-<td align="right">95.52403</td>
-<td align="left">PROPHET</td>
+<td align="left">FPT</td>
+<td align="left">2022-01-05</td>
+<td align="right">93.17252</td>
+<td align="right">83.31304</td>
+<td align="right">103.0320</td>
+<td align="left">ETS(M,AD,M)</td>
 </tr>
 <tr class="even">
-<td align="left">fpt</td>
-<td align="left">2021-07-28</td>
-<td align="right">90.87353</td>
-<td align="right">85.99872</td>
-<td align="right">95.74835</td>
-<td align="left">PROPHET</td>
+<td align="left">FPT</td>
+<td align="left">2022-01-06</td>
+<td align="right">92.98784</td>
+<td align="right">83.12835</td>
+<td align="right">102.8473</td>
+<td align="left">ETS(M,AD,M)</td>
 </tr>
 <tr class="odd">
-<td align="left">fpt</td>
-<td align="left">2021-07-29</td>
-<td align="right">91.07223</td>
-<td align="right">86.19741</td>
-<td align="right">95.94705</td>
-<td align="left">PROPHET</td>
-</tr>
-<tr class="even">
-<td align="left">fpt</td>
-<td align="left">2021-07-30</td>
-<td align="right">91.31257</td>
-<td align="right">86.43775</td>
-<td align="right">96.18739</td>
-<td align="left">PROPHET</td>
+<td align="left">FPT</td>
+<td align="left">2022-01-07</td>
+<td align="right">92.76302</td>
+<td align="right">82.90353</td>
+<td align="right">102.6225</td>
+<td align="left">ETS(M,AD,M)</td>
 </tr>
 </tbody>
 </table>
 <h3 id="hbc">HBC</h3>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_hbc) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_HBC) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -235,57 +379,49 @@ body {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">hbc</td>
-<td align="left">2021-07-23</td>
-<td align="right">15.11788</td>
-<td align="right">11.49806</td>
-<td align="right">18.73770</td>
+<td align="left">HBC</td>
+<td align="left">2022-01-03</td>
+<td align="right">30.33172</td>
+<td align="right">18.57433</td>
+<td align="right">42.08912</td>
 <td align="left">ETS(M,AD,M)</td>
 </tr>
 <tr class="even">
-<td align="left">hbc</td>
-<td align="left">2021-07-26</td>
-<td align="right">15.26883</td>
-<td align="right">11.64901</td>
-<td align="right">18.88865</td>
+<td align="left">HBC</td>
+<td align="left">2022-01-04</td>
+<td align="right">30.66637</td>
+<td align="right">18.90897</td>
+<td align="right">42.42377</td>
 <td align="left">ETS(M,AD,M)</td>
 </tr>
 <tr class="odd">
-<td align="left">hbc</td>
-<td align="left">2021-07-27</td>
-<td align="right">15.29516</td>
-<td align="right">11.67534</td>
-<td align="right">18.91498</td>
+<td align="left">HBC</td>
+<td align="left">2022-01-05</td>
+<td align="right">30.89311</td>
+<td align="right">19.13571</td>
+<td align="right">42.65051</td>
 <td align="left">ETS(M,AD,M)</td>
 </tr>
 <tr class="even">
-<td align="left">hbc</td>
-<td align="left">2021-07-28</td>
-<td align="right">15.27123</td>
-<td align="right">11.65141</td>
-<td align="right">18.89105</td>
+<td align="left">HBC</td>
+<td align="left">2022-01-06</td>
+<td align="right">30.97070</td>
+<td align="right">19.21330</td>
+<td align="right">42.72810</td>
 <td align="left">ETS(M,AD,M)</td>
 </tr>
 <tr class="odd">
-<td align="left">hbc</td>
-<td align="left">2021-07-29</td>
-<td align="right">15.18899</td>
-<td align="right">11.56917</td>
-<td align="right">18.80882</td>
-<td align="left">ETS(M,AD,M)</td>
-</tr>
-<tr class="even">
-<td align="left">hbc</td>
-<td align="left">2021-07-30</td>
-<td align="right">15.20515</td>
-<td align="right">11.58533</td>
-<td align="right">18.82498</td>
+<td align="left">HBC</td>
+<td align="left">2022-01-07</td>
+<td align="right">30.98639</td>
+<td align="right">19.22900</td>
+<td align="right">42.74379</td>
 <td align="left">ETS(M,AD,M)</td>
 </tr>
 </tbody>
 </table>
 <h3 id="hcm">HCM</h3>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_hcm) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_HCM) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -299,57 +435,49 @@ body {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">hcm</td>
-<td align="left">2021-07-23</td>
-<td align="right">42.93665</td>
-<td align="right">35.01486</td>
-<td align="right">50.85843</td>
-<td align="left">PROPHET</td>
+<td align="left">HCM</td>
+<td align="left">2022-01-03</td>
+<td align="right">46.20655</td>
+<td align="right">40.14182</td>
+<td align="right">52.27129</td>
+<td align="left">ARIMA(0,1,0) WITH DRIFT W/ XGBOOST ERRORS</td>
 </tr>
 <tr class="even">
-<td align="left">hcm</td>
-<td align="left">2021-07-26</td>
-<td align="right">43.17072</td>
-<td align="right">35.24893</td>
-<td align="right">51.09251</td>
-<td align="left">PROPHET</td>
+<td align="left">HCM</td>
+<td align="left">2022-01-04</td>
+<td align="right">46.26729</td>
+<td align="right">40.20256</td>
+<td align="right">52.33203</td>
+<td align="left">ARIMA(0,1,0) WITH DRIFT W/ XGBOOST ERRORS</td>
 </tr>
 <tr class="odd">
-<td align="left">hcm</td>
-<td align="left">2021-07-27</td>
-<td align="right">43.18291</td>
-<td align="right">35.26112</td>
-<td align="right">51.10470</td>
-<td align="left">PROPHET</td>
+<td align="left">HCM</td>
+<td align="left">2022-01-05</td>
+<td align="right">46.32803</td>
+<td align="right">40.26329</td>
+<td align="right">52.39277</td>
+<td align="left">ARIMA(0,1,0) WITH DRIFT W/ XGBOOST ERRORS</td>
 </tr>
 <tr class="even">
-<td align="left">hcm</td>
-<td align="left">2021-07-28</td>
-<td align="right">43.35011</td>
-<td align="right">35.42832</td>
-<td align="right">51.27189</td>
-<td align="left">PROPHET</td>
+<td align="left">HCM</td>
+<td align="left">2022-01-06</td>
+<td align="right">46.38877</td>
+<td align="right">40.32403</td>
+<td align="right">52.45351</td>
+<td align="left">ARIMA(0,1,0) WITH DRIFT W/ XGBOOST ERRORS</td>
 </tr>
 <tr class="odd">
-<td align="left">hcm</td>
-<td align="left">2021-07-29</td>
-<td align="right">43.50866</td>
-<td align="right">35.58687</td>
-<td align="right">51.43045</td>
-<td align="left">PROPHET</td>
-</tr>
-<tr class="even">
-<td align="left">hcm</td>
-<td align="left">2021-07-30</td>
-<td align="right">43.52569</td>
-<td align="right">35.60391</td>
-<td align="right">51.44748</td>
-<td align="left">PROPHET</td>
+<td align="left">HCM</td>
+<td align="left">2022-01-07</td>
+<td align="right">46.44951</td>
+<td align="right">40.38477</td>
+<td align="right">52.51424</td>
+<td align="left">ARIMA(0,1,0) WITH DRIFT W/ XGBOOST ERRORS</td>
 </tr>
 </tbody>
 </table>
 <h3 id="hdg">HDG</h3>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_hdg) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_HDG) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -363,57 +491,49 @@ body {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">hdg</td>
-<td align="left">2021-07-23</td>
-<td align="right">43.51756</td>
-<td align="right">39.90324</td>
-<td align="right">47.13189</td>
-<td align="left">ETS(M,AD,M)</td>
+<td align="left">HDG</td>
+<td align="left">2022-01-03</td>
+<td align="right">63.90178</td>
+<td align="right">56.52426</td>
+<td align="right">71.27931</td>
+<td align="left">PROPHET</td>
 </tr>
 <tr class="even">
-<td align="left">hdg</td>
-<td align="left">2021-07-26</td>
-<td align="right">44.00315</td>
-<td align="right">40.38882</td>
-<td align="right">47.61747</td>
-<td align="left">ETS(M,AD,M)</td>
+<td align="left">HDG</td>
+<td align="left">2022-01-04</td>
+<td align="right">64.19933</td>
+<td align="right">56.82181</td>
+<td align="right">71.57685</td>
+<td align="left">PROPHET</td>
 </tr>
 <tr class="odd">
-<td align="left">hdg</td>
-<td align="left">2021-07-27</td>
-<td align="right">43.92955</td>
-<td align="right">40.31522</td>
-<td align="right">47.54388</td>
-<td align="left">ETS(M,AD,M)</td>
+<td align="left">HDG</td>
+<td align="left">2022-01-05</td>
+<td align="right">64.40291</td>
+<td align="right">57.02539</td>
+<td align="right">71.78043</td>
+<td align="left">PROPHET</td>
 </tr>
 <tr class="even">
-<td align="left">hdg</td>
-<td align="left">2021-07-28</td>
-<td align="right">43.75129</td>
-<td align="right">40.13696</td>
-<td align="right">47.36562</td>
-<td align="left">ETS(M,AD,M)</td>
+<td align="left">HDG</td>
+<td align="left">2022-01-06</td>
+<td align="right">64.58617</td>
+<td align="right">57.20865</td>
+<td align="right">71.96370</td>
+<td align="left">PROPHET</td>
 </tr>
 <tr class="odd">
-<td align="left">hdg</td>
-<td align="left">2021-07-29</td>
-<td align="right">43.46168</td>
-<td align="right">39.84736</td>
-<td align="right">47.07601</td>
-<td align="left">ETS(M,AD,M)</td>
-</tr>
-<tr class="even">
-<td align="left">hdg</td>
-<td align="left">2021-07-30</td>
-<td align="right">43.62734</td>
-<td align="right">40.01301</td>
-<td align="right">47.24166</td>
-<td align="left">ETS(M,AD,M)</td>
+<td align="left">HDG</td>
+<td align="left">2022-01-07</td>
+<td align="right">64.81253</td>
+<td align="right">57.43501</td>
+<td align="right">72.19006</td>
+<td align="left">PROPHET</td>
 </tr>
 </tbody>
 </table>
 <h3 id="hpg">HPG</h3>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_hpg) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_HPG) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -427,57 +547,49 @@ body {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">hpg</td>
-<td align="left">2021-07-23</td>
-<td align="right">56.24564</td>
-<td align="right">43.54086</td>
-<td align="right">68.95043</td>
+<td align="left">HPG</td>
+<td align="left">2022-01-03</td>
+<td align="right">50.87068</td>
+<td align="right">42.40463</td>
+<td align="right">59.33673</td>
 <td align="left">PROPHET</td>
 </tr>
 <tr class="even">
-<td align="left">hpg</td>
-<td align="left">2021-07-26</td>
-<td align="right">56.66506</td>
-<td align="right">43.96027</td>
-<td align="right">69.36984</td>
+<td align="left">HPG</td>
+<td align="left">2022-01-04</td>
+<td align="right">50.93269</td>
+<td align="right">42.46663</td>
+<td align="right">59.39874</td>
 <td align="left">PROPHET</td>
 </tr>
 <tr class="odd">
-<td align="left">hpg</td>
-<td align="left">2021-07-27</td>
-<td align="right">56.82605</td>
-<td align="right">44.12127</td>
-<td align="right">69.53084</td>
+<td align="left">HPG</td>
+<td align="left">2022-01-05</td>
+<td align="right">50.91592</td>
+<td align="right">42.44987</td>
+<td align="right">59.38197</td>
 <td align="left">PROPHET</td>
 </tr>
 <tr class="even">
-<td align="left">hpg</td>
-<td align="left">2021-07-28</td>
-<td align="right">56.93561</td>
-<td align="right">44.23083</td>
-<td align="right">69.64040</td>
+<td align="left">HPG</td>
+<td align="left">2022-01-06</td>
+<td align="right">50.96809</td>
+<td align="right">42.50204</td>
+<td align="right">59.43415</td>
 <td align="left">PROPHET</td>
 </tr>
 <tr class="odd">
-<td align="left">hpg</td>
-<td align="left">2021-07-29</td>
-<td align="right">57.12763</td>
-<td align="right">44.42284</td>
-<td align="right">69.83242</td>
-<td align="left">PROPHET</td>
-</tr>
-<tr class="even">
-<td align="left">hpg</td>
-<td align="left">2021-07-30</td>
-<td align="right">57.30529</td>
-<td align="right">44.60050</td>
-<td align="right">70.01008</td>
+<td align="left">HPG</td>
+<td align="left">2022-01-07</td>
+<td align="right">50.91641</td>
+<td align="right">42.45036</td>
+<td align="right">59.38246</td>
 <td align="left">PROPHET</td>
 </tr>
 </tbody>
 </table>
 <h3 id="mbb">MBB</h3>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_mbb) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_MBB) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -491,57 +603,49 @@ body {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mbb</td>
-<td align="left">2021-07-23</td>
-<td align="right">31.33367</td>
-<td align="right">26.93409</td>
-<td align="right">35.73325</td>
-<td align="left">PROPHET</td>
+<td align="left">MBB</td>
+<td align="left">2022-01-03</td>
+<td align="right">28.89654</td>
+<td align="right">27.71314</td>
+<td align="right">30.07994</td>
+<td align="left">ETS(M,AD,M)</td>
 </tr>
 <tr class="even">
-<td align="left">mbb</td>
-<td align="left">2021-07-26</td>
-<td align="right">31.47073</td>
-<td align="right">27.07115</td>
-<td align="right">35.87031</td>
-<td align="left">PROPHET</td>
+<td align="left">MBB</td>
+<td align="left">2022-01-04</td>
+<td align="right">29.08873</td>
+<td align="right">27.90533</td>
+<td align="right">30.27213</td>
+<td align="left">ETS(M,AD,M)</td>
 </tr>
 <tr class="odd">
-<td align="left">mbb</td>
-<td align="left">2021-07-27</td>
-<td align="right">31.55690</td>
-<td align="right">27.15732</td>
-<td align="right">35.95648</td>
-<td align="left">PROPHET</td>
+<td align="left">MBB</td>
+<td align="left">2022-01-05</td>
+<td align="right">29.09659</td>
+<td align="right">27.91319</td>
+<td align="right">30.28000</td>
+<td align="left">ETS(M,AD,M)</td>
 </tr>
 <tr class="even">
-<td align="left">mbb</td>
-<td align="left">2021-07-28</td>
-<td align="right">31.70193</td>
-<td align="right">27.30235</td>
-<td align="right">36.10151</td>
-<td align="left">PROPHET</td>
+<td align="left">MBB</td>
+<td align="left">2022-01-06</td>
+<td align="right">29.09210</td>
+<td align="right">27.90870</td>
+<td align="right">30.27550</td>
+<td align="left">ETS(M,AD,M)</td>
 </tr>
 <tr class="odd">
-<td align="left">mbb</td>
-<td align="left">2021-07-29</td>
-<td align="right">31.75784</td>
-<td align="right">27.35826</td>
-<td align="right">36.15742</td>
-<td align="left">PROPHET</td>
-</tr>
-<tr class="even">
-<td align="left">mbb</td>
-<td align="left">2021-07-30</td>
-<td align="right">31.86654</td>
-<td align="right">27.46696</td>
-<td align="right">36.26612</td>
-<td align="left">PROPHET</td>
+<td align="left">MBB</td>
+<td align="left">2022-01-07</td>
+<td align="right">29.06762</td>
+<td align="right">27.88422</td>
+<td align="right">30.25103</td>
+<td align="left">ETS(M,AD,M)</td>
 </tr>
 </tbody>
 </table>
 <h3 id="pnj">PNJ</h3>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_pnj) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_PNJ) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -555,57 +659,105 @@ body {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">pnj</td>
-<td align="left">2021-07-23</td>
-<td align="right">104.1840</td>
-<td align="right">99.40332</td>
-<td align="right">108.9647</td>
-<td align="left">PROPHET</td>
+<td align="left">PNJ</td>
+<td align="left">2022-01-03</td>
+<td align="right">96.2</td>
+<td align="right">87.98133</td>
+<td align="right">104.4187</td>
+<td align="left">ARIMA(0,1,0)</td>
 </tr>
 <tr class="even">
-<td align="left">pnj</td>
-<td align="left">2021-07-26</td>
-<td align="right">104.3040</td>
-<td align="right">99.52333</td>
-<td align="right">109.0848</td>
-<td align="left">PROPHET</td>
+<td align="left">PNJ</td>
+<td align="left">2022-01-04</td>
+<td align="right">96.2</td>
+<td align="right">87.98133</td>
+<td align="right">104.4187</td>
+<td align="left">ARIMA(0,1,0)</td>
 </tr>
 <tr class="odd">
-<td align="left">pnj</td>
-<td align="left">2021-07-27</td>
-<td align="right">104.4656</td>
-<td align="right">99.68487</td>
-<td align="right">109.2463</td>
-<td align="left">PROPHET</td>
+<td align="left">PNJ</td>
+<td align="left">2022-01-05</td>
+<td align="right">96.2</td>
+<td align="right">87.98133</td>
+<td align="right">104.4187</td>
+<td align="left">ARIMA(0,1,0)</td>
 </tr>
 <tr class="even">
-<td align="left">pnj</td>
-<td align="left">2021-07-28</td>
-<td align="right">104.6169</td>
-<td align="right">99.83623</td>
-<td align="right">109.3977</td>
-<td align="left">PROPHET</td>
+<td align="left">PNJ</td>
+<td align="left">2022-01-06</td>
+<td align="right">96.2</td>
+<td align="right">87.98133</td>
+<td align="right">104.4187</td>
+<td align="left">ARIMA(0,1,0)</td>
 </tr>
 <tr class="odd">
-<td align="left">pnj</td>
-<td align="left">2021-07-29</td>
-<td align="right">104.8911</td>
-<td align="right">100.11035</td>
-<td align="right">109.6718</td>
-<td align="left">PROPHET</td>
+<td align="left">PNJ</td>
+<td align="left">2022-01-07</td>
+<td align="right">96.2</td>
+<td align="right">87.98133</td>
+<td align="right">104.4187</td>
+<td align="left">ARIMA(0,1,0)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ree">REE</h3>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_REE) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">.ticker</th>
+<th align="left">.index</th>
+<th align="right">.value</th>
+<th align="right">.low</th>
+<th align="right">.high</th>
+<th align="left">.model_desc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">REE</td>
+<td align="left">2022-01-03</td>
+<td align="right">69.27862</td>
+<td align="right">63.32489</td>
+<td align="right">75.23235</td>
+<td align="left">ETS(M,AD,M)</td>
 </tr>
 <tr class="even">
-<td align="left">pnj</td>
-<td align="left">2021-07-30</td>
-<td align="right">105.0960</td>
-<td align="right">100.31531</td>
-<td align="right">109.8767</td>
-<td align="left">PROPHET</td>
+<td align="left">REE</td>
+<td align="left">2022-01-04</td>
+<td align="right">69.19603</td>
+<td align="right">63.24230</td>
+<td align="right">75.14976</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="odd">
+<td align="left">REE</td>
+<td align="left">2022-01-05</td>
+<td align="right">69.05807</td>
+<td align="right">63.10433</td>
+<td align="right">75.01180</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="even">
+<td align="left">REE</td>
+<td align="left">2022-01-06</td>
+<td align="right">69.21757</td>
+<td align="right">63.26384</td>
+<td align="right">75.17130</td>
+<td align="left">ETS(M,AD,M)</td>
+</tr>
+<tr class="odd">
+<td align="left">REE</td>
+<td align="left">2022-01-07</td>
+<td align="right">69.15693</td>
+<td align="right">63.20320</td>
+<td align="right">75.11066</td>
+<td align="left">ETS(M,AD,M)</td>
 </tr>
 </tbody>
 </table>
 <h3 id="sbs">SBS</h3>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_sbs) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_SBS) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -619,57 +771,49 @@ body {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">sbs</td>
-<td align="left">2021-07-23</td>
-<td align="right">13.55177</td>
-<td align="right">10.31853</td>
-<td align="right">16.78501</td>
-<td align="left">PROPHET</td>
+<td align="left">SBS</td>
+<td align="left">2022-01-03</td>
+<td align="right">18.78089</td>
+<td align="right">15.19301</td>
+<td align="right">22.36877</td>
+<td align="left">ARIMA(0,1,0) WITH DRIFT W/ XGBOOST ERRORS</td>
 </tr>
 <tr class="even">
-<td align="left">sbs</td>
-<td align="left">2021-07-26</td>
-<td align="right">13.65794</td>
-<td align="right">10.42470</td>
-<td align="right">16.89117</td>
-<td align="left">PROPHET</td>
+<td align="left">SBS</td>
+<td align="left">2022-01-04</td>
+<td align="right">18.81482</td>
+<td align="right">15.22694</td>
+<td align="right">22.40271</td>
+<td align="left">ARIMA(0,1,0) WITH DRIFT W/ XGBOOST ERRORS</td>
 </tr>
 <tr class="odd">
-<td align="left">sbs</td>
-<td align="left">2021-07-27</td>
-<td align="right">13.66795</td>
-<td align="right">10.43472</td>
-<td align="right">16.90119</td>
-<td align="left">PROPHET</td>
+<td align="left">SBS</td>
+<td align="left">2022-01-05</td>
+<td align="right">18.84876</td>
+<td align="right">15.26087</td>
+<td align="right">22.43664</td>
+<td align="left">ARIMA(0,1,0) WITH DRIFT W/ XGBOOST ERRORS</td>
 </tr>
 <tr class="even">
-<td align="left">sbs</td>
-<td align="left">2021-07-28</td>
-<td align="right">13.75142</td>
-<td align="right">10.51819</td>
-<td align="right">16.98466</td>
-<td align="left">PROPHET</td>
+<td align="left">SBS</td>
+<td align="left">2022-01-06</td>
+<td align="right">18.88269</td>
+<td align="right">15.29481</td>
+<td align="right">22.47057</td>
+<td align="left">ARIMA(0,1,0) WITH DRIFT W/ XGBOOST ERRORS</td>
 </tr>
 <tr class="odd">
-<td align="left">sbs</td>
-<td align="left">2021-07-29</td>
-<td align="right">13.80956</td>
-<td align="right">10.57633</td>
-<td align="right">17.04280</td>
-<td align="left">PROPHET</td>
-</tr>
-<tr class="even">
-<td align="left">sbs</td>
-<td align="left">2021-07-30</td>
-<td align="right">13.87967</td>
-<td align="right">10.64643</td>
-<td align="right">17.11291</td>
-<td align="left">PROPHET</td>
+<td align="left">SBS</td>
+<td align="left">2022-01-07</td>
+<td align="right">18.91662</td>
+<td align="right">15.32874</td>
+<td align="right">22.50450</td>
+<td align="left">ARIMA(0,1,0) WITH DRIFT W/ XGBOOST ERRORS</td>
 </tr>
 </tbody>
 </table>
 <h3 id="shs">SHS</h3>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_shs) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_SHS) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -683,57 +827,49 @@ body {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">shs</td>
-<td align="left">2021-07-23</td>
-<td align="right">41.97460</td>
-<td align="right">35.38749</td>
-<td align="right">48.56172</td>
+<td align="left">SHS</td>
+<td align="left">2022-01-03</td>
+<td align="right">51.45272</td>
+<td align="right">44.49759</td>
+<td align="right">58.40785</td>
 <td align="left">PROPHET</td>
 </tr>
 <tr class="even">
-<td align="left">shs</td>
-<td align="left">2021-07-26</td>
-<td align="right">42.22050</td>
-<td align="right">35.63339</td>
-<td align="right">48.80762</td>
+<td align="left">SHS</td>
+<td align="left">2022-01-04</td>
+<td align="right">51.55202</td>
+<td align="right">44.59689</td>
+<td align="right">58.50714</td>
 <td align="left">PROPHET</td>
 </tr>
 <tr class="odd">
-<td align="left">shs</td>
-<td align="left">2021-07-27</td>
-<td align="right">42.23607</td>
-<td align="right">35.64895</td>
-<td align="right">48.82318</td>
+<td align="left">SHS</td>
+<td align="left">2022-01-05</td>
+<td align="right">51.70654</td>
+<td align="right">44.75142</td>
+<td align="right">58.66167</td>
 <td align="left">PROPHET</td>
 </tr>
 <tr class="even">
-<td align="left">shs</td>
-<td align="left">2021-07-28</td>
-<td align="right">42.42401</td>
-<td align="right">35.83690</td>
-<td align="right">49.01113</td>
+<td align="left">SHS</td>
+<td align="left">2022-01-06</td>
+<td align="right">51.91501</td>
+<td align="right">44.95988</td>
+<td align="right">58.87014</td>
 <td align="left">PROPHET</td>
 </tr>
 <tr class="odd">
-<td align="left">shs</td>
-<td align="left">2021-07-29</td>
-<td align="right">42.56124</td>
-<td align="right">35.97413</td>
-<td align="right">49.14836</td>
-<td align="left">PROPHET</td>
-</tr>
-<tr class="even">
-<td align="left">shs</td>
-<td align="left">2021-07-30</td>
-<td align="right">42.71313</td>
-<td align="right">36.12601</td>
-<td align="right">49.30024</td>
+<td align="left">SHS</td>
+<td align="left">2022-01-07</td>
+<td align="right">52.01655</td>
+<td align="right">45.06142</td>
+<td align="right">58.97167</td>
 <td align="left">PROPHET</td>
 </tr>
 </tbody>
 </table>
-<h3 id="ssi">SSI</h3>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_ssi) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<h3 id="ssb">SSB</h3>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_SSB) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -747,57 +883,105 @@ body {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">ssi</td>
-<td align="left">2021-07-23</td>
-<td align="right">48.44518</td>
-<td align="right">39.35428</td>
-<td align="right">57.53608</td>
+<td align="left">SSB</td>
+<td align="left">2022-01-03</td>
+<td align="right">46.58149</td>
+<td align="right">38.36935</td>
+<td align="right">54.79363</td>
+<td align="left">ARIMA(1,1,1)(0,0,1)[5]</td>
+</tr>
+<tr class="even">
+<td align="left">SSB</td>
+<td align="left">2022-01-04</td>
+<td align="right">46.59486</td>
+<td align="right">38.38272</td>
+<td align="right">54.80700</td>
+<td align="left">ARIMA(1,1,1)(0,0,1)[5]</td>
+</tr>
+<tr class="odd">
+<td align="left">SSB</td>
+<td align="left">2022-01-05</td>
+<td align="right">46.74191</td>
+<td align="right">38.52977</td>
+<td align="right">54.95405</td>
+<td align="left">ARIMA(1,1,1)(0,0,1)[5]</td>
+</tr>
+<tr class="even">
+<td align="left">SSB</td>
+<td align="left">2022-01-06</td>
+<td align="right">46.93284</td>
+<td align="right">38.72070</td>
+<td align="right">55.14498</td>
+<td align="left">ARIMA(1,1,1)(0,0,1)[5]</td>
+</tr>
+<tr class="odd">
+<td align="left">SSB</td>
+<td align="left">2022-01-07</td>
+<td align="right">46.92926</td>
+<td align="right">38.71712</td>
+<td align="right">55.14140</td>
+<td align="left">ARIMA(1,1,1)(0,0,1)[5]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ssi">SSI</h3>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_SSI) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">.ticker</th>
+<th align="left">.index</th>
+<th align="right">.value</th>
+<th align="right">.low</th>
+<th align="right">.high</th>
+<th align="left">.model_desc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">SSI</td>
+<td align="left">2022-01-03</td>
+<td align="right">52.06557</td>
+<td align="right">44.47283</td>
+<td align="right">59.65832</td>
 <td align="left">PROPHET</td>
 </tr>
 <tr class="even">
-<td align="left">ssi</td>
-<td align="left">2021-07-26</td>
-<td align="right">48.79768</td>
-<td align="right">39.70678</td>
-<td align="right">57.88858</td>
+<td align="left">SSI</td>
+<td align="left">2022-01-04</td>
+<td align="right">52.11392</td>
+<td align="right">44.52117</td>
+<td align="right">59.70667</td>
 <td align="left">PROPHET</td>
 </tr>
 <tr class="odd">
-<td align="left">ssi</td>
-<td align="left">2021-07-27</td>
-<td align="right">48.78622</td>
-<td align="right">39.69531</td>
-<td align="right">57.87712</td>
+<td align="left">SSI</td>
+<td align="left">2022-01-05</td>
+<td align="right">52.20773</td>
+<td align="right">44.61499</td>
+<td align="right">59.80048</td>
 <td align="left">PROPHET</td>
 </tr>
 <tr class="even">
-<td align="left">ssi</td>
-<td align="left">2021-07-28</td>
-<td align="right">48.94621</td>
-<td align="right">39.85531</td>
-<td align="right">58.03711</td>
+<td align="left">SSI</td>
+<td align="left">2022-01-06</td>
+<td align="right">52.43461</td>
+<td align="right">44.84186</td>
+<td align="right">60.02736</td>
 <td align="left">PROPHET</td>
 </tr>
 <tr class="odd">
-<td align="left">ssi</td>
-<td align="left">2021-07-29</td>
-<td align="right">49.12982</td>
-<td align="right">40.03891</td>
-<td align="right">58.22072</td>
-<td align="left">PROPHET</td>
-</tr>
-<tr class="even">
-<td align="left">ssi</td>
-<td align="left">2021-07-30</td>
-<td align="right">49.22930</td>
-<td align="right">40.13840</td>
-<td align="right">58.32020</td>
+<td align="left">SSI</td>
+<td align="left">2022-01-07</td>
+<td align="right">52.46932</td>
+<td align="right">44.87657</td>
+<td align="right">60.06206</td>
 <td align="left">PROPHET</td>
 </tr>
 </tbody>
 </table>
 <h3 id="tcb">TCB</h3>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_tcb) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_TCB) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -811,57 +995,49 @@ body {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">tcb</td>
-<td align="left">2021-07-23</td>
-<td align="right">56.51867</td>
-<td align="right">50.99495</td>
-<td align="right">62.04240</td>
+<td align="left">TCB</td>
+<td align="left">2022-01-03</td>
+<td align="right">50.54507</td>
+<td align="right">47.19186</td>
+<td align="right">53.89829</td>
 <td align="left">PROPHET</td>
 </tr>
 <tr class="even">
-<td align="left">tcb</td>
-<td align="left">2021-07-26</td>
-<td align="right">56.72601</td>
-<td align="right">51.20228</td>
-<td align="right">62.24973</td>
+<td align="left">TCB</td>
+<td align="left">2022-01-04</td>
+<td align="right">50.49729</td>
+<td align="right">47.14408</td>
+<td align="right">53.85051</td>
 <td align="left">PROPHET</td>
 </tr>
 <tr class="odd">
-<td align="left">tcb</td>
-<td align="left">2021-07-27</td>
-<td align="right">56.81547</td>
-<td align="right">51.29174</td>
-<td align="right">62.33920</td>
+<td align="left">TCB</td>
+<td align="left">2022-01-05</td>
+<td align="right">50.64712</td>
+<td align="right">47.29391</td>
+<td align="right">54.00034</td>
 <td align="left">PROPHET</td>
 </tr>
 <tr class="even">
-<td align="left">tcb</td>
-<td align="left">2021-07-28</td>
-<td align="right">57.04405</td>
-<td align="right">51.52032</td>
-<td align="right">62.56778</td>
+<td align="left">TCB</td>
+<td align="left">2022-01-06</td>
+<td align="right">50.65772</td>
+<td align="right">47.30450</td>
+<td align="right">54.01094</td>
 <td align="left">PROPHET</td>
 </tr>
 <tr class="odd">
-<td align="left">tcb</td>
-<td align="left">2021-07-29</td>
-<td align="right">57.17587</td>
-<td align="right">51.65214</td>
-<td align="right">62.69960</td>
-<td align="left">PROPHET</td>
-</tr>
-<tr class="even">
-<td align="left">tcb</td>
-<td align="left">2021-07-30</td>
-<td align="right">57.40666</td>
-<td align="right">51.88293</td>
-<td align="right">62.93038</td>
+<td align="left">TCB</td>
+<td align="left">2022-01-07</td>
+<td align="right">50.72138</td>
+<td align="right">47.36817</td>
+<td align="right">54.07460</td>
 <td align="left">PROPHET</td>
 </tr>
 </tbody>
 </table>
 <h3 id="tng">TNG</h3>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_tng) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_TNG) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -875,57 +1051,49 @@ body {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">tng</td>
-<td align="left">2021-07-23</td>
-<td align="right">23.24693</td>
-<td align="right">20.16195</td>
-<td align="right">26.33191</td>
-<td align="left">ARIMA(2,1,2)(0,0,1)[5]</td>
+<td align="left">TNG</td>
+<td align="left">2022-01-03</td>
+<td align="right">33.01567</td>
+<td align="right">30.05110</td>
+<td align="right">35.98024</td>
+<td align="left">ETS(M,AD,M)</td>
 </tr>
 <tr class="even">
-<td align="left">tng</td>
-<td align="left">2021-07-26</td>
-<td align="right">23.24693</td>
-<td align="right">20.16195</td>
-<td align="right">26.33191</td>
-<td align="left">ARIMA(2,1,2)(0,0,1)[5]</td>
+<td align="left">TNG</td>
+<td align="left">2022-01-04</td>
+<td align="right">33.33725</td>
+<td align="right">30.37268</td>
+<td align="right">36.30182</td>
+<td align="left">ETS(M,AD,M)</td>
 </tr>
 <tr class="odd">
-<td align="left">tng</td>
-<td align="left">2021-07-27</td>
-<td align="right">23.24693</td>
-<td align="right">20.16195</td>
-<td align="right">26.33191</td>
-<td align="left">ARIMA(2,1,2)(0,0,1)[5]</td>
+<td align="left">TNG</td>
+<td align="left">2022-01-05</td>
+<td align="right">33.50010</td>
+<td align="right">30.53553</td>
+<td align="right">36.46467</td>
+<td align="left">ETS(M,AD,M)</td>
 </tr>
 <tr class="even">
-<td align="left">tng</td>
-<td align="left">2021-07-28</td>
-<td align="right">23.24693</td>
-<td align="right">20.16195</td>
-<td align="right">26.33191</td>
-<td align="left">ARIMA(2,1,2)(0,0,1)[5]</td>
+<td align="left">TNG</td>
+<td align="left">2022-01-06</td>
+<td align="right">33.78453</td>
+<td align="right">30.81996</td>
+<td align="right">36.74910</td>
+<td align="left">ETS(M,AD,M)</td>
 </tr>
 <tr class="odd">
-<td align="left">tng</td>
-<td align="left">2021-07-29</td>
-<td align="right">23.24693</td>
-<td align="right">20.16195</td>
-<td align="right">26.33191</td>
-<td align="left">ARIMA(2,1,2)(0,0,1)[5]</td>
-</tr>
-<tr class="even">
-<td align="left">tng</td>
-<td align="left">2021-07-30</td>
-<td align="right">23.24693</td>
-<td align="right">20.16195</td>
-<td align="right">26.33191</td>
-<td align="left">ARIMA(2,1,2)(0,0,1)[5]</td>
+<td align="left">TNG</td>
+<td align="left">2022-01-07</td>
+<td align="right">33.43000</td>
+<td align="right">30.46543</td>
+<td align="right">36.39457</td>
+<td align="left">ETS(M,AD,M)</td>
 </tr>
 </tbody>
 </table>
 <h3 id="tpb">TPB</h3>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_tpb) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_TPB) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -939,57 +1107,49 @@ body {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">tpb</td>
-<td align="left">2021-07-23</td>
-<td align="right">36.89409</td>
-<td align="right">32.83699</td>
-<td align="right">40.95119</td>
-<td align="left">PROPHET</td>
+<td align="left">TPB</td>
+<td align="left">2022-01-03</td>
+<td align="right">41.57965</td>
+<td align="right">37.03137</td>
+<td align="right">46.12793</td>
+<td align="left">ARIMA(0,1,0) WITH DRIFT W/ XGBOOST ERRORS</td>
 </tr>
 <tr class="even">
-<td align="left">tpb</td>
-<td align="left">2021-07-26</td>
-<td align="right">37.05385</td>
-<td align="right">32.99675</td>
-<td align="right">41.11095</td>
-<td align="left">PROPHET</td>
+<td align="left">TPB</td>
+<td align="left">2022-01-04</td>
+<td align="right">41.63581</td>
+<td align="right">37.08753</td>
+<td align="right">46.18409</td>
+<td align="left">ARIMA(0,1,0) WITH DRIFT W/ XGBOOST ERRORS</td>
 </tr>
 <tr class="odd">
-<td align="left">tpb</td>
-<td align="left">2021-07-27</td>
-<td align="right">37.10428</td>
-<td align="right">33.04718</td>
-<td align="right">41.16138</td>
-<td align="left">PROPHET</td>
+<td align="left">TPB</td>
+<td align="left">2022-01-05</td>
+<td align="right">41.69197</td>
+<td align="right">37.14369</td>
+<td align="right">46.24025</td>
+<td align="left">ARIMA(0,1,0) WITH DRIFT W/ XGBOOST ERRORS</td>
 </tr>
 <tr class="even">
-<td align="left">tpb</td>
-<td align="left">2021-07-28</td>
-<td align="right">37.19165</td>
-<td align="right">33.13455</td>
-<td align="right">41.24875</td>
-<td align="left">PROPHET</td>
+<td align="left">TPB</td>
+<td align="left">2022-01-06</td>
+<td align="right">41.74813</td>
+<td align="right">37.19985</td>
+<td align="right">46.29641</td>
+<td align="left">ARIMA(0,1,0) WITH DRIFT W/ XGBOOST ERRORS</td>
 </tr>
 <tr class="odd">
-<td align="left">tpb</td>
-<td align="left">2021-07-29</td>
-<td align="right">37.22853</td>
-<td align="right">33.17143</td>
-<td align="right">41.28563</td>
-<td align="left">PROPHET</td>
-</tr>
-<tr class="even">
-<td align="left">tpb</td>
-<td align="left">2021-07-30</td>
-<td align="right">37.32315</td>
-<td align="right">33.26605</td>
-<td align="right">41.38025</td>
-<td align="left">PROPHET</td>
+<td align="left">TPB</td>
+<td align="left">2022-01-07</td>
+<td align="right">41.80429</td>
+<td align="right">37.25601</td>
+<td align="right">46.35257</td>
+<td align="left">ARIMA(0,1,0) WITH DRIFT W/ XGBOOST ERRORS</td>
 </tr>
 </tbody>
 </table>
 <h3 id="vcb">VCB</h3>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_vcb) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_VCB) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -1003,180 +1163,44 @@ body {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">vcb</td>
-<td align="left">2021-07-23</td>
-<td align="right">105.3385</td>
-<td align="right">96.12491</td>
-<td align="right">114.5520</td>
-<td align="left">PROPHET</td>
+<td align="left">VCB</td>
+<td align="left">2022-01-03</td>
+<td align="right">79.20948</td>
+<td align="right">75.85102</td>
+<td align="right">82.56794</td>
+<td align="left">ARIMA(2,1,2)(0,0,1)[5] W/ XGBOOST ERRORS</td>
 </tr>
 <tr class="even">
-<td align="left">vcb</td>
-<td align="left">2021-07-26</td>
-<td align="right">104.9596</td>
-<td align="right">95.74608</td>
-<td align="right">114.1732</td>
-<td align="left">PROPHET</td>
+<td align="left">VCB</td>
+<td align="left">2022-01-04</td>
+<td align="right">79.20948</td>
+<td align="right">75.85102</td>
+<td align="right">82.56794</td>
+<td align="left">ARIMA(2,1,2)(0,0,1)[5] W/ XGBOOST ERRORS</td>
 </tr>
 <tr class="odd">
-<td align="left">vcb</td>
-<td align="left">2021-07-27</td>
-<td align="right">105.1706</td>
-<td align="right">95.95702</td>
-<td align="right">114.3841</td>
-<td align="left">PROPHET</td>
+<td align="left">VCB</td>
+<td align="left">2022-01-05</td>
+<td align="right">79.20948</td>
+<td align="right">75.85102</td>
+<td align="right">82.56794</td>
+<td align="left">ARIMA(2,1,2)(0,0,1)[5] W/ XGBOOST ERRORS</td>
 </tr>
 <tr class="even">
-<td align="left">vcb</td>
-<td align="left">2021-07-28</td>
-<td align="right">105.4419</td>
-<td align="right">96.22835</td>
-<td align="right">114.6555</td>
-<td align="left">PROPHET</td>
+<td align="left">VCB</td>
+<td align="left">2022-01-06</td>
+<td align="right">79.20948</td>
+<td align="right">75.85102</td>
+<td align="right">82.56794</td>
+<td align="left">ARIMA(2,1,2)(0,0,1)[5] W/ XGBOOST ERRORS</td>
 </tr>
 <tr class="odd">
-<td align="left">vcb</td>
-<td align="left">2021-07-29</td>
-<td align="right">105.8744</td>
-<td align="right">96.66089</td>
-<td align="right">115.0880</td>
-<td align="left">PROPHET</td>
-</tr>
-<tr class="even">
-<td align="left">vcb</td>
-<td align="left">2021-07-30</td>
-<td align="right">105.6727</td>
-<td align="right">96.45910</td>
-<td align="right">114.8862</td>
-<td align="left">PROPHET</td>
-</tr>
-</tbody>
-</table>
-<h3 id="vci">VCI</h3>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_vci) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
-<table>
-<thead>
-<tr class="header">
-<th align="left">.ticker</th>
-<th align="left">.index</th>
-<th align="right">.value</th>
-<th align="right">.low</th>
-<th align="right">.high</th>
-<th align="left">.model_desc</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">vci</td>
-<td align="left">2021-07-23</td>
-<td align="right">47.45839</td>
-<td align="right">36.71137</td>
-<td align="right">58.20541</td>
-<td align="left">PROPHET</td>
-</tr>
-<tr class="even">
-<td align="left">vci</td>
-<td align="left">2021-07-26</td>
-<td align="right">47.79103</td>
-<td align="right">37.04402</td>
-<td align="right">58.53805</td>
-<td align="left">PROPHET</td>
-</tr>
-<tr class="odd">
-<td align="left">vci</td>
-<td align="left">2021-07-27</td>
-<td align="right">47.83367</td>
-<td align="right">37.08665</td>
-<td align="right">58.58069</td>
-<td align="left">PROPHET</td>
-</tr>
-<tr class="even">
-<td align="left">vci</td>
-<td align="left">2021-07-28</td>
-<td align="right">47.99818</td>
-<td align="right">37.25116</td>
-<td align="right">58.74520</td>
-<td align="left">PROPHET</td>
-</tr>
-<tr class="odd">
-<td align="left">vci</td>
-<td align="left">2021-07-29</td>
-<td align="right">48.19260</td>
-<td align="right">37.44558</td>
-<td align="right">58.93962</td>
-<td align="left">PROPHET</td>
-</tr>
-<tr class="even">
-<td align="left">vci</td>
-<td align="left">2021-07-30</td>
-<td align="right">48.33364</td>
-<td align="right">37.58663</td>
-<td align="right">59.08066</td>
-<td align="left">PROPHET</td>
-</tr>
-</tbody>
-</table>
-<h3 id="vni">VNI</h3>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">readd</span>(two_week_fc_vni) <span class="sc">%&gt;%</span>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
-<table>
-<thead>
-<tr class="header">
-<th align="left">.ticker</th>
-<th align="left">.index</th>
-<th align="right">.value</th>
-<th align="right">.low</th>
-<th align="right">.high</th>
-<th align="left">.model_desc</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">vni</td>
-<td align="left">2021-07-23</td>
-<td align="right">1403.485</td>
-<td align="right">1360.203</td>
-<td align="right">1446.766</td>
-<td align="left">PROPHET</td>
-</tr>
-<tr class="even">
-<td align="left">vni</td>
-<td align="left">2021-07-26</td>
-<td align="right">1405.435</td>
-<td align="right">1362.154</td>
-<td align="right">1448.717</td>
-<td align="left">PROPHET</td>
-</tr>
-<tr class="odd">
-<td align="left">vni</td>
-<td align="left">2021-07-27</td>
-<td align="right">1407.066</td>
-<td align="right">1363.784</td>
-<td align="right">1450.347</td>
-<td align="left">PROPHET</td>
-</tr>
-<tr class="even">
-<td align="left">vni</td>
-<td align="left">2021-07-28</td>
-<td align="right">1409.320</td>
-<td align="right">1366.039</td>
-<td align="right">1452.602</td>
-<td align="left">PROPHET</td>
-</tr>
-<tr class="odd">
-<td align="left">vni</td>
-<td align="left">2021-07-29</td>
-<td align="right">1412.335</td>
-<td align="right">1369.054</td>
-<td align="right">1455.616</td>
-<td align="left">PROPHET</td>
-</tr>
-<tr class="even">
-<td align="left">vni</td>
-<td align="left">2021-07-30</td>
-<td align="right">1414.523</td>
-<td align="right">1371.242</td>
-<td align="right">1457.804</td>
-<td align="left">PROPHET</td>
+<td align="left">VCB</td>
+<td align="left">2022-01-07</td>
+<td align="right">79.20948</td>
+<td align="right">75.85102</td>
+<td align="right">82.56794</td>
+<td align="left">ARIMA(2,1,2)(0,0,1)[5] W/ XGBOOST ERRORS</td>
 </tr>
 </tbody>
 </table>

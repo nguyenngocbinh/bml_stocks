@@ -1,34 +1,47 @@
-library(xgboost)
-library(drake)
-library(tidymodels)
-library(modeltime)
-library(tidyverse)
-library(tidyquant)
-library(lubridate)
-library(timetk)
-library(modeltime.ensemble)
-
+# Author: Nguyen Ngoc Binh
+# Purpose: Predict price of stock
+# Load packages
+pacman::p_load(
+  xgboost,
+  drake,
+  tidymodels,
+  modeltime,
+  tidyverse,
+  tidyquant,
+  lubridate,
+  timetk,
+  modeltime.ensemble,
+  httr,
+  magrittr
+)
 
 # Note:
 # Tickers have enough obs
 source("R/ultilities_funs.R")
-tickers <-  list.files("data") %>% stringr::str_sub(7, 9)
-# Note: vnindex -> vni
+source("R/vndirect.R")
 
+# Get list favor tickers
+# Return object tickers
+source("R/bml_stocks/R/tickers.R")
 
-my_plan <- drake_plan(
-  interactive = FALSE,
-  
+#-----------------------------------------------------------------------------
+# Get data from vndirect
+# Divide data to training set and test set
+#-----------------------------------------------------------------------------
+plan_data_preparation <- drake_plan(
+  transform = FALSE,
   # Using raw_data to fit accuracy and dont need update training model
-  raw_data = target(fnc_get_data(ticker),
-                    transform = map(ticker = !!tickers)),
+  raw_data = target({
+    df = bml_vndirect_ticker_price(ticker)
+    bml_data_processing(df)
+  },
+  transform = map(ticker = !!tickers)),
   
   # Data
-  # Function from ultilities_funs.R
   data = target(
     raw_data %>%
-      # Note: prevent retrain and 
-      filter(date <= ymd(20210701), date > ymd(20210701) - 365 * 2),
+      # Note: prevent retrain and
+      filter(date <= ymd('2021-12-31'), date > ymd('2021-12-31') - 365 * 2),
     
     transform = map(raw_data, .id = ticker)
   ),
@@ -41,7 +54,19 @@ my_plan <- drake_plan(
       time_series_split(assess = "3 months", cumulative = TRUE),
     transform = map(data, .id = ticker)
   ),
-  
+)
+
+#-----------------------------------------------------------------------------
+# Modeling plan
+# 1. Arima
+# 2. Arima with xgboost
+# 3. exp_smoothing
+# 4. prophet
+#-----------------------------------------------------------------------------
+
+plan_modelling <- drake_plan(
+  interactive = FALSE,
+  transform = FALSE,
   
   # # Function from ultilities_funs.R
   # modeling = target(fnc_modeling(data),
@@ -199,8 +224,16 @@ my_plan <- drake_plan(
   
 )
 
+
+raw_plan = bind_plans(
+  plan_data_preparation,
+  plan_modelling
+)
+
+plan <- transform_plan(raw_plan)
+
 # clean(destroy = TRUE)
-make(my_plan)
+make(plan)
 
 # Reports =====================================================================
 # Create folders
@@ -211,15 +244,20 @@ map(tickers, function(ticker) {
 
 
 # Create markdown files
-map(tickers, fnc_template_report)
+map(tickers, bml_template_report)
 
+#-----------------------------------------------------------------------------
+source("R/vignettes_preparation.R")
 # Build vignettes
+# Detailed analysis for each stock
 map(tickers,
     function(ticker) {
       rmarkdown::render(input = paste0("vignettes/", ticker, "/Readme.Rmd"))
     })
 
+#-----------------------------------------------------------------------------
 # Create readme
-fnc_readme()
-map(tickers, fnc_readme_add)
+# Summary results from each stock report
+bml_create_readme_file()
+map(tickers, bml_readme_add_ticker)
 rmarkdown::render("Readme.Rmd")

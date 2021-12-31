@@ -28,18 +28,18 @@ library(dplyr)
 interactive <- FALSE
 ```
 
-# Forecast acb price
+# Forecast ACB price
 
 ### Plot
 ```{r}
-readd(data_acb) %>%
+readd(data_ACB) %>%
   plot_time_series(date, value, .interactive = interactive)
 ```
 
 ### Divide data to train/ test
 
 ```{r}
-readd(splits_acb) %>%
+readd(splits_ACB) %>%
   tk_time_series_cv_plan() %>%
   plot_time_series_cv_plan(date, value, .interactive = FALSE)
 ```
@@ -47,30 +47,30 @@ readd(splits_acb) %>%
 ### Modeltime Table
 
 ```{r}
-readd(models_tbl_acb)
+readd(models_tbl_ACB)
 ```
 
 ### Calibration
 ```{r}
-readd(calibration_tbl_acb)
+readd(calibration_tbl_ACB)
 ```
 
 
 ### Forecast (Testing Set)
 ```{r}
 
-readd(forecast_tbl_acb) %>% 
+readd(forecast_tbl_ACB) %>% 
   plot_modeltime_forecast(.legend_max_width = 25, 
                            .interactive      = interactive)
 ```
 
 ### Accuracy table
 ```{r}
-readd(accuracy_tbl_acb)$`_data`
+readd(accuracy_tbl_ACB)$`_data`
 
 ```
 ### Next week forecast
 ```{r}
-readd(two_week_fc_acb)
+readd(two_week_fc_ACB)
 ```
 

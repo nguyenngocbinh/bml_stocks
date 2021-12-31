@@ -28,18 +28,18 @@ library(dplyr)
 interactive <- FALSE
 ```
 
-# Forecast sbs price
+# Forecast SBS price
 
 ### Plot
 ```{r}
-readd(data_sbs) %>%
+readd(data_SBS) %>%
   plot_time_series(date, value, .interactive = interactive)
 ```
 
 ### Divide data to train/ test
 
 ```{r}
-readd(splits_sbs) %>%
+readd(splits_SBS) %>%
   tk_time_series_cv_plan() %>%
   plot_time_series_cv_plan(date, value, .interactive = FALSE)
 ```
@@ -47,30 +47,30 @@ readd(splits_sbs) %>%
 ### Modeltime Table
 
 ```{r}
-readd(models_tbl_sbs)
+readd(models_tbl_SBS)
 ```
 
 ### Calibration
 ```{r}
-readd(calibration_tbl_sbs)
+readd(calibration_tbl_SBS)
 ```
 
 
 ### Forecast (Testing Set)
 ```{r}
 
-readd(forecast_tbl_sbs) %>% 
+readd(forecast_tbl_SBS) %>% 
   plot_modeltime_forecast(.legend_max_width = 25, 
                            .interactive      = interactive)
 ```
 
 ### Accuracy table
 ```{r}
-readd(accuracy_tbl_sbs)$`_data`
+readd(accuracy_tbl_SBS)$`_data`
 
 ```
 ### Next week forecast
 ```{r}
-readd(two_week_fc_sbs)
+readd(two_week_fc_SBS)
 ```
 

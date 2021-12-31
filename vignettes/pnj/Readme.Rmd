@@ -28,18 +28,18 @@ library(dplyr)
 interactive <- FALSE
 ```
 
-# Forecast pnj price
+# Forecast PNJ price
 
 ### Plot
 ```{r}
-readd(data_pnj) %>%
+readd(data_PNJ) %>%
   plot_time_series(date, value, .interactive = interactive)
 ```
 
 ### Divide data to train/ test
 
 ```{r}
-readd(splits_pnj) %>%
+readd(splits_PNJ) %>%
   tk_time_series_cv_plan() %>%
   plot_time_series_cv_plan(date, value, .interactive = FALSE)
 ```
@@ -47,30 +47,30 @@ readd(splits_pnj) %>%
 ### Modeltime Table
 
 ```{r}
-readd(models_tbl_pnj)
+readd(models_tbl_PNJ)
 ```
 
 ### Calibration
 ```{r}
-readd(calibration_tbl_pnj)
+readd(calibration_tbl_PNJ)
 ```
 
 
 ### Forecast (Testing Set)
 ```{r}
 
-readd(forecast_tbl_pnj) %>% 
+readd(forecast_tbl_PNJ) %>% 
   plot_modeltime_forecast(.legend_max_width = 25, 
                            .interactive      = interactive)
 ```
 
 ### Accuracy table
 ```{r}
-readd(accuracy_tbl_pnj)$`_data`
+readd(accuracy_tbl_PNJ)$`_data`
 
 ```
 ### Next week forecast
 ```{r}
-readd(two_week_fc_pnj)
+readd(two_week_fc_PNJ)
 ```
 
