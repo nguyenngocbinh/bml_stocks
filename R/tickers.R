@@ -1,4 +1,4 @@
-tickers <- c(
+list_tickers <- c(
   'AAA',
   'ACB',
   'BID',

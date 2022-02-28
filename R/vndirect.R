@@ -11,19 +11,19 @@ VNDIRECT <- list(
 #' @importFrom purrr map_dfr
 #' @importFrom dplyr bind_rows
 #' @example bml_vndirect_ticker_price('VCB', 1000)
-bml_vndirect_ticker_price <- function(ticker = NULL, size = 1000) {
+bml_vndirect_ticker_price <- function(.ticker = NULL, .size = 1000) {
   
-  if (is.null(ticker)) {
+  if (is.null(.ticker)) {
     stop('symbol is not set')
   }
   
   base <- "https://finfo-api.vndirect.com.vn/v4/stock_prices/"
   
-  endpoint = paste('code:', ticker)
+  endpoint = paste('code:', .ticker)
   
   params = list(
     sort = "date",
-    size = size,
+    size = .size,
     page = 1,
     q = endpoint
   )
@@ -32,7 +32,10 @@ bml_vndirect_ticker_price <- function(ticker = NULL, size = 1000) {
   
   df <- content(res) %>% 
     extract2('data') %>% 
-    map_dfr(bind_rows) 
+    map_dfr(bind_rows) %>% 
+    rename(ticker_name = code) %>% 
+    mutate(date = as.Date(date))
+    
   
   df
 }
